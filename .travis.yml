@@ -1,0 +1,5 @@
+language: python
+install:
+  - make deps
+script:
+  - make build lint

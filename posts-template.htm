@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KA Engineering - {{title}}</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="description" content="{{stripped_description}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- inject:head:css -->
+    <!-- endinject -->
+</head>
+<body id="post-page">
+    {{#is_draft}}
+    <a href="javascript: document.getElementById('draft-bar').remove()" id="draft-bar">
+        This is a draft, please don't share it (click to hide)
+    </a>
+    {{/is_draft}}
+    <header id="top-header">
+        <h1 id="post-title">
+             <a href="/">KA Engineering</a>: {{title}}
+        </h1>
+        <div id="post-metadata" class="faded">
+            Posted {{date}}
+        </div>
+    </header>
+    <div id="post-body">
+        {{{body}}}
+    </div>
+    <div id="end-bits">
+        <a href="/">see all posts</a> - <a href="/rss.xml">subscribe with RSS</a>
+    </div>
+    <div id="comments">
+        (comments are temporarily unavailable)
+    </div>
+</body>
+</html>

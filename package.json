@@ -1,0 +1,18 @@
+{
+    "name": "engblog",
+    "version": "0.0.1",
+    "dependencies": {
+        "gulp": "*",
+        "gulp-shell": "*",
+        "gulp-inject": "*",
+        "gulp-foreach": "*",
+        "gulp-concat": "*",
+        "gulp-minify-css": "*",
+        "gulp-minify-html": "*",
+        "gulp-imagemin": "*",
+        "gulp-webserver": "*",
+        "gulp-uncss": "*",
+        "gulp-minify-inline": "*"
+    },
+    "private": true
+}

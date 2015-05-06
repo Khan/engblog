@@ -1,0 +1,146 @@
+#logo {
+    width: 10em;
+    height: 10em;
+    border-radius: 5em;
+    -webkit-border-radius: 5em;
+    -moz-border-radius: 5em;
+}
+
+#banner-engineering {
+    color: #9Cb53b;
+}
+
+#top-header {
+    color: white;
+    padding: 3.5em 0;
+    text-align: center;
+    background-color: #252F3D;
+}
+
+#banner {
+    margin-bottom: 0.5em;
+    word-spacing: 2em;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+    display: inline-block;
+    font-weight: normal;
+    font-size: 4em;
+    word-spacing: normal;
+    letter-spacing: 0.07em;
+}
+
+@media (max-width: 300px) {
+    h1 { font-size: 1.5em; }
+}
+
+@media (max-width: 700px) {
+    h1 { font-size: 3em; }
+}
+
+h2 > a {
+    color: inherit;
+}
+
+h2 > a:hover {
+    color: inherit;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h2 {
+    font-weight: normal;
+    letter-spacing: 0.05em;
+}
+
+.post {
+    /* Center the post by setting the left and right margins to auto */
+    margin: 0 auto;
+
+    /* This makes the text a little nicer to read */
+    line-height: 1.5;
+
+    /* This ensures that the posts won't get too wide because generally
+     * super wide paragraphs are considered a little harder to read.
+     * Not a lot of good empirical evidence to support this though.*/
+    max-width: 50em;
+
+    padding-top: 3em;
+    margin-top: 3em;
+    border-top: 1px solid #ccc;
+}
+
+.post:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.post-title {
+    /* This brings the author part closer to the title. There is still
+     * space between the two according to the line-height though. */
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 2em;
+}
+
+.post-description p {
+    margin: 0;
+}
+
+/* same as .post > *:last-child*/
+.read-it {
+    margin: 0.1em 0 0 0;
+    padding: .5em 1em;
+    background-color: #E6E6E6;
+    color: black;
+    display: inline-block;
+}
+
+.team-tag {
+    border-radius: 0.3em;
+    padding: 0.3em 0.8em;
+    font-size: 0.8em;
+    font-weight: 500;
+    display: inline-block;
+    color: white;
+}
+
+.team-tag-web-frontend {
+    background-color: #63BBD9;
+}
+
+.team-tag-infrastructure {
+    background-color: #E57281;
+}
+
+.web-frontend i {
+    color: #63BBD9;
+}
+
+.infrastructure i {
+    color: #E57281;
+}
+
+.post-metadata {
+    margin-top: 0.5em;
+    margin-bottom: 1.3em;
+}
+
+.post-metadata > * {
+    margin-right: 1.5em;
+}
+
+.post-metadata .fa {
+    margin-right: 0.4em;
+}
+
+.author-photo {
+    width: 2em;
+    border-radius: 1em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.date-tag, .author-tag {
+    color: #777;
+}

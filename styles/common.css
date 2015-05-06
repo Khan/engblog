@@ -1,0 +1,83 @@
+/* The text banners here are useful for users of Sublime Text. They were
+ * generated with the Roman font at http://www.network-science.de/ascii/ */
+
+body {
+    /* Open Sans is a nice easy font-family to work with and usually
+     * yields good looking pages. The user likely has a cached copy of
+     * it already too. */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    /* True white is often too bright to use as a background */
+    background-color: #FEFEFE;
+
+    /* True black is often too dark to use as a base font color */
+    color: #161616;
+
+    /* This will keep any text from riding up too close to any of the
+     * edges of the page. */
+    padding-bottom: 5em;
+    margin: 0;
+
+    font-size: 16px;
+}
+
+.bounded {
+    padding: 0 2em;
+}
+
+@media (min-width: 1500px) {
+    body { font-size: 19px; }
+}
+
+@media (max-width: 1000px) {
+  body { font-size: 15px; }
+}
+
+@media (max-width: 300px) {
+  body { font-size: 11px; }
+}
+
+strong, b {
+    /* I prefer semi-bold to a full bold */
+    font-weight: 600;
+}
+
+a {
+    /* Our links will be blue and not have underlines */
+    text-decoration: none;
+    color: #778A2D;
+}
+
+a:hover {
+    /* When the user hovers over a link show an underline in case they were
+     * unsure if it was really a link (we do this mostly because it looks
+     * cool but it's fun to pretend). */
+    text-decoration: underline;
+}
+
+/* We mention #content here because we need to raise the specificity of this
+ * selector to override the pure.css selector. */
+#content .pure-form legend, #content .pure-form fieldset {
+    /* By default, legend and fieldset elements have a border on the bottom. It
+     * doesn't look very good so we want to get rid of it. */
+    border-bottom: none;
+}
+
+a.pure-button-primary, button.pure-button-primary {
+    /* The default color that Pure.css uses is a little too harsh imo
+     * so this is a much more faded blue. */
+    background-color: #5CADB5;
+
+    /* The white on blue can be difficult to read if it's not bolded,
+     * this also makes the primary button stand out more. */
+    font-weight: 600;
+}
+
+.faded {
+    opacity: .7;
+}
+
+.align-center {
+    display: block;
+    margin: 0 auto;
+}
