@@ -1,10 +1,10 @@
 [submodule "phial"]
 	path = phial
-	url = git@github.com:brownhead/phial.git
+	url = https://github.com/brownhead/phial.git
 [submodule "khan-linter"]
 	path = khan-linter
-	url = git@github.com:Khan/khan-linter.git
+	url = https://github.com/Khan/khan-linter.git
 [submodule "output"]
 	path = output
-	url = git@github.com:Khan/engblog.git
+	url = .
 	branch = gh-pages
