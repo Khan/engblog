@@ -5,7 +5,7 @@ KA Engineering Blog
 	:target: https://travis-ci.org/Khan/engblog
 	:alt: Travis build status
 
-This repo houses the code used to build the KA Engineering Blog, which is not yet live.
+This repo houses the code used to build the `KA Engineering Blog <http://khan.github.io/engblog>`_.
 
 Usage
 -----
@@ -23,3 +23,15 @@ Linting
 -------
 
 Before committing any changes, make sure to run ``make lint``.
+
+
+Publishing
+----------
+
+To publish your changes to the live site, follow these steps:
+
+1. Discard any changes you've made to the ``output`` submodule/directory: ``bash -c 'cd output && git reset --hard && git clean -fd'``.
+2. Commit the rest of your changes and push them to GitHub.
+3. Run ``make ready-publish`` and follow the instructions it gives you.
+
+After doing all that, your changes should be live! Yippee!
