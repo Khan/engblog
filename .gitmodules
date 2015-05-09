@@ -6,5 +6,5 @@
 	url = https://github.com/Khan/khan-linter.git
 [submodule "output"]
 	path = output
-	url = ./
+	url = https://github.com/Khan/engblog.git
 	branch = gh-pages
