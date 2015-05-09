@@ -7,13 +7,11 @@ ready-publish:
 	# Build the site
 	gulp
 
-	# Publish the site locally (this will not push to GitHub)
 	cd output && git add -A
-	-cd output && git commit -m "publish" && git push origin gh-pages
+	-cd output && git commit -m "publish"
 
 	@echo
-	@echo The blog has been built into the gh-pages branch. Double check that
-	@echo all is well by running:
+	@echo The blog has been built. Double check that all is well by running:
 	@echo "    bash -c 'cd output; python -m SimpleHTTPServer 9029 2> /dev/null'"
 	@echo And then going to http://localhost:9029 in your browser.
 	@echo
