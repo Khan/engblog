@@ -10,13 +10,6 @@ lint linc:
 	env/bin/python khan-linter/runlint.py app.py gulpfile.js
 
 deps:
-	# Make sure that a gh-pages branch exists so that our output submodule can
-	# function properly.
-	# TODO(johnsullivan): If we stop doing the relative nonsense with the
-	#     output submodule, we should remove this
-	git fetch origin
-	git branch gh-pages origin/gh-pages || true
-
 	# We have a few submodules, make sure they're all set
 	git submodule update --recursive --init
 

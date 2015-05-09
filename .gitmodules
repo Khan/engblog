@@ -4,7 +4,3 @@
 [submodule "khan-linter"]
 	path = khan-linter
 	url = https://github.com/Khan/khan-linter.git
-[submodule "output"]
-	path = output
-	url = .
-	branch = gh-pages
