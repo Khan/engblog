@@ -18,8 +18,9 @@ ready-publish:
 	@echo And then going to http://localhost:9029 in your browser.
 	@echo
 	@echo When "you're" sure everything is OK, run
+	@echo "    bash -c 'cd output; git push origin HEAD:gh-pages'"
 	@echo "    git add output && git commit -m 'output substate'"
-	@echo "    git push origin master gh-pages"
+	@echo "    git push origin master"
 
 serve server:
 	gulp serve
