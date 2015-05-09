@@ -1,7 +1,25 @@
-.PHONY: serve server deps build
+.PHONY: serve server deps build ready-publish
 
 build:
 	gulp
+
+ready-publish:
+	# Build the site
+	gulp
+
+	# Publish the site locally (this will not push to GitHub)
+	cd output && git add -A
+	-cd output && git commit -m "publish" && git push origin gh-pages
+
+	@echo
+	@echo The blog has been built into the gh-pages branch. Double check that
+	@echo all is well by running:
+	@echo "    bash -c 'cd output; python -m SimpleHTTPServer 9029 2> /dev/null'"
+	@echo And then going to http://localhost:9029 in your browser.
+	@echo
+	@echo When "you're" sure everything is OK, run
+	@echo "    git add output && git commit -m 'output substate'"
+	@echo "    git push origin master gh-pages"
 
 serve server:
 	gulp serve
