@@ -1,7 +1,10 @@
-.PHONY: serve server deps build ready-publish
+.PHONY: serve server deps build ready-publish reset-output
 
 build:
 	gulp
+
+reset-output:
+	cd output && git checkout . && git clean -fd
 
 ready-publish:
 	# Build the site
