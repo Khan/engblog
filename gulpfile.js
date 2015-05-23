@@ -3,13 +3,11 @@ var foreach = require("gulp-foreach");
 var gulp = require("gulp");
 var imagemin = require("gulp-imagemin");
 var inject = require("gulp-inject");
+var less = require("gulp-less");
 var minifyCss = require("gulp-minify-css");
 var minifyHTML = require("gulp-minify-html");
 var minifyInline = require("gulp-minify-inline");
 var shell = require("gulp-shell");
-// TODO(johnsullivan): uncss gives errors when we run it over and over again
-//     link when were serving the testing test. Fix this and reenable this.
-// var uncss = require('gulp-uncss');
 var webserver = require("gulp-webserver");
 
 /**
@@ -40,11 +38,9 @@ function embed_css(html_glob, page_css_glob, output_dir) {
             // Gather all of the CSS we want to inline in this post
             var css = (gulp
                 .src([page_css_glob, "bower_components/normalize.css",
-                      "styles/common.css", "styles/pygments.css"])
+                      "styles/pygments.css"])
+                .pipe(less())
                 .pipe(concat("all.css")))
-                // .pipe(uncss({
-                //     html: file.contents.toString("utf8")
-                // }))
                 .pipe(minifyCss());
 
             return stream
@@ -67,7 +63,7 @@ function embed_css(html_glob, page_css_glob, output_dir) {
  * Embeds each post page's CSS.
  */
 gulp.task("inline-posts-css", ["phial"], function() {
-    return embed_css("/tmp/engblog-phial/posts/*", "styles/post-page.css",
+    return embed_css("/tmp/engblog-phial/posts/*", "styles/posts-template.less",
                       "output/posts/");
 });
 

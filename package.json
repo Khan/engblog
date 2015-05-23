@@ -11,8 +11,8 @@
         "gulp-minify-html": "*",
         "gulp-imagemin": "*",
         "gulp-webserver": "*",
-        "gulp-uncss": "*",
-        "gulp-minify-inline": "*"
+        "gulp-minify-inline": "*",
+        "gulp-less": "*"
     },
     "private": true
 }
