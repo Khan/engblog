@@ -6,32 +6,89 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <meta name="description" content="{{stripped_description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <!-- inject:head:css -->
     <!-- endinject -->
 </head>
-<body id="post-page">
-    {{#is_draft}}
-    <a href="javascript: document.getElementById('draft-bar').remove()" id="draft-bar">
-        This is a draft, please don't share it (click to hide)
-    </a>
-    {{/is_draft}}
-    <header id="top-header">
-        <h1 id="post-title">
-             <a href="..">KA Engineering</a>: {{title}}
+<body>
+    <div class="left-bar">
+        <h1 class="logo">
+            KA <span class="engineering">Engineering</span>
         </h1>
-        <div id="post-metadata" class="faded">
-            Posted {{date}}
+        <div class="subscription-info">
+            <span style="opacity: 0.9; font-size: 12px">subscribe with</span>
+            <i class="fa fa-rss"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-envelope-o"></i>
+            <!-- <div class="subscribe-button">
+                <div class="icon">
+                    <i class="fa fa-rss"></i>
+                </div>
+                <div class="caption">RSS</div>
+            </div>
+            <div class="subscribe-button">
+                <div class="icon">
+                    <i class="fa fa-twitter"></i>
+                </div>
+                <div class="caption">Tweet</div>
+            </div>
+            <div class="subscribe-button">
+                <div class="icon">
+                    <i class="fa fa-envelope-o"></i>
+                </div>
+                <div class="caption">Email</div>
+            </div> -->
         </div>
-    </header>
-    <div id="post-body">
-        {{{body}}}
+        <section>
+            <h2 class="section-heading">Upcoming fortnightly post</h2>
+            <div class="post-blurb team-infrastructure">
+                <h3 class="title"><a href="#">Breaking the app engine sandbox</a></h3>
+                <div class="info">
+                    <img class="inline-author-photo" src="https://avatars1.githubusercontent.com/u/6820?v=3&s=460"/>
+                    <a class="author-link" href="#">Ben Alpert</a> on May 31<sup>st</sup>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="section-heading">Past posts</h2>
+            <div class="post-blurb team-web-frontend">
+                <h3 class="title"><a href="#">How wooden puzzles can destroy dev teams</a></h3>
+                <div class="info">
+                    <img class="inline-author-photo" src="https://avatars0.githubusercontent.com/u/367832?v=3&s=460"/>
+                    <a class="author-link" href="#">John Sullivan</a> on May 17<sup>th</sup>
+                </div>
+            </div>
+            <div class="post-blurb team-eng-leads">
+                <h3 class="title"><a href="#">How TIP has been working out</a></h3>
+                <div class="info">
+                    <img class="inline-author-photo" src="https://avatars1.githubusercontent.com/u/108202?v=3&s=460"/>
+                    <a class="author-link" href="#">Ben Kamens</a> on May 9<sup>th</sup>
+                </div>
+            </div>
+            <div class="post-blurb team-infrastructure">
+                <h3 class="title"><a href="#">Why transactions are a drag</a></h3>
+                <div class="info">
+                    <img class="inline-author-photo" src="https://avatars1.githubusercontent.com/u/353697?v=3&s=460"/>
+                    <a class="author-link" href="#">Dylan Vassallo</a> on May 1<sup>st</sup>
+                </div>
+            </div>
+        </section>
     </div>
-    <div id="end-bits">
-        <a href="..">see all posts</a> - <a href="../rss.xml">subscribe with RSS</a>
-    </div>
-    <div id="comments">
-        (comments are temporarily unavailable)
-    </div>
+    <main class="content">
+        <article class="post">
+            <h1 class="title">{{title}}</h1>
+            <div class="info">
+                <img class="inline-author-photo" src="https://avatars0.githubusercontent.com/u/367832?v=3&s=460"/>
+                <a class="author-link" href="#">John Sullivan</a> on May 17<sup>th</sup>
+            </div>
+            <div class="body">
+                {{{body}}}
+            </div>
+        </article>
+        <div id="comments">
+            (comments are temporarily unavailable)
+        </div>
+    </main>
 </body>
 </html>
