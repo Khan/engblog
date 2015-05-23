@@ -48,18 +48,23 @@ body {
     .subscription-info {
         text-align: left;
 
-        .subscribe-button {
-            display: inline-block;
-            width: 40px;
-            text-align: center;
-            
-            .icon {
-                font-size: 24px;
+        .links {
+            font-size: 24px;
+
+            a {
+                margin-right: 7px;
+                text-decoration: none;
+                color: @leftBarTextColor;
             }
 
-            .caption {
-                text-transform: uppercase;
-                font-size: 8px;
+            a:hover {
+                border-bottom: 1px solid @leftBarTextColor;
+            }
+
+            .email {
+                // The email icon hangs a little below the base line so we
+                // nudge it up a little.
+                margin-top: -1px;
             }
         }
     }
