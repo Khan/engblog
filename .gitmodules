@@ -8,3 +8,4 @@
 	path = output
 	url = https://github.com/Khan/engblog.git
 	branch = gh-pages
+	ignore = dirty
