@@ -1,6 +1,7 @@
 @contentTextColor: #404040;
 @leftBarTextColor: #f0f0f0;
-@doubleColumnMaxWidth: 600px;
+@doubleColumnMaxWidth: 900px;
+@leftBarBackgroundColor: #252F3D;
 
 html, body {
     height: 100%;
@@ -11,6 +12,12 @@ body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: #FEFEFE;
     font-size: 14px;
+
+    @media (max-width: @doubleColumnMaxWidth) {
+        &.mobile-menu-visible {
+            background-color: @leftBarBackgroundColor;
+        }
+    }
 }
 
 .inline-author-photo {
@@ -25,7 +32,7 @@ body {
 #left-bar {
     box-sizing: border-box;
     display: table-cell;
-    background-color: #252F3D;
+    background-color: @leftBarBackgroundColor;
     color: @leftBarTextColor;
     width: 325px;
     padding: 10px 35px 35px 35px;
@@ -63,8 +70,8 @@ body {
                 display: block;
 
                 a {
-                    padding: 10px 20px 10px 20px;
-                    margin: 0 -20px 0 -20px;
+                    padding: 15px 20px 15px 20px;
+                    margin: 0 -20px -15px -20px;
                     display: block;
                     text-decoration: none;
                     color: @leftBarTextColor;

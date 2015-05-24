@@ -87,12 +87,15 @@
     </main>
     <script>
         document.getElementById("mobile-menu-button").onclick = function() {
+            var body = document.body;
             var leftBar = document.getElementById("left-bar");
             var content = document.getElementById("content");
             if (leftBar.className === "mobile-visible") {
+                body.className = "";
                 leftBar.className = "";
                 content.className = "";
             } else {
+                body.className = "mobile-menu-visible";
                 leftBar.className = "mobile-visible";
                 content.className = "mobile-hidden";
             }
