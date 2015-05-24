@@ -12,9 +12,15 @@
     <!-- endinject -->
 </head>
 <body>
-    <div class="left-bar">
+    <div id="left-bar" class="mobile-visible">
         <h1 class="logo">
-            <i class="fa fa-bars"></i> KA <span class="engineering">Engineering</span>
+            KA <span class="engineering">Engineering</span>
+        </h1>
+        <h1 class="logo mobile">
+            <!-- We'll bind a handler to this that'll toggle the menu -->
+            <a id="mobile-menu-button" href="javascript: void 0">
+                <i class="fa fa-bars"></i> KA <span class="engineering">Engineering</span>
+            </a>
         </h1>
         <section class="subscription-info">
             <h2 class="section-heading">Subscribe</h2>
@@ -63,10 +69,11 @@
             <ul class="link-list">
                 <li><a href="https://github.com/Khan/engblog">About this blog</a></li>
                 <li><a href="https://www.khanacademy.org/about">KA's mission</a></li>
+                <li><a href="https://github.com/khan/engblog/issues">Report a bug</a></li>
             </ul>
         </section>
     </div>
-    <main class="content">
+    <main id="content">
         <article class="post">
             <h1 class="title">{{title}}</h1>
             <div class="info">
@@ -78,5 +85,15 @@
             </div>
         </article>
     </main>
+    <script>
+        document.getElementById("mobile-menu-button").onclick = function() {
+            var leftBar = document.getElementById("left-bar");
+            if (leftBar.className === "mobile-visible") {
+                leftBar.className = "";
+            } else {
+                leftBar.className = "mobile-visible";
+            }
+        };
+    </script>
 </body>
 </html>

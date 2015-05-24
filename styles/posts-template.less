@@ -23,7 +23,7 @@ body {
     vertical-align: middle;
 }
 
-.left-bar {
+#left-bar {
     box-sizing: border-box;
     display: table-cell;
     background-color: #252F3D;
@@ -36,7 +36,7 @@ body {
         width: 100%;
         padding: 10px 20px 10px 20px;
 
-        section {
+        &:not(.mobile-visible) section {
             display: none;
         }
     }
@@ -52,11 +52,27 @@ body {
         text-align: left;
         text-transform: uppercase;
 
-        @media (max-width: @doubleColumnMaxWidth) {
+        &.mobile {
             font-size: 24px;
+            display: none;
+
+            @media (max-width: @doubleColumnMaxWidth) {
+                display: block;
+
+                a {
+                    display: block;
+                    text-decoration: none;
+                    color: @leftBarTextColor;
+                }
+            }
+
             i {
                 opacity: 0.8;
             }
+        }
+
+        @media (max-width: @doubleColumnMaxWidth) {
+            display: none;
         }
 
         .engineering {
@@ -181,7 +197,7 @@ body {
     }
 }
 
-.content {
+#content {
     display: table-cell;
     padding: 10px 35px 35px 50px;
     color: @contentTextColor;
