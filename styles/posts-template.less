@@ -1,5 +1,6 @@
 @contentTextColor: #404040;
 @leftBarTextColor: #f0f0f0;
+@doubleColumnMaxWidth: 600px;
 
 html, body {
     height: 100%;
@@ -30,15 +31,33 @@ body {
     width: 325px;
     padding: 10px 35px 35px 35px;
 
+    @media (max-width: @doubleColumnMaxWidth) {
+        display: block;
+        width: 100%;
+        padding: 10px 20px 10px 20px;
+
+        section {
+            display: none;
+        }
+    }
+
     .logo {
-        margin-top: 0;
         font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
-        text-transform: uppercase;
-        text-align: left;
-        line-height: 1em;
+        font-size: 28px;
         letter-spacing: 1px;
-        margin-left: -2px;
+        line-height: 1em;
         margin-bottom: 6px;
+        margin-left: -2px;
+        margin-top: 0;
+        text-align: left;
+        text-transform: uppercase;
+
+        @media (max-width: @doubleColumnMaxWidth) {
+            font-size: 24px;
+            i {
+                opacity: 0.8;
+            }
+        }
 
         .engineering {
             color: #9cb53b;
@@ -167,6 +186,11 @@ body {
     padding: 10px 35px 35px 50px;
     color: @contentTextColor;
 
+    @media (max-width: @doubleColumnMaxWidth) {
+        padding: 10px 20px 50px 20px;
+        display: block;
+    }
+
     .title {
         letter-spacing: 1px;
         margin-bottom: 5px;
@@ -190,6 +214,10 @@ body {
         line-height: 1.5;
         width: 500px;
 
+        @media (max-width: @doubleColumnMaxWidth) {
+            width: 100%;
+        }
+
         a {
             color: #778A2D;
             text-decoration: none;
@@ -200,3 +228,4 @@ body {
         }
     }
 }
+
