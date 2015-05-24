@@ -1,6 +1,6 @@
 @contentTextColor: #404040;
 @leftBarTextColor: #f0f0f0;
-@doubleColumnMaxWidth: 900px;
+@doubleColumnMaxWidth: 920px;
 @leftBarBackgroundColor: #252F3D;
 
 html, body {
@@ -12,8 +12,10 @@ body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: #FEFEFE;
     font-size: 14px;
+    width: 920px;
 
     @media (max-width: @doubleColumnMaxWidth) {
+        width: 100%;
         &.mobile-menu-visible {
             background-color: @leftBarBackgroundColor;
         }
@@ -173,7 +175,7 @@ body {
             .author-link {
                 color: @leftBarTextColor;
                 text-decoration: none;
-                font-weight: 600;
+                font-weight: bold;
                 font-size: 11px;
             }
 
@@ -229,14 +231,15 @@ body {
 
     .title {
         letter-spacing: 1px;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
         font-size: 28px;
+        line-height: 1;
     }
 
     .info {
         .author-link {
             color: @contentTextColor;
-            font-weight: 600;
+            font-weight: bold;
             text-decoration: none;
         }
 
