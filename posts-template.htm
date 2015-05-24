@@ -12,7 +12,7 @@
     <!-- endinject -->
 </head>
 <body>
-    <div id="left-bar" class="mobile-visible">
+    <div id="left-bar">
         <h1 class="logo">
             KA <span class="engineering">Engineering</span>
         </h1>
@@ -25,9 +25,9 @@
         <section class="subscription-info">
             <h2 class="section-heading">Subscribe</h2>
             <div class="links">
-                <a href="#"><i class="fa fa-rss"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>
                 <a href="#"><i class="fa fa-envelope-o email"></i></a>
+                <a href="#"><i class="fa fa-rss"></i></a>
             </div>
         </section>
         <section>
@@ -88,10 +88,13 @@
     <script>
         document.getElementById("mobile-menu-button").onclick = function() {
             var leftBar = document.getElementById("left-bar");
+            var content = document.getElementById("content");
             if (leftBar.className === "mobile-visible") {
                 leftBar.className = "";
+                content.className = "";
             } else {
                 leftBar.className = "mobile-visible";
+                content.className = "mobile-hidden";
             }
         };
     </script>
