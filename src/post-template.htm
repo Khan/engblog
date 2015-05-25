@@ -31,7 +31,7 @@
         </section>
         <section>
             <h2 class="section-heading">Upcoming fortnightly post</h2>
-            <div class="post-blurb team-infrastructure">
+            <div class="post-blurb {{upcoming_post.team_class}}">
                 <h3 class="title">{{upcoming_post.title}}</h3>
                 <div class="info">
                     <img class="inline-author-photo" src="{{upcoming_post.author.icon_url}}"/>
@@ -42,7 +42,7 @@
         <section>
             <h2 class="section-heading">Latest posts</h2>
             {{#latest_posts}}
-            <div class="post-blurb team-web-frontend current">
+            <div class="post-blurb {{team_class}}">
                 <h3 class="title">
                     {{#is_displayed_post}}
                     {{title}}

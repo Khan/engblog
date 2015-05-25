@@ -76,6 +76,7 @@ class Post(object):
         self.file_path = post_file.name
 
         self.title = frontmatter["title"]
+        self.team = frontmatter["team"]
         self.published_on = (
                 datetime.datetime.strptime(frontmatter["published_on"],
                                            "%B %d, %Y"))
@@ -94,12 +95,14 @@ class Post(object):
             is_displayed_post = self.file_path == post.file_path
             params = {
                 "title": post.title,
+                "team_class":
+                    "team-" + post.team.lower().replace(" ", "-"),
                 "published_on_html":
                     datetime_to_html_string(post.published_on),
                 "author": info.authors[post.author],
                 "permalink": "/" + post.get_output_path(),
                 "content_html": is_displayed_post and post.get_html_content(),
-                "is_displayed_post": is_displayed_post
+                "is_displayed_post": is_displayed_post,
             }
 
             return params

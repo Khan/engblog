@@ -1,6 +1,7 @@
 title: A mysterious post
 published_on: April 30, 2015
 author: Marcia Lee
+team: Web Frontend
 ...
 
 In hac habitasse platea dictumst. Ut bibendum et diam at bibendum. Pellentesque et ligula bibendum, commodo est nec, placerat nunc. Nullam rhoncus et libero in luctus. Vestibulum lectus urna, pharetra a felis et, ultricies vehicula nisl. Aliquam blandit fermentum quam sit amet laoreet. Nam laoreet nisi nisi. Ut et ipsum nibh. Duis rhoncus convallis nulla, quis consectetur erat fermentum sit amet. Suspendisse nulla eros, vestibulum sit amet sem ac, pharetra consectetur tellus. Suspendisse tempus euismod tincidunt. Sed tempor ex vel mattis pellentesque.

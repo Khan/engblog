@@ -1,6 +1,7 @@
 title: Solving a wooden puzzle
 published_on: April 27, 2015
 author: John Sullivan
+team: Web Frontend
 ...
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit et vestibulum `orci nisi <https://www.khanacademy.org/>`_.

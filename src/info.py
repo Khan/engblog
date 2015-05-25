@@ -18,6 +18,8 @@ authors = {
 
 upcoming_post = {
 	"title": "Breaking the app engine sandbox",
+	"team": "Infrastructure",
+	"team_class": "team-infrastructure",
     "author": authors["Ben Alpert"],
     "published_on_html": "May 31<sup>st</sup>",
 }
