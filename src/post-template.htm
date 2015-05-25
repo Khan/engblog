@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>KA Engineering - {{title}}</title>
+    <title>{{displayed_post.title}}</title>
 
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,8 +34,8 @@
             <div class="post-blurb team-infrastructure">
                 <h3 class="title">{{upcoming_post.title}}</h3>
                 <div class="info">
-                    <img class="inline-author-photo" src="https://avatars1.githubusercontent.com/u/6820?v=3&s=460"/>
-                    <a class="author-link" href="#">{{upcoming_post.author}}</a> on {{{upcoming_post.published_on_html}}}
+                    <img class="inline-author-photo" src="{{upcoming_post.author.icon_url}}"/>
+                    <a class="author-link" href="{{upcoming_post.author.primary_url}}">{{upcoming_post.author.display_as}}</a> on {{{upcoming_post.published_on_html}}}
                 </div>
             </div>
         </section>
@@ -52,8 +52,8 @@
                     {{/is_displayed_post}}
                 </h3>
                 <div class="info">
-                    <img class="inline-author-photo" src="https://avatars0.githubusercontent.com/u/367832?v=3&s=460"/>
-                    <a class="author-link" href="#">{{author}}</a> on {{{published_on_html}}}
+                    <img class="inline-author-photo" src="{{author.icon_url}}"/>
+                    <a class="author-link" href="{{author.primary_url}}">{{author.display_as}}</a> on {{{published_on_html}}}
                 </div>
             </div>
             {{/latest_posts}}
@@ -71,8 +71,8 @@
         <article class="post">
             <h1 class="title">{{displayed_post.title}}</h1>
             <div class="info">
-                <img class="inline-author-photo" src="https://avatars0.githubusercontent.com/u/367832?v=3&s=460"/>
-                <a class="author-link" href="#">{{displayed_post.author}}</a> on {{{displayed_post.published_on_html}}}
+                <img class="inline-author-photo" src="{{displayed_post.author.icon_url}}"/>
+                <a class="author-link" href="{{displayed_post.author.primary_url}}">{{displayed_post.author.display_as}}</a> on {{{displayed_post.published_on_html}}}
             </div>
             <div class="body">
                 {{{displayed_post.content_html}}}

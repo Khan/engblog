@@ -4,6 +4,7 @@ from docutils.core import publish_parts
 import pystache
 import datetime
 from HTMLParser import HTMLParser
+import info
 
 
 class MLStripper(HTMLParser):
@@ -95,7 +96,7 @@ class Post(object):
                 "title": post.title,
                 "published_on_html":
                     datetime_to_html_string(post.published_on),
-                "author": post.author,
+                "author": info.authors[post.author],
                 "permalink": "/" + post.get_output_path(),
                 "content_html": is_displayed_post and post.get_html_content(),
                 "is_displayed_post": is_displayed_post
@@ -106,11 +107,7 @@ class Post(object):
         template_params = {
             "displayed_post": post_to_template_params(self),
             "latest_posts": [post_to_template_params(i) for i in all_posts],
-            "upcoming_post": {
-                "title": "Breaking the app engine sandbox",
-                "author": "Ben Alpert",
-                "published_on_html": "May 31<sup>st</sup>",
-            }
+            "upcoming_post": info.upcoming_post,
         }
         template = phial.open_file("post-template.htm").read()
         return pystache.Renderer().render(template, template_params)

@@ -70,7 +70,7 @@ gulp.task("content", ["inline-css", "rss-feed"], function() {});
  * Moves all of the images into the output directory (and optimizes them).
  */
 gulp.task("images", function() {
-    return gulp.src("images/*")
+    return gulp.src("images/**")
         .pipe(imagemin({optimizationLevel: 5, progressive: true}))
         .pipe(gulp.dest("../output/images"));
 });
@@ -81,10 +81,7 @@ gulp.task("default", ["content", "images"], function() {});
  * Build and serve the site for testing.
  */
 gulp.task("serve", ["default"], function() {
-    gulp.watch(["app.py", "index.htm", "post-template.htm", "rss.xml",
-                "posts/*", "styles/*"],
-               ["content"]);
-    gulp.watch("images/*", ["images"]);
+    gulp.watch(["**"], ["content", "images"]);
 
     return gulp.src("../output")
         .pipe(webserver({
