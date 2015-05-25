@@ -3,7 +3,7 @@ published_on: April 27, 2015
 author: John Sullivan
 ...
 
-Last week a mysterious double-sided puzzle appeared at `Khan Academy <https://www.khanacademy.org/>`_.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit et vestibulum `orci nisi <https://www.khanacademy.org/>`_.
 
 .. image:: /images/mysterious-puzzle.jpg
     :alt: A picture of the mysterious puzzle
@@ -11,11 +11,9 @@ Last week a mysterious double-sided puzzle appeared at `Khan Academy <https://ww
     :align: center
     :target: /images/mysterious-puzzle.jpg
 
-To solve the puzzle you must fit all four pieces inside the recessed area (the pieces will not entirely fill the area). We found a solution to the easy side after only a few days [#easy_solution]_ but nobody could get close to solving the hard side. So five of us began writing our own solvers.
+Donec nec urna eget erat tincidunt malesuada in non leo. Donec ornare erat eget arcu aliquet efficitur. Sed imperdiet nisl dui, in tincidunt risus mollis sit amet. Sed vel tempor lorem, id eleifend orci. Sed ut ornare enim, ut sagittis nibh.
 
-The first question each of us faced was how to represent the positions of the pieces. We were able to lay down a triangular grid on top of each side, but how should the cells be addressed?
-
-Each of us came up with our own answer to this question [#such_coordinates]_. I decided to use a coordinate system that used two perpendicular axes, with the origin at the bottom left.
+Proin nec nibh sed eros rutrum gravida. Aliquam congue ante condimentum tempus fringilla. Donec efficitur iaculis facilisis. Curabitur porta lacus id augue sodales pharetra.
 
 .. image:: /images/triangular-grid.png
     :alt: The triangular grid
@@ -28,43 +26,39 @@ Each of us came up with our own answer to this question [#such_coordinates]_. I 
     :align: center
     :target: /images/johns-coordinates.png
 
-I had a problem though. Once I manually input a piece into my coordinate system, I needed to be able to rotate and reflect that piece into 12 different alignments. Reflection was easy, but despite my best efforts, I couldn't figure out how to rotate the pieces once they were placed into my grid.
+Vivamus sit amet mauris interdum, accumsan justo at, vulputate purus. Mauris molestie convallis justo at sollicitudin. Praesent eu malesuada velit, quis molestie arcu.
 
-After smashing my head against the problem for an hour and getting nowhere, I gave up [#emily_rotation]_. I instead decided to manually input each of the three rotations necessary for each piece (all the other alignments could be expressed as reflections of those rotations).
+Suspendisse rhoncus pharetra ipsum, eget mollis orci ornare et. Vestibulum quis mi erat. Pellentesque mattis fringilla est a mattis. Mauris suscipit auctor neque vitae faucibus. Morbi luctus scelerisque eros, id posuere mi hendrerit quis. In finibus tempor felis at tempus.
 
-Now I just had to write the logic to try every possible placement of the pieces.
+Nulla blandit auctor sem sed efficitur. Donec ligula lacus, cursus sit amet luctus at, luctus id lacus. Aenean in eros nisi.
 
-By this time, Ben Eater's solver was done and ticking away. `His solver <https://www.khanacademy.org/computer-programming/spin-off-of-puzzle/4900481558249472>`_ didn't do any pruning of the search space though (and took some time to check each placement), so he estimated that the solver would finish in around 2 years. I felt good about my chances of finding a solution before then.
+Morbi feugiat, orci et sagittis elementum.
 
 .. image:: /images/eaters-solver.gif
     :alt: Ben Eater's solver
     :align: center
 
-To try and be a little faster I added in some logic to prune large parts of the search space where possible. This worked by laying down a piece at a time, and only trying the other ones if there were no collisions.
+Donec augue ligula, porta vitae sem sit amet, molestie posuere lacus. Nam rutrum placerat condimentum. Aliquam ac urna fringilla, cursus ipsum et, mollis odio. Sed mattis, sapien in auctor mollis.
 
-For example, first my program would lay down Piece A somewhere. If Piece A collided with a wall, my program would not try laying down Piece B yet, but would instead move Piece A somewhere else. Similarily, once it came time to lay down
+In hac habitasse platea dictumst. Fusce vulputate viverra sapien quis ornare. Maecenas convallis turpis non lectus fermentum, nec luctus ipsum accumsan. Pellentesque habitant morbi tristique senectus et netus.
 
-This ended up working well and soon I had `a solver <https://github.com/brownhead/damn-puzzle/blob/master/boom.js>`_ that could brute force the puzzle in less than a minute.
+
+Donec varius auctor velit, ac efficitur nisi tincidunt sed. `Fusce non <https://www.google.com>`_ nisl ut diam auctor porta vitae sit amet augue. Cras pellentesque sem sed euismod maximus. Suspendisse consectetur at enim a varius.
 
 .. image:: /images/solver.gif
     :alt: My solver
     :width: 50%
     :align: center
 
-Emily finished `her solver <https://github.com/xymostech/wood-puzzle/blob/master/src/Main.hs>`_ around the same time and we were able to confirm our results. **The hard side of the puzzle was unsolvable**.
+Vestibulum pulvinar `ultrices neque <https://www.google.com>`_ et vulputate. Aenean ultricies laoreet sagittis. Nulla nibh ligula, porta pellentesque placerat vel, tempus a nisi. **Aliquam ornare consectetur urna, ac dapibus mauris laoreet eu.**
 
-Clearly there was a very evil puzzle master in our ranks.
+Praesent convallis vel nunc sed faucibus. Aliquam a augue ipsum.
 
 .. image:: /images/evil-kitty.gif
     :alt: An evil kitten
     :width: 50%
     :align: center
 
-`Jamie Wong <http://jamie-wong.com/>`_ readily admitted to bringing in the puzzle (though he didn't tell us where he got it). Despite the staggering proof to the contrary though, he was adamant that a solution existed. He said our solvers all shared a fatal flaw.
+`Fusce porttitor <https://www.google.com>`_, dui ac iaculis consectetur, purus enim hendrerit neque, sit amet euismod massa diam non dui. Phasellus auctor, mauris et fermentum pharetra, mi lacus efficitur sem, et interdum elit sapien malesuada leo.
 
-After a few hints, Emily and I did find the answer [#hard_solution]_. Which was good, because none of us had gotten any work done for a little while and we were starting to feel guilty.
-
-.. [#easy_solution] If you want to spoil it for yourself, here is `a picture of the solved easy side </images/easy-solved.jpg>`_.
-.. [#such_coordinates] Ben Eater decided to side-step the issue by drawing the shapes directly onto the screen. Cam Christensen came up with a coordinate system with two axes that formed a 60° angle and he convinced Emily Eisenberg to use the same system. Justin Helps used a screen-based coordinate system like Ben Eater, but tracked all three vertices of each triangle.
-.. [#emily_rotation] `Emily was actually able to figure out rotation <https://github.com/xymostech/wood-puzzle/blob/f7ea685855c06531debcc9e6105451c934a00cde/src/Main.hs#L35>`_ (though her coordinate system was different in that the axes formed a 60° angle).
-.. [#hard_solution] You don't really want me to give you the answer do you? That would be boring.
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Etiam quis dui nec sapien ultricies volutpat at vel erat. Nam viverra malesuada mollis. Curabitur dapibus eleifend turpis vitae luctus.
