@@ -4,7 +4,6 @@
     <title>KA Engineering - {{title}}</title>
 
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <meta name="description" content="{{stripped_description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
@@ -33,36 +32,31 @@
         <section>
             <h2 class="section-heading">Upcoming fortnightly post</h2>
             <div class="post-blurb team-infrastructure">
-                <h3 class="title">Breaking the app engine sandbox</h3>
+                <h3 class="title">{{upcoming_post.title}}</h3>
                 <div class="info">
                     <img class="inline-author-photo" src="https://avatars1.githubusercontent.com/u/6820?v=3&s=460"/>
-                    <a class="author-link" href="#">Ben Alpert</a> on May 31<sup>st</sup>
+                    <a class="author-link" href="#">{{upcoming_post.author}}</a> on {{{upcoming_post.published_on_html}}}
                 </div>
             </div>
         </section>
         <section>
             <h2 class="section-heading">Latest posts</h2>
+            {{#latest_posts}}
             <div class="post-blurb team-web-frontend current">
-                <h3 class="title">{{title}}</h3>
+                <h3 class="title">
+                    {{#is_displayed_post}}
+                    {{title}}
+                    {{/is_displayed_post}}
+                    {{^is_displayed_post}}
+                    <a href="{{permalink}}">{{title}}</a>
+                    {{/is_displayed_post}}
+                </h3>
                 <div class="info">
                     <img class="inline-author-photo" src="https://avatars0.githubusercontent.com/u/367832?v=3&s=460"/>
-                    <a class="author-link" href="#">John Sullivan</a> on May 17<sup>th</sup>
+                    <a class="author-link" href="#">{{author}}</a> on {{{published_on_html}}}
                 </div>
             </div>
-            <div class="post-blurb team-eng-leads">
-                <h3 class="title"><a href="#">How TIP has been working out</a></h3>
-                <div class="info">
-                    <img class="inline-author-photo" src="https://avatars1.githubusercontent.com/u/108202?v=3&s=460"/>
-                    <a class="author-link" href="#">Ben Kamens</a> on May 9<sup>th</sup>
-                </div>
-            </div>
-            <div class="post-blurb team-infrastructure">
-                <h3 class="title"><a href="#">Why transactions are a drag</a></h3>
-                <div class="info">
-                    <img class="inline-author-photo" src="https://avatars1.githubusercontent.com/u/353697?v=3&s=460"/>
-                    <a class="author-link" href="#">Dylan Vassallo</a> on May 1<sup>st</sup>
-                </div>
-            </div>
+            {{/latest_posts}}
         </section>
         <section class="meta-section">
             <h2 class="section-heading">Meta</h2>
@@ -75,13 +69,13 @@
     </div>
     <main id="content">
         <article class="post">
-            <h1 class="title">{{title}}</h1>
+            <h1 class="title">{{displayed_post.title}}</h1>
             <div class="info">
                 <img class="inline-author-photo" src="https://avatars0.githubusercontent.com/u/367832?v=3&s=460"/>
-                <a class="author-link" href="#">John Sullivan</a> on May 17<sup>th</sup>
+                <a class="author-link" href="#">{{displayed_post.author}}</a> on {{{displayed_post.published_on_html}}}
             </div>
             <div class="body">
-                {{{body}}}
+                {{{displayed_post.content_html}}}
             </div>
         </article>
     </main>

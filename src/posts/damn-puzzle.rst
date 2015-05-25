@@ -1,9 +1,6 @@
 title: Solving a wooden puzzle
-date: April 27, 2015
+published_on: April 27, 2015
 author: John Sullivan
-team: Web Frontend
-description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum luctus diam fringilla maximus. Nullam justo purus, dignissim eu massa convallis, semper sodales dolor.
 ...
 
 Last week a mysterious double-sided puzzle appeared at `Khan Academy <https://www.khanacademy.org/>`_.
