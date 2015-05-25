@@ -1,14 +1,14 @@
 .PHONY: serve server deps build ready-publish reset-output
 
 build:
-	gulp
+	cd src && gulp
 
 reset-output:
 	cd output && git checkout . && git clean -fd
 
 ready-publish:
 	# Build the site
-	gulp
+	cd src && gulp
 
 	cd output && git add -A
 	-cd output && git commit -m "publish"
@@ -24,10 +24,10 @@ ready-publish:
 	@echo "    git push origin master"
 
 serve server:
-	gulp serve
+	cd src && gulp serve
 
 lint linc:
-	env/bin/python khan-linter/runlint.py app.py gulpfile.js
+	env/bin/python khan-linter/runlint.py src/app.py src/gulpfile.js
 
 deps:
 	# Make sure we have a gh-pages branch so our output submodule has a proper

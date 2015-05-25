@@ -53,7 +53,7 @@ def render_rst(text):
 
 @phial.page(["posts/*.rst"])
 def post_page(source_file):
-    template = phial.open_file("posts-template.htm").read()
+    template = phial.open_file("post-template.htm").read()
 
     frontmatter, content = phial.parse_frontmatter(source_file)
 
@@ -109,9 +109,9 @@ def render_index_page(template_path, metadata_transformer=None,
     return phial.file(name=template_path, content=content)
 
 
-@phial.page(depends_on=post_page)
-def main_page():
-    return render_index_page("index.htm")
+# @phial.page(depends_on=post_page)
+# def main_page():
+#     return render_index_page("index.htm")
 
 
 @phial.page(depends_on=post_page)
