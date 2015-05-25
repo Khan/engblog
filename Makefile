@@ -46,7 +46,10 @@ deps:
 	npm install -g bower
 	bower install normalize.css
 
-	# Install our node dependencies (note that ./npm-shrinkwrap.json will be
-	# used to get very particular versions of everything).
+	# Install khan-linter's dependencies
 	cd ./khan-linter; npm install
+
+	# Install our own dependencies (gulp likes to be installed globally and
+	# locally).
+	npm install -g gulp
 	npm install
