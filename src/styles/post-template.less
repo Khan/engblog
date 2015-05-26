@@ -33,6 +33,12 @@ body {
     margin-right: 4px;
 }
 
+.font-awesome-svg {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+}
+
 #left-bar {
     box-sizing: border-box;
     display: table-cell;
@@ -74,17 +80,25 @@ body {
                 display: block;
 
                 a {
-                    padding: 15px 20px 15px 20px;
+                    padding: 11px 20px 15px 20px;
                     margin: 0 -20px -15px -20px;
                     display: block;
                     text-decoration: none;
                     color: @leftBarTextColor;
                 }
+
+                svg {
+                    opacity: 0.8;
+                    margin-right: -2px;
+                    margin-top: 1px;
+                    height: 25px;
+                }
+
+                .text, svg {
+                    vertical-align: middle;
+                }
             }
 
-            i {
-                opacity: 0.8;
-            }
         }
 
         @media (max-width: @doubleColumnMaxWidth) {
