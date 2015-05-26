@@ -44,12 +44,7 @@
             {{#latest_posts}}
             <div class="post-blurb {{team_class}}">
                 <h3 class="title">
-                    {{#is_displayed_post}}
-                    {{title}}
-                    {{/is_displayed_post}}
-                    {{^is_displayed_post}}
                     <a href="{{permalink}}">{{title}}</a>
-                    {{/is_displayed_post}}
                 </h3>
                 <div class="info">
                     <img class="inline-author-photo" src="{{author.icon_url}}"/>

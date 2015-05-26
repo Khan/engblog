@@ -21,11 +21,8 @@ gulp.task("phial", shell.task([
      "/tmp/engblog-phial -v ./app.py"),
 ]));
 
-/**
- * Embeds each post page's CSS.
- */
-gulp.task("inline-css", ["phial"], function() {
-    return gulp.src("/tmp/engblog-phial/posts/*")
+function inlinePostCss(inputGlob, outputDir) {
+    return gulp.src(inputGlob)
         .pipe(foreach(function(stream, file){
             // Gather all of the CSS we want to inline in this post
             var css = (gulp
@@ -49,7 +46,21 @@ gulp.task("inline-css", ["phial"], function() {
         }))
         .pipe(minifyHTML({comments: true, loose: true}))
         .pipe(minifyInline({css: false}))
-        .pipe(gulp.dest("../output/posts/"));
+        .pipe(gulp.dest(outputDir));
+}
+
+/**
+ * Embeds each post page's CSS.
+ */
+gulp.task("inline-css", ["phial"], function() {
+    return inlinePostCss("/tmp/engblog-phial/posts/*", "../output/posts/");
+});
+
+/**
+ * The index page (which is just one of the posts) needs the same treatment
+ */
+gulp.task("inline-index-css", ["phial"], function() {
+    return inlinePostCss("/tmp/engblog-phial/index.htm", "../output/");
 });
 
 /**
@@ -64,7 +75,8 @@ gulp.task("rss-feed", ["phial"], function() {
 /**
  * Shortcut task to create the site's content.
  */
-gulp.task("content", ["inline-css", "rss-feed"], function() {});
+gulp.task("content", ["inline-css", "inline-index-css", "rss-feed"],
+          function() {});
 
 /**
  * Moves all of the images into the output directory (and optimizes them).
@@ -85,7 +97,10 @@ gulp.task("serve", ["default"], function() {
 
     return gulp.src("../output")
         .pipe(webserver({
-            host: "0.0.0.0",
+            // Uncomment this line to expose the webserver to your private
+            // network (you would never do this on an unsafe public network
+            // would you?).
+            // host: "0.0.0.0",
             livereload: true,
             port: 9103,
             fallback: "index.htm",

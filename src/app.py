@@ -104,7 +104,6 @@ class Post(object):
                 "content_html": is_displayed_post and post.get_html_content(),
                 "is_displayed_post": is_displayed_post,
             }
-
             return params
 
         template_params = {
@@ -117,31 +116,58 @@ class Post(object):
 
 
 @phial.pipeline("posts/*.rst", binary_mode=False)
-def post(stream):
+def posts(stream):
     all_posts = [Post(post_file) for post_file in stream.contents]
+    all_posts.sort(reverse=True, key=lambda post: post.published_on)
     stream.prepare_contents()
 
     def post_to_file(post_file):
         post = Post(post_file)
         return phial.file(
             name=post.get_output_path(),
-            content=post.render_page(all_posts))
+            content=post.render_page(all_posts),
+            metadata=post)
 
     return stream | phial.map(post_to_file)
 
-# @phial.page(depends_on=post_page)
-# def rss_feed():
-#     def metadata_transformer(metadata):
-#         metadata["description"] = MLStripper.strip_tags(
-#                                        metadata["description"])
 
-#         date = datetime.datetime.strptime(metadata["date"], "%B %d, %Y")
-#         # Sat, 07 Sep 2002 0:00:01 GMT
-#         metadata["date"] = date.strftime("%a, %d %b %Y 0:00:01 GMT-8")
+@phial.page(depends_on=posts)
+def rss_feed():
+    to_rss_string = lambda d: d.strftime("%a, %d %b %Y 11:00:00 GMT-8")
+    sorted_posts = sorted(
+        [i.metadata for i in phial.get_task(posts).files],
+        reverse=True,
+        key=lambda post: post.published_on)
 
-#         return metadata
+    template_params = {
+        "posts": [
+            {
+                "title": post.title,
+                "path": post.get_output_path(),
+                "date": to_rss_string(post.published_on),
+            }
+            for post in sorted_posts
+        ]
+    }
+    template = phial.open_file("rss.xml").read()
+    return phial.file(
+        name="rss.xml",
+        content=pystache.Renderer().render(template, template_params))
 
-#     return render_index_page("rss.xml", metadata_transformer)
+
+@phial.page(depends_on=posts)
+def index():
+    sorted_post_files = sorted(
+        phial.get_task(posts).files,
+        reverse=True,
+        key=lambda phial_file: phial_file.metadata.published_on)
+    latest_post_file = sorted_post_files[0]
+
+    # Clone the latest post
+    latest_post_file.seek(0)
+    cloned_file = phial.file(name="index.htm", content=latest_post_file.read())
+
+    return cloned_file
 
 
 if __name__ == "__main__":

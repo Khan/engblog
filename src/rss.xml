@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>John CS</title>
-        <link>http://johncs.com</link>
-        <description>Blog of John Christopher Sullivan</description>
+        <title>KA Engineering</title>
+        <link>http://engineering.khanacademy.org</link>
+        <description>Khan Academy Engineering's blog</description>
         {{#posts}}
         <item>
             <title>{{title}}</title>
-            <link>http://johncs.com/{{link}}</link>
-            <description>{{{description}}}</description>
+            <link>http://engineering.khanacademy.org/{{path}}</link>
             <pubDate>{{date}}</pubDate>
+            <guid>http://engineering.khanacademy.org/{{path}}</guid>
         </item>
         {{/posts}}
     </channel>
