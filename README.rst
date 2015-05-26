@@ -5,7 +5,7 @@ KA Engineering Blog
 	:target: https://travis-ci.org/Khan/engblog
 	:alt: Travis build status
 
-This repo houses the code used to build the `KA Engineering Blog <http://khan.github.io/engblog>`_.
+This repo houses the code used to build the `KA Engineering Blog <http://engineering.khanacademy.org>`_.
 
 Usage
 -----
