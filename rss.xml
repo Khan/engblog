@@ -1,26 +1,20 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>John CS</title>
-        <link>http://johncs.com</link>
-        <description>Blog of John Christopher Sullivan</description>
+        <title>KA Engineering</title>
+        <link>http://engineering.khanacademy.org</link>
+        <description>Khan Academy Engineering's blog</description>
         <item>
-            <title>A mysterious post!</title>
-            <link>http://johncs.com/posts/mystery.htm</link>
-            <description>
-In hac habitasse platea dictumst. Ut bibendum et diam at bibendum. Pellentesque et ligula bibendum, commodo est nec, placerat nunc. Nullam rhoncus et libero in luctus.
-
-</description>
-            <pubDate>Thu, 30 Apr 2015 0:00:01 GMT-8</pubDate>
+            <title>A mysterious post</title>
+            <link>http://engineering.khanacademy.org/posts/mystery.htm</link>
+            <pubDate>Thu, 30 Apr 2015 11:00:00 GMT-8</pubDate>
+            <guid>http://engineering.khanacademy.org/posts/mystery.htm</guid>
         </item>
         <item>
             <title>Solving a wooden puzzle</title>
-            <link>http://johncs.com/posts/damn-puzzle.htm</link>
-            <description>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum luctus diam fringilla maximus. Nullam justo purus, dignissim eu massa convallis, semper sodales dolor.
-
-</description>
-            <pubDate>Mon, 27 Apr 2015 0:00:01 GMT-8</pubDate>
+            <link>http://engineering.khanacademy.org/posts/damn-puzzle.htm</link>
+            <pubDate>Mon, 27 Apr 2015 11:00:00 GMT-8</pubDate>
+            <guid>http://engineering.khanacademy.org/posts/damn-puzzle.htm</guid>
         </item>
     </channel>
 </rss>
