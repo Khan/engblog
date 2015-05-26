@@ -48,7 +48,7 @@ The text above the three dots is parsed as YAML, the text below the three dots i
 
 If you haven't posted before, you'll need to add yourself as an author to the ``src/info.py`` file. **You also need to update the upcoming post section**, which you can do from that same file.
 
-Note that supporting other markup languages is trivial, including HTML and custom CSS and all kinds of crazy JS (including Perseus), just `open up an issue <https://github.com/Khan/engblog/issues>`_, ping ``@johnsullivan`` on HipChat, or dive into the code yourself!
+Note that supporting other markup languages is trivial, including HTML and custom CSS and all kinds of crazy JS (including Perseus), just `open up an issue <https://github.com/Khan/engblog/issues>`_, ping ``@johnsullivan`` on HipChat (KAers only), or dive into the code yourself!
 
 
 Publishing
