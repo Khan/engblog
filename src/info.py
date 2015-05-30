@@ -14,12 +14,17 @@ authors = {
 		"primary_url": "https://github.com/marcia",
 		"icon_url": "/images/author-icons/marcialee.png",
 	},
+	"Jordan Scales": {
+		"display_as": "Jordan Scales",
+		"primary_url": "https://github.com/jdan",
+		"icon_url": "/images/author-icons/jordanscales.png",
+	}
 }
 
 upcoming_post = {
-	"title": "Breaking the app engine sandbox",
-	"team": "Infrastructure",
-	"team_class": "team-infrastructure",
-    "author": authors["Ben Alpert"],
-    "published_on_html": "May 31<sup>st</sup>",
+	"title": "Tota11y",
+	"team": "Web Frontend",
+	"team_class": "team-web-frontend",
+    "author": authors["Jordan Scales"],
+    "published_on_html": "June 1<sup>st</sup>",
 }
