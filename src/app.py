@@ -62,7 +62,8 @@ def datetime_to_html_string(datetime):
             2: "nd",
             3: "rd"
         }[datetime.day % 10]
-    day = "{}<sup aria-hidden='true'>{}</sup>".format(str(datetime.day), day_suffix)
+    day = "{}<sup aria-hidden='true'>{}</sup>".format(str(datetime.day),
+                                                      day_suffix)
 
     return "{} {}".format(month, day)
 
