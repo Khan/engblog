@@ -26,5 +26,5 @@ upcoming_post = {
 	"team": "Web Frontend",
 	"team_class": "team-web-frontend",
     "author": authors["Jordan Scales"],
-    "published_on_html": "June 1<sup>st</sup>",
+    "published_on_html": "June 1<sup aria-hidden='true'>st</sup>",
 }
