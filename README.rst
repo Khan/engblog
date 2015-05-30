@@ -9,6 +9,10 @@ This repo houses the code used to build the `KA Engineering Blog <http://enginee
 
 The instructions in this README are geared towards the general public. If you're a KA employee who wants to make a blog post, `this forge page <https://sites.google.com/a/khanacademy.org/forge/for-khan-employees/ka-engineering-blog>`_ should be your best starting point.
 
+Who can contribute?
+-------------------
+
+Anyone can contribute patches (`we're open source <https://github.com/Khan/engblog/blob/master/LICENSE.rst>`_) but posting to the blog is generally restricted to Khan Academy employees.
 
 Building locally
 ----------------
