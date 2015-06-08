@@ -1,4 +1,4 @@
-.PHONY: serve server deps build ready-publish reset-output
+.PHONY: serve server deps build ready-publish reset-output push-to-live
 
 build:
 	cd src && gulp
