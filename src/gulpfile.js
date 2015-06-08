@@ -44,7 +44,7 @@ function inlinePostCss(inputGlob, outputDir) {
                     }
                 }));
         }))
-        .pipe(minifyHTML({comments: true, loose: true}))
+        .pipe(minifyHTML({loose: true}))
         .pipe(minifyInline({css: false}))
         .pipe(gulp.dest(outputDir));
 }
