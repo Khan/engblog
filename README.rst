@@ -62,6 +62,7 @@ To publish your changes to the live site, follow these steps:
 
 1. Discard any changes you've made to the ``output`` submodule/directory: ``bash -c 'cd output && git reset --hard && git clean -fd'``.
 2. Commit the rest of your changes and push them to GitHub.
-3. Run ``make ready-publish`` and follow the instructions it gives you.
+3. Run ``make ready-publish``
+4. Run ``make push-to-live``
 
-After doing all that, your changes should be live!
+You can ping ``@johnsullivan`` for help if any of these commands fail. Otherwise, after doing all that your changes should be live!

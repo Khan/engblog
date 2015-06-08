@@ -10,8 +10,9 @@ ready-publish:
 	# Build the site
 	cd src && gulp
 
+	# Commit the changes (if there are any changes to commit)
 	cd output && git add -A
-	-cd output && git commit -m "publish"
+	cd output && if ! git diff-index --quiet --cached HEAD; then git commit -nm "publish"; else echo "No changes in output directory. Maybe you meant to run make push-to-live?" && exit 1; fi
 
 	@echo
 	@echo The blog has been built. Double check that all is well by running:
@@ -19,9 +20,15 @@ ready-publish:
 	@echo And then going to http://localhost:9029 in your browser.
 	@echo
 	@echo When "you're" sure everything is OK, run
-	@echo "    bash -c 'cd output; git push origin HEAD:gh-pages'"
-	@echo "    git add output && git commit -m 'output substate'"
-	@echo "    git push origin master"
+	@echo "    make push-to-live"
+
+push-to-live:
+	cd output && if ! git diff-index --quiet --cached HEAD || ! git diff-files --quiet || ! git ls-files --others; then echo "Output directory is dirty. Refusing to push to live." && exit 1; fi
+	if ! git diff-index --quiet --cached HEAD; then echo "There are staged changes. Refusing to push to live." && exit 1; fi
+
+	git add output && git commit -nm 'output substate'
+	cd output && git push origin HEAD:gh-pages
+	git push origin master
 
 serve server:
 	cd src && gulp serve
