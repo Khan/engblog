@@ -51,8 +51,8 @@ how could we spread that knowledge to *the team* efficiently? How could we make
 every `Khan Academy employee <khanacademy.org/about/the-team>`_ feel
 empowered to report and fix accessibility violations?
 
-We gave talks, wrote docs, sent out emails, but regressions still popped up. Our
-tests ran, but were flaky, and didn't gain the same level of respect as our
+We gave talks, wrote docs, sent out emails, but regressions still popped up.
+Our tests ran, but were flaky, and didn't gain the same level of respect as our
 unit tests or linter.
 
 Simply put, our dev team still didn't fully understand the problems they were
@@ -70,8 +70,8 @@ our dev team to dig through long-winded audit reports for violations they
 didn't understand, we wanted provide simple visualizations where they already
 were - the browser, right in front of them.
 
-So we started off with the idea of "annotations." Highlighting parts of the
-current document, either to point out errors, successes, or just highlighting
+So we started off with the idea of "annotations." We highlight parts of the
+current document, either to point out errors, successes, or just to label
 important tags like headings or `ARIA landmarks <http://www.w3.org/WAI/GL/wiki/Using_ARIA_landmarks_to_identify_regions_of_a_page>`_.
 
 .. image:: /images/early-tota11y.png
@@ -81,8 +81,7 @@ important tags like headings or `ARIA landmarks <http://www.w3.org/WAI/GL/wiki/U
 *A (very) early proof-of-concept for tota11y.*
 
 We ran with this core idea of "annotations" and expanded it, as you'll see,
-to include highlights, detailed error messages, suggestions for
-fixes, and more.
+to include detailed error messages, suggestions for fixes, and more.
 
 What can tota11y do
 ===================
