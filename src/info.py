@@ -27,7 +27,7 @@ authors = {
 }
 
 upcoming_post = {
-    "title": "How Khan Academy uses Babel in its i18n Toolchain",
+    "title": "Babel in Khan Academy's i18n Toolchain",
     "team": "Web Frontend",
     "team_class": "team-web-frontend",
     "author": authors["Kevin Barabash"],
