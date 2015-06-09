@@ -66,3 +66,5 @@ To publish your changes to the live site, follow these steps:
 4. Run ``make push-to-live``
 
 You can ping ``@johnsullivan`` for help if any of these commands fail. Otherwise, after doing all that your changes should be live!
+
+**If you're a KA employee**, and you just finished publishing to the live site, make sure to follow `the remaining instructions on the forge page <https://sites.google.com/a/khanacademy.org/forge/for-khan-employees/ka-engineering-blog#TOC-Publishing->`_. This includes *at least* posting to the KA Eengineering twitter account.
