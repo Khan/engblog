@@ -22,14 +22,14 @@ authors = {
     "Kevin Barabash": {
         "display_as": "Kevin Barabash",
         "primary_url": "https://github.com/kevinb7",
-        "icon_url": "/images/author-icons/kevinbarabash.png",
+        "icon_url": "/images/author-icons/kevinbarabash.png"
     }
 }
 
 upcoming_post = {
-    "title": "Babel in Khan Academy's i18n Toolchain",
+    "title": "How wooden puzzles can destroy dev teams",
     "team": "Web Frontend",
     "team_class": "team-web-frontend",
-    "author": authors["Kevin Barabash"],
-    "published_on_html": "June 22<sup aria-hidden='true'>nd</sup>",
+    "author": authors["John Sullivan"],
+    "published_on_html": "July 6<sup aria-hidden='true'>th</sup>",
 }
