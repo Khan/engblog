@@ -48,7 +48,7 @@ Then the hard part came.
 
 *We* felt capable of fixing most accessibility violations on our site, but
 how could we spread that knowledge to *the team* efficiently? How could we make
-every `Khan Academy employee <khanacademy.org/about/the-team>`_ feel
+every `Khan Academy employee <http://khanacademy.org/about/the-team>`_ feel
 empowered to report and fix accessibility violations?
 
 We gave talks, wrote docs, sent out emails, but regressions still popped up.
