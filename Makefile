@@ -37,26 +37,8 @@ lint linc:
 	env/bin/python khan-linter/runlint.py src/app.py src/gulpfile.js
 
 deps:
-	# Make sure we have a gh-pages branch so our output submodule has a proper
-	# target.
-	git fetch origin
-	git branch gh-pages origin/gh-pages || true
+	./setup.sh
 
-	# We have a few submodules, make sure they're all set
-	git submodule update --recursive --init
+	if [ `uname -s` = Linux ]; then ./linux-setup.sh; fi
+	if [ `uname -s` = Darwin ]; then ./mac-setup.sh; fi
 
-	# Create a virtual environment with all of our Python dependencies
-	virtualenv --prompt '(engblog)' env
-	env/bin/pip install -r ./khan-linter/requirements.txt -r ./requirements.txt
-
-	# Install our bower dependencies
-	npm install -g bower
-	bower install normalize.css
-
-	# Install khan-linter's dependencies
-	cd ./khan-linter; npm install
-
-	# Install our own dependencies (gulp likes to be installed globally and
-	# locally).
-	npm install -g gulp
-	npm install
