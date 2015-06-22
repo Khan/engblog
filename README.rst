@@ -61,7 +61,7 @@ Publishing
 To publish your changes to the live site, follow these steps:
 
 1. Discard any changes you've made to the ``output`` submodule/directory: ``bash -c 'cd output && git reset --hard && git clean -fd'``.
-2. Commit the rest of your changes and push them to GitHub.
+2. Commit any remaining changes to the ``engblog`` repo and push them to GitHub.
 3. Run ``make ready-publish``
 4. Run ``make push-to-live``
 
