@@ -10,9 +10,9 @@ our ES6 and JSX code to ES5, but we'd like to switch to `babel <http://babeljs.i
 Some of the reasons for doing this include:
 
 - better support for ES6 + ES7
-- allows us to use `eslint <https://github.com/babel/babel-eslint>`_ making it 
-  easier for open source contributors to run tests in projects such as 
-  `perseus <https://github.com/Khan/perseus>`_.
+- allows us to use `eslint <https://github.com/babel/babel-eslint>`_, making it 
+  easier for open source contributors to lint their code and run the tests in 
+  projects such as `perseus <https://github.com/Khan/perseus>`_.
 
 i18n Workflow
 -------------
