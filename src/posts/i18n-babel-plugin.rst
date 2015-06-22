@@ -324,5 +324,5 @@ Thanks
 ------
 
 We'd like to thank babel's maintainer Sebastian McKenzie for the quick turnaround
-when it came to dealing issues in babel.  Also, Ben Alpert was helpful in 
+when it came to dealing with issues in babel.  Also, Ben Alpert was helpful in 
 pointing out edge cases we hadn't thought about.
