@@ -1,5 +1,5 @@
 title: Babel in Khan Academy's i18n Toolchain
-published_on: June 15, 2015
+published_on: June 22, 2015
 author: Kevin Barabash
 team: Web Frontend
 ...
@@ -324,5 +324,5 @@ Thanks
 ------
 
 We'd like to thank babel's maintainer Sebastian McKenzie for the quick turnaround
-when it to dealing issues in babel.  Also, Ben Alpert was helpful in point edge
-cases we hadn't thought about.
+when it came to dealing issues in babel.  Also, Ben Alpert was helpful in 
+pointing out edge cases we hadn't thought about.
