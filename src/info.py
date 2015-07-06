@@ -22,14 +22,19 @@ authors = {
     "Kevin Barabash": {
         "display_as": "Kevin Barabash",
         "primary_url": "https://github.com/kevinb7",
-        "icon_url": "/images/author-icons/kevinbarabash.png"
-    }
+        "icon_url": "/images/author-icons/kevinbarabash.png",
+    },
+    "Riley Shaw": {
+        "display_as": "Riley Shaw",
+        "primary_url": "http://rileyjshaw.com",
+        "icon_url": "/images/author-icons/rileyshaw.png",
+    },
 }
 
 upcoming_post = {
-    "title": "How wooden puzzles can destroy dev teams",
+    "title": "Khan Academy: a new employee's illustrated primer",
     "team": "Web Frontend",
     "team_class": "team-web-frontend",
-    "author": authors["John Sullivan"],
-    "published_on_html": "July 6<sup aria-hidden='true'>th</sup>",
+    "author": authors["Riley Shaw"],
+    "published_on_html": "July 20<sup aria-hidden='true'>th</sup>",
 }
