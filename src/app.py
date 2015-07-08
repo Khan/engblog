@@ -5,6 +5,7 @@ import pystache
 import datetime
 from HTMLParser import HTMLParser
 import info
+import markdown
 
 
 class MLStripper(HTMLParser):
@@ -86,7 +87,10 @@ class Post(object):
 
     def get_html_content(self):
         """Processes the raw content and returns HTML."""
-        return render_rst(self.raw_content.read())
+        if self.file_path.endswith(".rst"):
+            return render_rst(self.raw_content.read())
+        elif self.file_path.endswith(".md"):
+            return markdown.markdown(self.raw_content.read())
 
     def get_output_path(self):
         return phial.swap_extension(self.file_path, ".htm")
@@ -116,7 +120,7 @@ class Post(object):
         return pystache.Renderer().render(template, template_params)
 
 
-@phial.pipeline("posts/*.rst", binary_mode=False)
+@phial.pipeline(["posts/*.rst", "posts/*.md"], binary_mode=False)
 def posts(stream):
     all_posts = [Post(post_file) for post_file in stream.contents]
     all_posts.sort(reverse=True, key=lambda post: post.published_on)
