@@ -29,6 +29,11 @@ authors = {
         "primary_url": "http://rileyjshaw.com",
         "icon_url": "/images/author-icons/rileyshaw.png",
     },
+    "Marcos Ojeda": {
+        "display_as": "Marcos Ojeda",
+        "primary_url": "http://generic.cx/",
+        "icon_url": "/images/author-icons/marcosojeda.jpg",
+    },
 }
 
 upcoming_post = {
