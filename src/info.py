@@ -37,9 +37,9 @@ authors = {
 }
 
 upcoming_post = {
-    "title": "Khan Academy: a new employee's illustrated primer",
-    "team": "Web Frontend",
-    "team_class": "team-web-frontend",
-    "author": authors["Riley Shaw"],
-    "published_on_html": "July 20<sup aria-hidden='true'>th</sup>",
+    "title": "The glorious LearnStorm banner",
+    "team": "Design",
+    "team_class": "team-design",
+    "author": authors["Marcos Ojeda"],
+    "published_on_html": "August 3<sup aria-hidden='true'>rd</sup>",
 }
