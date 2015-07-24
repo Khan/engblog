@@ -10,6 +10,8 @@ var minifyInline = require("gulp-minify-inline");
 var shell = require("gulp-shell");
 var webserver = require("gulp-webserver");
 
+var DEBUG_MODE = false;
+
 /**
  * Runs the Phial app to generate the site.
  *
@@ -82,9 +84,14 @@ gulp.task("content", ["inline-css", "inline-index-css", "rss-feed"],
  * Moves all of the images into the output directory (and optimizes them).
  */
 gulp.task("images", function() {
-    return gulp.src("images/**")
-        .pipe(imagemin({optimizationLevel: 5, progressive: true}))
-        .pipe(gulp.dest("../output/images"));
+    var source = gulp.src("images/**");
+
+    if (!DEBUG_MODE) {
+        source = source.pipe(
+            imagemin({optimizationLevel: 5, progressive: true}));
+    }
+
+    return source.pipe(gulp.dest("../output/images"));
 });
 
 gulp.task("javascript", function() {
@@ -98,6 +105,8 @@ gulp.task("default", ["content", "images", "javascript"], function() {});
  * Build and serve the site for testing.
  */
 gulp.task("serve", ["default"], function() {
+    DEBUG_MODE = true;
+
     gulp.watch(["**"], ["content", "images"]);
 
     return gulp.src("../output")
