@@ -58,6 +58,7 @@
                 <li><a href="https://github.com/Khan/engblog">About this blog</a></li>
                 <li><a href="https://www.khanacademy.org/about">KA's mission</a></li>
                 <li><a href="https://github.com/khan/engblog/issues">Report a bug</a></li>
+                <li><a id="activate-tota11y" href="javascript: void 0">Activate tota11y</a></li>
             </ul>
         </section>
     </div>
@@ -87,6 +88,19 @@
                 leftBar.className = "mobile-visible";
                 content.className = "mobile-hidden";
             }
+        };
+
+        var totallyActivated = false;
+        document.getElementById("activate-tota11y").onclick = function() {
+            if (totallyActivated) {
+                console.log("Tota11y already activated. Doing nothing.");
+                return;
+            }
+
+            var script = document.createElement("script");
+            script.src = "/javascript/tota11y.min.js";
+            document.head.appendChild(script);
+            totallyActivated = true;
         };
     </script>
 </body>

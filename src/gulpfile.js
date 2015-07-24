@@ -87,7 +87,12 @@ gulp.task("images", function() {
         .pipe(gulp.dest("../output/images"));
 });
 
-gulp.task("default", ["content", "images"], function() {});
+gulp.task("javascript", function() {
+    return gulp.src("javascript/**")
+        .pipe(gulp.dest("../output/javascript"));
+});
+
+gulp.task("default", ["content", "images", "javascript"], function() {});
 
 /**
  * Build and serve the site for testing.
