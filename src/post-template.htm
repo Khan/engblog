@@ -73,6 +73,20 @@
                 {{{displayed_post.content_html}}}
             </div>
         </article>
+        <div class="keep-reading-buttons">
+            {{#next_post}}
+            <div class="button next-post-button {{next_post.team_class}}">
+                <div class="header">next post</div>
+                <a href="{{next_post.permalink}}" class="post-title">{{next_post.title}}</a>
+            </div>
+            {{/next_post}}
+            {{#prev_post}}
+            <div class="button prev-post-button {{prev_post.team_class}}">
+                <div class="header">previous post</div>
+                <a href="{{prev_post.permalink}}" class="post-title">{{prev_post.title}}</a>
+            </div>
+            {{/prev_post}}
+        </div>
     </main>
     <script>
         document.getElementById("mobile-menu-button").onclick = function() {

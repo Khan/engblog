@@ -3,6 +3,11 @@
 @doubleColumnMaxWidth: 920px;
 @leftBarBackgroundColor: #252F3D;
 
+@infrastructureColor: #E57281;
+@frontendColor: #63BBD9;
+@engLeadsColor: #ccc;
+@designColor: #ab59c6;
+
 html, body {
     height: 100%;
     margin: 0;
@@ -177,19 +182,19 @@ body {
         }
 
         &.team-infrastructure {
-            border-color: #E57281;
+            border-color: @infrastructureColor;
         }
 
         &.team-web-frontend {
-            border-color: #63BBD9;
+            border-color: @frontendColor;
         }
 
         &.team-eng-leads {
-            border-color: #ccc;
+            border-color: @engLeadsColor;
         }
 
         &.team-design {
-            border-color: #ab59c6;
+            border-color: @designColor;
         }
 
         .title {
@@ -320,6 +325,64 @@ body {
 
         img {
             max-width: 100%
+        }
+    }
+
+    .keep-reading-buttons {
+        margin-top: 30px;
+
+        .button {
+            padding: 3px 0;
+            display: block;
+            max-width: 40%;
+            color: @contentTextColor;
+
+            .header {
+                font-size: 12px;
+                color: #767676;
+                // text-transform: uppercase;
+            }
+
+            .post-title {
+                margin-top: 8px;
+                color: #6c7d28;
+                text-decoration: none;
+                display: block;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &.next-post-button {
+                text-align: right;
+                float: right;
+                border-right: 2px solid;
+                padding-right: 10px;
+                margin-right: -10px;
+            }
+
+            &.prev-post-button {
+                border-left: 2px solid;
+                padding-left: 10px;
+                margin-left: -10px;
+            }
+
+            &.team-infrastructure {
+                border-color: @infrastructureColor;
+            }
+
+            &.team-web-frontend {
+                border-color: @frontendColor;
+            }
+
+            &.team-eng-leads {
+                border-color: @engLeadsColor;
+            }
+
+            &.team-design {
+                border-color: @designColor;
+            }
         }
     }
 }

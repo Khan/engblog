@@ -96,7 +96,7 @@ class Post(object):
     def get_output_path(self):
         return phial.swap_extension(self.file_path, ".htm")
 
-    def render_page(self, all_posts):
+    def render_page(self, all_posts, index):
         def post_to_template_params(post):
             is_displayed_post = self.file_path == post.file_path
             params = {
@@ -112,10 +112,20 @@ class Post(object):
             }
             return params
 
+        next_post = None
+        if index != 0:
+            next_post = post_to_template_params(all_posts[index - 1])
+
+        prev_post = None
+        if index != len(all_posts) - 1:
+            prev_post = post_to_template_params(all_posts[index + 1])
+
         template_params = {
             "displayed_post": post_to_template_params(self),
             "latest_posts": [post_to_template_params(i) for i in all_posts],
             "upcoming_post": info.upcoming_post,
+            "next_post": next_post,
+            "prev_post": prev_post,
         }
         template = phial.open_file("post-template.htm").read()
         return pystache.Renderer().render(template, template_params)
@@ -125,16 +135,20 @@ class Post(object):
 def posts(stream):
     all_posts = [Post(post_file) for post_file in stream.contents]
     all_posts.sort(reverse=True, key=lambda post: post.published_on)
-    stream.prepare_contents()
 
-    def post_to_file(post_file):
-        post = Post(post_file)
-        return phial.file(
-            name=post.get_output_path(),
-            content=post.render_page(all_posts),
-            metadata=post)
+    result = []
+    for index, post in enumerate(all_posts):
+        result.append(
+            phial.file(
+                name=post.get_output_path(),
+                content=post.render_page(all_posts, index),
+                metadata=post))
 
-    return stream | phial.map(post_to_file)
+    # HACK(johnsullivan): Reaching into Phial's internals... Should probably
+    #     just expose this class. Also think more on this use case of just
+    #     throwing away all the normal pipeline nonsense and doing everything
+    #     synchronously myself.
+    return phial.pipelines.PipelineSource(result)
 
 
 @phial.page(depends_on=posts)
