@@ -1,7 +1,14 @@
 language: python
+
 git:
   submodules: false
+
+before_install:
+  - openssl aes-256-cbc -K $encrypted_bab5a9fa61ac_key -iv $encrypted_bab5a9fa61ac_iv -in travis-publish-key.enc -out travis-publish-key -d
+
 install:
   - make deps
+
 script:
   - make build lint
+  - ./travis-publish.sh
