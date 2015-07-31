@@ -24,8 +24,8 @@ rsync -rv --delete --exclude=.git ./output ~/engblog
 # Actually push to GitHub
 cd ~/engblog
 git add -f .
-git commit -m "Publish by Travis (#$TRAVIS_BUILD_NUMBER)"
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Sir Travis"
+git commit -m "Publish by Travis (#$TRAVIS_BUILD_NUMBER)"
 git push -q origin gh-pages
 echo "Publish completed"
