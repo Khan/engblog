@@ -346,12 +346,26 @@ body {
     }
 
     .keep-reading-buttons {
+        display: table;
         margin-top: 30px;
+        width: 100%;
+
+        .keep-reading-cell {
+            display: table-cell;
+            margin: 0;
+            padding: 0;
+            vertical-align: top;
+            width: 50%;
+        }
+
+        .keep-reading-right {
+            text-align: right;
+        }
 
         .button {
             padding: 3px 0;
-            display: block;
-            max-width: 40%;
+            display: inline-block;
+            max-width: 90%;
             color: @contentTextColor;
 
             .header {
@@ -372,8 +386,6 @@ body {
             }
 
             &.next-post-button {
-                text-align: right;
-                float: right;
                 border-right: 2px solid;
                 padding-right: 10px;
                 margin-right: -10px;
