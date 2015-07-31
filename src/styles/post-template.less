@@ -18,7 +18,6 @@ body {
     background-color: #FEFEFE;
     font-size: 14px;
     width: 920px;
-    display: table;
 
     @media (max-width: @doubleColumnMaxWidth) {
         width: 100%;
@@ -407,8 +406,9 @@ body {
 
 .code {
     background-color: #EEE;
-    border: solid 1px #CCC;
     border-radius: 6px;
+    border: solid 1px #CCC;
+    overflow-x: auto;
     padding: 6px;
 
     .ln {
