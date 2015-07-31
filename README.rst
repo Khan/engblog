@@ -1,18 +1,20 @@
-KA Engineering Blog
+Khan Academy Engineering Blog
 ===================
 
 .. image:: https://travis-ci.org/Khan/engblog.svg?branch=master
 	:target: https://travis-ci.org/Khan/engblog
 	:alt: Travis build status
 
-This repo houses the code used to build the `KA Engineering Blog <http://engineering.khanacademy.org>`_.
+This repo houses the code used to build the `Khan Academy Engineering Blog <http://engineering.khanacademy.org>`_.
 
 The instructions in this README are geared towards the general public. If you're a KA employee who wants to make a blog post, `this forge page <https://sites.google.com/a/khanacademy.org/forge/for-khan-employees/ka-engineering-blog>`_ should be your best starting point.
+
 
 Who can contribute?
 -------------------
 
 Anyone can contribute patches (`we're open source <https://github.com/Khan/engblog/blob/master/LICENSE.rst>`_) but posting to the blog is generally restricted to Khan Academy employees.
+
 
 Building locally
 ----------------
@@ -58,13 +60,8 @@ Note that supporting other markup languages is trivial, including HTML and custo
 Publishing
 ----------
 
-To publish your changes to the live site, follow these steps:
+To publish your changes to the live site, just push your changes to master. `Travis <https://travis-ci.org/Khan/engblog>`_ will take care of everything else.
 
-1. Discard any changes you've made to the ``output`` submodule/directory: ``bash -c 'cd output && git reset --hard && git clean -fd'``.
-2. Commit any remaining changes to the ``engblog`` repo and push them to GitHub.
-3. Run ``make ready-publish``
-4. Run ``make push-to-live``
+You can ping `brownhead <https://github.com/brownhead>`_ (``@johnsullivan`` on HipChat) for help if anything explodes.
 
-You can ping ``@johnsullivan`` for help if any of these commands fail. Otherwise, after doing all that your changes should be live!
-
-**If you're a KA employee**, and you just finished publishing to the live site, make sure to follow `the remaining instructions on the forge page <https://sites.google.com/a/khanacademy.org/forge/for-khan-employees/ka-engineering-blog#TOC-Publishing->`_. This includes *at least* posting to the KA Eengineering twitter account.
+**If you're a KA employee**, and you just finished publishing to the live site, make sure to follow `the remaining instructions on the forge page <https://sites.google.com/a/khanacademy.org/forge/for-khan-employees/ka-engineering-blog#TOC-Publishing->`_. This includes *at least* posting to the KA Engineering twitter account.
