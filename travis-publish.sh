@@ -15,6 +15,7 @@ fi
 
 # Install the publish key so SSH will use it
 cp ./travis-publish-key ~/.ssh/id_rsa
+chmod 600 ~/.ssh/id_rsa
 
 # Clone the gh-pages branch into its own repo and update it with the new output
 git clone --branch gh-pages git@github.com:Khan/engblog.git ~/engblog
