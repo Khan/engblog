@@ -12,9 +12,8 @@ if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then
 	exit 0
 fi
 
-CURRENT_BRANCH=`git rev-parse --abbrev-ref HEAD | xargs`
-if [[ "$CURRENT_BRANCH" != "master" ]]; then
-	echo "Refusing to publish from non-master branch $CURRENT_BRANCH"
+if [[ "$TRAVIS_BRANCH" != "master" ]]; then
+	echo "Refusing to publish from non-master branch $TRAVIS_BRANCH"
 	exit 0
 fi
 
@@ -38,6 +37,7 @@ cd ~/engblog
 git add -f .
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Sir Travis"
-git commit --allow-empty -m "Publish by Travis (#$TRAVIS_BUILD_NUMBER)"
+git commit --allow-empty -m "Publish by Travis (#$TRAVIS_BUILD_NUMBER)" \
+                         -m "Built from commit $TRAVIS_COMMIT"
 git push origin gh-pages
 echo "Publish completed"
