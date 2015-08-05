@@ -91,7 +91,9 @@ class Post(object):
             return render_rst(self.raw_content.read())
         elif self.file_path.endswith(".md"):
             return markdown.markdown(self.raw_content.read(),
-                    extensions=['markdown.extensions.footnotes'])
+                    extensions=['markdown.extensions.footnotes',
+                                'markdown.extensions.fenced_code',
+                                'markdown.extensions.codehilite'])
 
     def get_output_path(self):
         return phial.swap_extension(self.file_path, ".htm")

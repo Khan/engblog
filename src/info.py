@@ -34,12 +34,17 @@ authors = {
         "primary_url": "http://generic.cx/",
         "icon_url": "/images/author-icons/marcosojeda.jpg",
     },
+    "Phillip Lemons": {
+        "display_as": "Phillip Lemons",
+        "primary_url": "http://philliplemons.com/",
+        "icon_url": "/images/author-icons/philliplemons.png",
+    },
 }
 
 upcoming_post = {
-    "title": "The glorious LearnStorm banner",
-    "team": "Design",
-    "team_class": "team-design",
-    "author": authors["Marcos Ojeda"],
-    "published_on_html": "August 3<sup aria-hidden='true'>rd</sup>",
+    "title": "No cheating allowed!!",
+    "team": "Web Frontend",
+    "team_class": "team-web-frontend",
+    "author": authors["Phillip Lemons"],
+    "published_on_html": "August 17<sup aria-hidden='true'>rd</sup>",
 }
