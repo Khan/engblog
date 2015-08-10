@@ -46,5 +46,5 @@ upcoming_post = {
     "team": "Web Frontend",
     "team_class": "team-web-frontend",
     "author": authors["Phillip Lemons"],
-    "published_on_html": "August 17<sup aria-hidden='true'>rd</sup>",
+    "published_on_html": "August 17<sup aria-hidden='true'>th</sup>",
 }
