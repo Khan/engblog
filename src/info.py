@@ -39,12 +39,17 @@ authors = {
         "primary_url": "http://philliplemons.com/",
         "icon_url": "/images/author-icons/philliplemons.png",
     },
+    "Sam Lau": {
+        "display_as": "Sam Lau",
+        "primary_url": "https://github.com/SamLau95",
+        "icon_url": "/images/author-icons/samlau.jpg",
+    },
 }
 
 upcoming_post = {
-    "title": "No cheating allowed!!",
+    "title": "Articles to Particles (My Khan Academy Internship)",
     "team": "Web Frontend",
     "team_class": "team-web-frontend",
-    "author": authors["Phillip Lemons"],
-    "published_on_html": "August 17<sup aria-hidden='true'>th</sup>",
+    "author": authors["Sam Lau"],
+    "published_on_html": "August 31<sup aria-hidden='true'>st</sup>",
 }
