@@ -5,6 +5,12 @@
         <link>http://engineering.khanacademy.org</link>
         <description>Khan Academy Engineering's blog</description>
         <item>
+            <title>No Cheating Allowed!!</title>
+            <link>http://engineering.khanacademy.org/posts/no-cheating-allowed.htm</link>
+            <pubDate>Mon, 17 Aug 2015 11:00:00 GMT-8</pubDate>
+            <guid>http://engineering.khanacademy.org/posts/no-cheating-allowed.htm</guid>
+        </item>
+        <item>
             <title>Fun with slope fields, css and react</title>
             <link>http://engineering.khanacademy.org/posts/fun-with-slopfields.htm</link>
             <pubDate>Wed, 05 Aug 2015 11:00:00 GMT-8</pubDate>
