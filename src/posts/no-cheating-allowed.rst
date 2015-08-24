@@ -1,4 +1,4 @@
-title: No Cheating Allowed!!
+title: No cheating allowed!!
 published_on: August 17, 2015
 author: Phillip Lemons
 team: Web Frontend
