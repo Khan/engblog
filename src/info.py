@@ -1,3 +1,5 @@
+"""Contains metadata about authors and upcoming posts."""
+
 authors = {
     "John Sullivan": {
         "display_as": "John Sullivan",

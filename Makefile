@@ -9,7 +9,7 @@ serve server:
 	cd src && gulp serve
 
 lint linc:
-	env/bin/python khan-linter/runlint.py src/app.py src/gulpfile.js
+	env/bin/python khan-linter/runlint.py src/*.py src/gulpfile.js
 
 deps:
 	# Make sure we have a gh-pages branch so our output submodule has a proper

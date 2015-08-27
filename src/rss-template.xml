@@ -7,9 +7,9 @@
         {{#posts}}
         <item>
             <title>{{title}}</title>
-            <link>http://engineering.khanacademy.org/{{path}}</link>
+            <link>http://engineering.khanacademy.org/{{relative_href}}</link>
             <pubDate>{{date}}</pubDate>
-            <guid>http://engineering.khanacademy.org/{{path}}</guid>
+            <guid>http://engineering.khanacademy.org/{{relative_href}}</guid>
         </item>
         {{/posts}}
     </channel>

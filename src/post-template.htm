@@ -44,7 +44,7 @@
         </section>
         <section>
             <h2 class="section-heading">Latest posts</h2>
-            {{#latest_posts}}
+            {{#posts}}
             <div class="post-blurb {{team_class}}">
                 <h3 class="title">
                     <a href="{{permalink}}">{{title}}</a>
@@ -54,7 +54,7 @@
                     <a class="author-link" href="{{author.primary_url}}">{{author.display_as}}</a> on {{{published_on_html}}}
                 </div>
             </div>
-            {{/latest_posts}}
+            {{/posts}}
         </section>
         <section class="meta-section">
             <h2 class="section-heading">Meta</h2>
@@ -74,17 +74,17 @@
                 <span class="sr-only">by</span> <a class="author-link" href="{{displayed_post.author.primary_url}}">{{displayed_post.author.display_as}}</a> on {{{displayed_post.published_on_html}}}
             </div>
             <div class="body">
-                {{{displayed_post.content_html}}}
+                {{{html_content}}}
             </div>
         </article>
         <div class="keep-reading-buttons">
             <div class="keep-reading-cell keep-reading-left">
-                {{#prev_post}}
-                <div class="button prev-post-button {{prev_post.team_class}}">
+                {{#previous_post}}
+                <div class="button prev-post-button {{previous_post.team_class}}">
                     <div class="header">previous post</div>
-                    <a href="{{prev_post.permalink}}" class="post-title">{{prev_post.title}}</a>
+                    <a href="{{previous_post.permalink}}" class="post-title">{{previous_post.title}}</a>
                 </div>
-                {{/prev_post}}
+                {{/previous_post}}
             </div>
             <div class="keep-reading-cell keep-reading-right">
                 {{#next_post}}

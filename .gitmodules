@@ -1,6 +1,3 @@
-[submodule "phial"]
-	path = phial
-	url = https://github.com/brownhead/phial.git
 [submodule "khan-linter"]
 	path = khan-linter
 	url = https://github.com/Khan/khan-linter.git

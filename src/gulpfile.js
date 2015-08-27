@@ -19,8 +19,8 @@ var DEBUG_MODE = false;
  */
 gulp.task("phial", shell.task([
     "rm -rf /tmp/engblog-phial",
-    ("PYTHONPATH=../phial ../env/bin/python -m phial.__main__ --output " +
-     "/tmp/engblog-phial -v ./app.py"),
+    "mkdir /tmp/engblog-phial",
+    "../env/bin/python ./app.py /tmp/engblog-phial",
 ]));
 
 function inlinePostCss(inputGlob, outputDir) {
