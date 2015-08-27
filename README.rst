@@ -46,6 +46,7 @@ Create a new file in ``src/posts/`` with a ``.rst`` extension. It should follow 
 	published_on: January 1, 2020
 	author: Jane Doe
 	team: Web Frontend
+	async_scripts: ["javascript/some-javascript-i-want.js"]
 	...
 
 	Hello ``world``!

@@ -71,6 +71,7 @@ class Post(object):
                 datetime.datetime.strptime(frontmatter["published_on"],
                                            "%B %d, %Y"))
         self.author = frontmatter["author"]
+        self.async_scripts = frontmatter.get("async_scripts", [])
         self.raw_content = content
 
     def get_html_content(self):
@@ -99,5 +100,6 @@ class Post(object):
             "published_on_html":
                 datetime_to_html_string(self.published_on),
             "author": info.authors[self.author],
+            "async_scripts": self.async_scripts,
             "permalink": "/posts/" + self.get_output_name()
         }
