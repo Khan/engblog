@@ -27,7 +27,7 @@ def render_post_page(posts, current_post_index):
     Returns: A string or unicode object containing the rendered page.
     """
     def get_post_dict(index):
-        if 0 < index < len(posts):
+        if 0 <= index < len(posts):
             return posts[index].to_dict()
 
         return None
