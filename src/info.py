@@ -59,9 +59,9 @@ authors = {
 }
 
 upcoming_post = {
-    "title": "Making thumbnails fast",
-    "team": "Web Frontend",
-    "team_class": "team-web-frontend",
-    "author": authors["William Chargin"],
-    "published_on_html": "September 14<sup aria-hidden='true'>th</sup>",
+    "title": "i18nize-templates: internationalization after the fact",
+    "team": "Infrastructure",
+    "team_class": "team-infrastructure",
+    "author": authors["Craig Silverstein"],
+    "published_on_html": "September 28<sup aria-hidden='true'>th</sup>",
 }
