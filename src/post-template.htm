@@ -13,6 +13,10 @@
     {{#displayed_post.async_scripts}}
     <script async src="{{.}}"></script>
     {{/displayed_post.async_scripts}}
+
+    {{#displayed_post.stylesheets}}
+    <link rel="stylesheet" href="{{.}}"></link>
+    {{/displayed_post.stylesheets}}
 </head>
 <body>
     <div id="left-bar">
@@ -81,6 +85,9 @@
                 {{{html_content}}}
             </div>
         </article>
+        {{#displayed_post.postcontent_scripts}}
+        <script async src="{{.}}"></script>
+        {{/displayed_post.postcontent_scripts}}
         <div class="keep-reading-buttons">
             <div class="keep-reading-cell keep-reading-left">
                 {{#previous_post}}
