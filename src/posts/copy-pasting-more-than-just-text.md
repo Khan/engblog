@@ -125,8 +125,8 @@ exercise / article.
 to go to another web page and copy some text from there, and 3. paste that text
 instead of the original text with widgets. Since step 1 moves metadata into
 `localStorage` and when we paste we simply look for the presence of that data,
-when we paste we'll erroneously move that metadata in even though the text we're
-actually pasting wasn't even originally was Perseus.
+we'll erroneously pull that metadata in even though the text we're
+actually pasting wasn't originally from Perseus.
 
 ## Making Copy-Paste Do More Things Properly
 I resolved the above issues as follows:
