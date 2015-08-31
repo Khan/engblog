@@ -1,4 +1,4 @@
-title: "Copy-Pasting More Than Just Text"
+title: "Copy-pasting more than just text"
 published_on: August 31, 2015
 author: Sam Lau
 team: Web Frontend
