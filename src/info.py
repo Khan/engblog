@@ -54,9 +54,9 @@ authors = {
 }
 
 upcoming_post = {
-    "title": "Articles to Particles (My Khan Academy Internship)",
+    "title": "Making thumbnails fast",
     "team": "Web Frontend",
     "team_class": "team-web-frontend",
-    "author": authors["Sam Lau"],
-    "published_on_html": "August 31<sup aria-hidden='true'>st</sup>",
+    "author": authors["William Chargin"],
+    "published_on_html": "September 14<sup aria-hidden='true'>th</sup>",
 }
