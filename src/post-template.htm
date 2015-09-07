@@ -45,7 +45,7 @@
             <div class="post-blurb {{upcoming_post.team_class}}">
                 <h3 class="title">{{upcoming_post.title}}</h3>
                 <div class="info">
-                    <img class="inline-author-photo" src="{{upcoming_post.author.icon_url}}" aria-hidden="true"/>
+                    <img class="inline-author-photo" src="{{upcoming_post.author.icon_url}}" aria-hidden="true" role="presentation" />
                     <span class="sr-only">by</span> <a class="author-link" href="{{upcoming_post.author.primary_url}}">{{upcoming_post.author.display_as}}</a> on {{{upcoming_post.published_on_html}}}
                 </div>
             </div>
@@ -58,7 +58,7 @@
                     <a href="{{permalink}}">{{title}}</a>
                 </h3>
                 <div class="info">
-                    <img class="inline-author-photo" src="{{author.icon_url}}" aria-hidden="true"/>
+                    <img class="inline-author-photo" src="{{author.icon_url}}" aria-hidden="true" role="presentation" />
                     <a class="author-link" href="{{author.primary_url}}">{{author.display_as}}</a> on {{{published_on_html}}}
                 </div>
             </div>
@@ -78,7 +78,7 @@
         <article class="post">
             <h1 class="title">{{displayed_post.title}}</h1>
             <div class="info">
-                <img class="inline-author-photo" src="{{displayed_post.author.icon_url}}" aria-hidden="true"/>
+                <img class="inline-author-photo" src="{{displayed_post.author.icon_url}}" aria-hidden="true" role="presentation" />
                 <span class="sr-only">by</span> <a class="author-link" href="{{displayed_post.author.primary_url}}">{{displayed_post.author.display_as}}</a> on {{{displayed_post.published_on_html}}}
             </div>
             <div class="body">
