@@ -51,6 +51,11 @@ authors = {
         "primary_url": "https://wchargin.github.io",
         "icon_url": "/images/author-icons/wchargin.png",
     },
+    "Craig Silverstein": {
+        "display_as": "Craig Silverstein",
+        "primary_url": "https://github.com/csilvers",
+        "icon_url": "/images/author-icons/csilvers.png",
+    },
 }
 
 upcoming_post = {
