@@ -265,7 +265,7 @@ D \otimes
 \end{bmatrix}.
 $$
 Let’s look at the first row.
-The right-hand side expands to $$(w_r + 1 - k_D) r + k_D w_g g + k_D w_b b,$$
+The right-hand side expands to $$(k_D w_r + 1 - k_D) r + k_D w_g g + k_D w_b b,$$
 so we see that we must have $$d_{11} = k_D w_r + 1 - k_D, \quad d_{12} = k_D w_g, \quad \text{and} \quad d_{13} = k_D w_b.$$
 In the second row, we similarly have $$d_{21} = k_D w_r, \quad d_{22} = k_D w_g + 1 - k_D, \quad \text{and} \quad d_{23} = k_D w_b.$$
 Finally, in the third row, we similarly have $$d_{31} = k_D w_r, \quad d_{32} = k_D w_g, \quad \text{and} \quad d_{33} = k_D w_b + 1 - k_D.$$
