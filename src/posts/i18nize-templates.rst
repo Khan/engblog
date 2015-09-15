@@ -1,5 +1,5 @@
 title: "i18nize-templates: Internationalization After the Fact"
-published_on: September 22, 2015
+published_on: September 28, 2015
 author: Craig Silverstein
 team: Infrastructure
 ...
