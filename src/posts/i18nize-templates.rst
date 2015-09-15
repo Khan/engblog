@@ -153,17 +153,86 @@ fake-translate our website into our testing language, called box-language
                   or (s.startswith('<') and s.endswith('>'))):
                 return s   # do not translate
             else:
-                return re.sub(r'\w', u'\u25a1', s)    # alnum -> box
+                return re.sub(r'\w', u'\u25a1', s)  # alnum -> box
 
         parser = i18nize_templates.Jinja2HtmlLexer(parser_callback)
         return parser.parse(jinaj2_file_contents)
+
+
+Extracting JavaScript
+=====================
+
+Sometimes, i18nize-templates is useful just because it knows how to
+parse templated HTML.  For instance, for some of our code, we need to
+extract JavaScript (inside ``<script>`` tags) from our HTML files.
+There are many tools to do this for straight HTML, but they all choke
+on templated HTML.  A simple callback makes it easy to use
+i18nize-templates for this task:
+
+.. code:: python
+
+   def extract_js_from_html(html, filetype):
+       """Return JavaScript code from inside an html file."""
+       next_segment_is_script_contents = [False]
+       all_script_contents = []
+
+       def callback(segment, segment_separates_nltext):
+           if segment is None:    # EOF
+               return ''
+
+           # The '</script' is to check for an empty script.
+           if (next_segment_is_script_contents[0] and
+                  not segment.lower().startswith('</script')):
+               all_script_contents.append(segment)
+
+           segment = segment.lower()
+           next_segment_is_script_contents[0] = (
+               segment.startswith('<script'))
+
+       if filetype == "html":
+           lexer = i18nize_templates.HtmlLexer(callback)
+       elif filetype == "jinja2":
+           lexer = i18nize_templates.Jinja2HtmlLexer(callback)
+       elif filetype == "handlebars":
+           lexer = i18nize_templates.HandlebarsHtmlLexer(callback)
+       else:
+           assert False, ('Expected "html", "jinja2" or '
+                          '"handlebars", found %s' % filetype)
+
+       lexer.parse(html)
+       return all_script_contents
+
+Side note: in reality, our JavaScript extractor is a fair bit more
+complicated, because of the potential use of the template conditionals
+within the JavaScript:
+
+.. code:: html
+
+    <script>
+       var x = {% if x %}true{% else %}false{% endif %};
+       call_function(x{% if arg2 %}, {{arg2}}{% endif %})
+    </script>
+
+Our code actually parses out all these conditionals and yields several
+versions of the JavaScript, one for each possible value of each
+if/else:
+
+.. code:: javascript
+
+       var x = true; call_function(x);
+       var x = false; call_function(x);
+       var x = true; call_function(x, arg2);
+       var x = false; call_function(x, arg2);
+
+The full code of the JavaScript extractor is available
+`here </supporting-files/js_in_html.py>`_.
 
 
 Implementation
 --------------
 
 i18nize-templates consists of two parts: a template lexer, and a text
-rewriter.  The template parser finds runs of natural language text in
+rewriter.  The template lexer finds runs of natural language text in
 the input code, and the rewriter adds ``{{ _(...) }}`` and the like,
 munging the natural language text if appropriate.
 
@@ -451,3 +520,19 @@ template engine that is a no-op.  In Khan Academy, we do the following:
      }
      ...
    }
+
+
+Summary
+-------
+
+When Khan Academy converted our website from being all in English to
+including i18n markup, i18nize-templates saved many man-months of
+tedious work.  We used it for straight HTML files, jinja2, and
+handlebars, and should be easy to extend to other HTML template
+languages as well.
+
+Since our conversion completed, i18nize-templates has found a second
+life as a templated-HTML lexer.  It has proven particularly useful at
+extracting natural language text out of (possibly templated) HTML
+files.  We've also used it as an easy way to extract JavaScript out of
+templated HTML files.

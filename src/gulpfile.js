@@ -94,12 +94,18 @@ gulp.task("images", function() {
     return source.pipe(gulp.dest("../output/images"));
 });
 
+gulp.task("supporting-files", function() {
+    return gulp.src("supporting-files/**")
+        .pipe(gulp.dest("../output/supporting-files"));
+});
+
 gulp.task("javascript", function() {
     return gulp.src("javascript/**")
         .pipe(gulp.dest("../output/javascript"));
 });
 
-gulp.task("default", ["content", "images", "javascript"], function() {});
+gulp.task("default", ["content", "images", "supporting-files", "javascript"],
+          function() {});
 
 /**
  * Build and serve the site for testing.
@@ -107,7 +113,7 @@ gulp.task("default", ["content", "images", "javascript"], function() {});
 gulp.task("serve", ["default"], function() {
     DEBUG_MODE = true;
 
-    gulp.watch(["**"], ["content", "images"]);
+    gulp.watch(["**"], ["content", "images", "supporting-files"]);
 
     return gulp.src("../output")
         .pipe(webserver({
