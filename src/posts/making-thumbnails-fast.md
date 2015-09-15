@@ -110,6 +110,7 @@ So I&nbsp;looked at the PIL source and found, on line 767 of `imaging.c`,
 
 I’m no expert on Python’s C&nbsp;extensions, but there are clearly twelve *f*s there, and if that’s anything like the JNI interop, it means that the C&nbsp;code expects Python to pass it a 12-tuple of floats.
 This agrees with the example, and shows that the documentation is just wrong.
+(**edit:** The Pillow team has since fixed this! The documentation will be correct in new versions of Pillow.)
 
 So this was good news!
 This meant that if I&nbsp;could express all our image manipulation in terms of affine transforms, we’d be able to use this function.
