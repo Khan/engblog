@@ -1,7 +1,7 @@
 title: "Fun with slope fields, css and react"
 published_on: August 05, 2015
 author: Marcos Ojeda
-team: Web Frontend
+team: Design
 ...
 
 A while ago, we needed to send out a notification to all our [LearnStorm](https://www.khanacademy.org/learnstorm) winners inviting them to the Finals event in Mountain View. It's a big deal! Only *200 Students* from all of the bay area got invited to the event.
