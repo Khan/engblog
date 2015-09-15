@@ -48,8 +48,8 @@ And there are plenty of services out there to manage the actual
 translation of strings; we use `Crowdin <http://www.crowdin.net>`_.
 
 What is lacking is a tool that will mark up all the natural language
-text in your code and templates, to show to translators.  For this
-task, we developed
+text in your code and templates; this is the process that determines
+*what* text to show to translators.  For this task, we developed
 `i18nize-templates <https://github.com/khan/i18nize_templates>`_, a
 tool for finding natural language text in a variety of templating
 languages, and automatically munging it to be i18n-aware.
@@ -236,17 +236,19 @@ When making a callback on an element, the i18nize-templates lexers say
 whether that element separates natural language text or not.
 
 Note that while related to the concept of HTML inline elements, the
-implementation of nltext-separation is slightly different, due to the
-semantics of some of the HTML tags.  For instance, ``<textarea>`` is
-an inline element, but we consider it to separate nltext because text
-inside a textarea is semantically separate from the text before and
-after it.  Likewise, we special case ``<br><br>`` to separate nltext,
-since semantically it's used by HTML authors as a synonym for ``<p>``.
+implementation of natural language text separation is slightly
+different, due to the semantics of some of the HTML tags.  For
+instance, ``<textarea>`` is an inline element, but we consider it to
+separate natural language text ("nltext") because text inside a
+textarea is semantically separate from the text before and after it.
+Likewise, we special case ``<br><br>`` to separate natural language
+text, since semantically it's used by HTML authors as a synonym for
+``<p>``.
 
 The rules for whether an element separates natural language text are
 subtle in the details but simple in broad outline:
 
-* **An HTML tag**: yes for block elements, no for HTML elements
+* **An HTML tag**: yes for block elements, no for inline elements
 * **A run of text between HTML tags**: no, by definition; but yes
   inside cdata sections like ``<script>``
 * **A template variable**: no
@@ -271,8 +273,8 @@ For this reason, the i18nize-templates driver uses two lexers.  The
 main lexer emits elements from the doc.  For each element it returns
 that might have natural language text inside of it, we call a
 sub-lexer on the subset of the element with natural language.  In the
-above example, we'd call a lexer on the value of the ``title`` tag, and
-on the function argument to ``add_prefix``.
+above example, we'd call a lexer on the value of the ``title``
+attribute, and on the function argument to ``add_prefix``.
 
 Rewriters
 =========
@@ -312,11 +314,11 @@ a jinja2 template file):
 
 Its algorithm is pretty simple: when it sees a segment with
 separates_nltext=False, it collects it up.  Whenever it sees a segment
-with separates_nltext=True, it concatenates together the previously
-collected-up segments, puts '{{ _("...") }}' around the whole thing,
-and emits it.  Then it also emits the separates-nltext text; stuff
-that separates natural-language runs is never marked up, and can
-always be emitted verbatim.
+with ``separates_nltext=True``, it concatenates together the
+previously collected-up segments, puts ``{{ _("...") }}`` around the
+whole thing, and emits it.  Then it also emits the separates-nltext
+text; stuff that separates natural-language runs is never marked up,
+and can always be emitted verbatim.
 
 This work is made (much) more complicated by various optimizations we
 put in to make life simpler for translators.  For instance, for HTML
@@ -419,12 +421,12 @@ i18nize-templates has some customization functions to tell it that
 particular HTML tag attributes do or do not have natural language
 text, as well as particular template functions.  You can also mark
 certain function parameters, or even function argument values, as not
-being nltext.  For instance, for
+being natural language text.  For instance, for
 ``myfunc(url="http://example.com")``, there are three different ways
 to say that ``http://example.com`` is not nl-text: you could say
-``myfunc`` has no nltext arguments, you could say parameters named ``url``
-never have natural language values, or you could say arguments matching
-``http://.*`` are never natural language.
+``myfunc`` has no natural language arguments, you could say parameters
+named ``url`` never have natural language values, or you could say
+arguments matching ``http://.*`` are never natural language.
 
 If i18nize-templates marks a certain bit of text to be translated, but
 it really shouldn't be, then you can tell i18nize-templates to leave it
