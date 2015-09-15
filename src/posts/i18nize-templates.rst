@@ -61,8 +61,8 @@ languages, and automatically munging it to be i18n-aware.
 .. code:: html
 
        <h2>Badges</h2>
-       <p><img src="{{ badge.large_icon_src }}"
-               alt="a large illustration of a {{ badge.type_label() }}">
+       <p><img src="{{ badge.icon }}"
+               alt="a picture of a {{ badge.label() }}">
 
 .. class:: label
 
@@ -71,8 +71,9 @@ languages, and automatically munging it to be i18n-aware.
 .. code:: html
 
        <h2>{{ _("Badges") }}</h2>
-       <p><img src="{{ badge.large_icon_src }}"
-               alt="{{ _("a large illustration of a %(badge_type_label)s", badge_type_label=badge.type_label()) }}">
+       <p><img src="{{ badge.icon }}"
+               alt="{{ _("a picture of a %(badge_label)s",
+                         badge_label=badge.label()) }}">
 
 .. class:: label
 
