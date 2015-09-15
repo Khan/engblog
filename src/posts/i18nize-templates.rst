@@ -4,6 +4,8 @@ author: Craig Silverstein
 team: Infrastructure
 ...
 
+.. contents::
+
 Khan Academy started as a collection of videos, but now has over
 100,000 pieces of written content, from `exercises
 <https://www.khanacademy.org/math/differential-calculus/derivative_applications/differentiation-application/e/applications-of-differentiation-in-biology--economics--physics--etc>`_
