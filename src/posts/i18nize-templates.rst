@@ -15,7 +15,7 @@ to `programming challenges
 `of <https://es.khanacademy.org/humanities/art-history-basics/beginners-art-history/a/cave-painting-contemporary-art-and-everything-in-between>`_
 `these
 <https://pl.khanacademy.org/computing/computer-programming/html-css/intro-to-html/p/challenge-write-a-poem>`_
-are now avaiable in multiple languages.  But the Khan Academy codebase
+are now available in multiple languages.  But the Khan Academy codebase
 was originally written to be English-only.  We had to retrofit the
 codebase to support internationalization (i18n) and localization
 (l10n) of written content *after* a lot of infrastructure was already
@@ -185,7 +185,7 @@ to get from the AST back to a textual representation.)
 
 For this reason, i18nize-templates implements its own lexers, one that
 can handle raw HTML, one that can handle jinja2-annotated HTML, and
-one that can handle that handlerbars-annotated HTML.  They are all
+one that can handle that handlebars-annotated HTML.  They are all
 based on the Python standard library module ``markupbase``, which is
 what the standard libarary class ``HTMLParser`` is based on.
 
@@ -316,7 +316,7 @@ Its algorithm is pretty simple: when it sees a segment with
 separates_nltext=False, it collects it up.  Whenever it sees a segment
 with ``separates_nltext=True``, it concatenates together the
 previously collected-up segments, puts ``{{ _("...") }}`` around the
-whole thing, and emits it.  Then it also emits the separates-nltext
+whole thing, and emits it.  Then it also emits the separates_nltext
 text; stuff that separates natural-language runs is never marked up,
 and can always be emitted verbatim.
 
@@ -398,7 +398,7 @@ whether the ``_TODO()`` should be removed or replaced with ``_()``.
 Optimizations
 -------------
 
-i18nize-templates takes some effort to make life easiesr for both
+i18nize-templates takes some effort to make life easier for both
 translators and for the person marking up the files with natural
 language text.
 
@@ -413,9 +413,10 @@ etc).
 For the person marking up the files, i18nize-templates hard-codes some
 logic about whether template function arguments are natural language
 text or not.  For instance, it knows that the argument to the jinja2
-``groupby`` function is not natural language.  Likewise, it knows the
-argument to the HTML attribute ``style`` is never natural language
-either (though style names may look like natural language names).
+``groupby`` function is not natural language.  Likewise, it knows that
+for any jinja2 function that takes a ``style`` argument, that argument
+is the name of a CSS style and not natural language text (even though
+style names may look like natural language names).
 
 i18nize-templates has some customization functions to tell it that
 particular HTML tag attributes do or do not have natural language
@@ -437,7 +438,7 @@ alone:
      {{ i18n_do_not_translate("Khan Academy:") }} Funtime!
 
 You will need to register a function `i18n_do_not_translate` with your
-template engine that is a noop.  In Khan Academy, we do the following:
+template engine that is a no-op.  In Khan Academy, we do the following:
 
 .. code:: python
 
