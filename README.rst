@@ -58,7 +58,7 @@ The text above the three dots is parsed as YAML, the text below the three dots i
 The available options of the frontmatter are:
 
 ``title``
-  The title of your post. As a rule of thumb, try not to make it long enough to exceed two lines when rendered in the sidebar of the blog.
+  The title of your post (should be sentence case, ie: only the first word is capitalized). Regarding length, try not to make it so long that it exceeds two lines when rendered in the sidebar of the blog.
 
 ``published_on``
   The date your post was/will be/is published. Must be in the format ``Janurary 1, 2020`` (ie: ``[Full Month] [Day], [Full Year]``).
