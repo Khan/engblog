@@ -56,12 +56,17 @@ authors = {
         "primary_url": "https://github.com/csilvers",
         "icon_url": "/images/author-icons/csilvers.png",
     },
+    "Chelsea Voss": {
+        "display_as": "Chelsea Voss",
+        "primary_url": "http://csvoss.mit.edu/",
+        "icon_url": "/images/author-icons/chelseavoss.png",
+    },
 }
 
 upcoming_post = {
-    "title": "i18nize-templates: internationalization after the fact",
+    "title": u"Schr\u00F6dinger's deploys no more: how we update translations",
     "team": "Infrastructure",
     "team_class": "team-infrastructure",
-    "author": authors["Craig Silverstein"],
-    "published_on_html": "September 28<sup aria-hidden='true'>th</sup>",
+    "author": authors["Chelsea Voss"],
+    "published_on_html": "October 12<sup aria-hidden='true'>th</sup>",
 }
