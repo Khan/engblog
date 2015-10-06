@@ -74,9 +74,9 @@ authors = {
 }
 
 upcoming_post = {
-    "title": u"Switching to Slack",
+    "title": u"Forgo JavaScript packaging? The time isn't right.",
     "team": "Infrastructure",
     "team_class": "team-infrastructure",
-    "author": authors["Benjamin Pollack"],
-    "published_on_html": "November 9<sup aria-hidden='true'>th</sup>",
+    "author": authors["Craig Silverstein"],
+    "published_on_html": "November 23<sup aria-hidden='true'>rd</sup>",
 }
