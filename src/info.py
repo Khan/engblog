@@ -61,6 +61,11 @@ authors = {
         "primary_url": "http://csvoss.mit.edu/",
         "icon_url": "/images/author-icons/chelseavoss.png",
     },
+    "Benjamin Pollack": {
+        "display_as": "Benjamin Pollack",
+        "primary_url": "http://bitquabit.com/",
+        "icon_url": "/images/author-icons/benjaminpollack.jpg",
+    }
 }
 
 upcoming_post = {
