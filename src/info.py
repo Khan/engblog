@@ -65,13 +65,18 @@ authors = {
         "display_as": "Benjamin Pollack",
         "primary_url": "http://bitquabit.com/",
         "icon_url": "/images/author-icons/benjaminpollack.jpg",
+    },
+    "David Wang": {
+        "display_as": "David Wang",
+        "primary_url": "http://ourracingthoughts.com/author/d15w/",
+        "icon_url": "/images/author-icons/davidwang.jpg"
     }
 }
 
 upcoming_post = {
-    "title": u"Schr\u00F6dinger's deploys no more: how we update translations",
+    "title": u"Receiving feedback as an intern at Khan Academy",
     "team": "Infrastructure",
     "team_class": "team-infrastructure",
-    "author": authors["Chelsea Voss"],
-    "published_on_html": "October 12<sup aria-hidden='true'>th</sup>",
+    "author": authors["David Wang"],
+    "published_on_html": "October 26<sup aria-hidden='true'>th</sup>",
 }
