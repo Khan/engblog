@@ -58,7 +58,7 @@ authors = {
     },
     "Chelsea Voss": {
         "display_as": "Chelsea Voss",
-        "primary_url": "http://csvoss.mit.edu/",
+        "primary_url": "http://csvoss.github.io/",
         "icon_url": "/images/author-icons/chelseavoss.png",
     },
     "Benjamin Pollack": {
