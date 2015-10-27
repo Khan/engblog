@@ -74,9 +74,9 @@ authors = {
 }
 
 upcoming_post = {
-    "title": u"Receiving feedback as an intern at Khan Academy",
+    "title": u"Switching to Slack",
     "team": "Infrastructure",
     "team_class": "team-infrastructure",
-    "author": authors["David Wang"],
-    "published_on_html": "October 26<sup aria-hidden='true'>th</sup>",
+    "author": authors["Benjamin Pollack"],
+    "published_on_html": "November 9<sup aria-hidden='true'>th</sup>",
 }
