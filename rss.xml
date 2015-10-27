@@ -5,6 +5,12 @@
         <link>http://engineering.khanacademy.org</link>
         <description>Khan Academy Engineering's blog</description>
         <item>
+            <title>Receiving feedback as an intern at Khan Academy</title>
+            <link>http://engineering.khanacademy.org/posts/receiving-feedback.htm</link>
+            <pubDate>Mon, 26 Oct 2015 11:00:00 GMT-8</pubDate>
+            <guid>http://engineering.khanacademy.org/posts/receiving-feedback.htm</guid>
+        </item>
+        <item>
             <title>Schrödinger's deploys no more: how we update translations</title>
             <link>http://engineering.khanacademy.org/posts/translation-server.htm</link>
             <pubDate>Mon, 12 Oct 2015 11:00:00 GMT-8</pubDate>
