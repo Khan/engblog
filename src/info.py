@@ -74,7 +74,7 @@ authors = {
 }
 
 upcoming_post = {
-    "title": u"Forgo JavaScript packaging? The time isn't right.",
+    "title": u"Forgo JavaScript packaging? Not so fast.",
     "team": "Infrastructure",
     "team_class": "team-infrastructure",
     "author": authors["Craig Silverstein"],
