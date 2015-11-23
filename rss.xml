@@ -5,6 +5,12 @@
         <link>http://engineering.khanacademy.org</link>
         <description>Khan Academy Engineering's blog</description>
         <item>
+            <title>Forgo JS packaging? Not so fast</title>
+            <link>http://engineering.khanacademy.org/posts/js-packaging-http2.htm</link>
+            <pubDate>Mon, 23 Nov 2015 11:00:00 GMT-8</pubDate>
+            <guid>http://engineering.khanacademy.org/posts/js-packaging-http2.htm</guid>
+        </item>
+        <item>
             <title>Switching to Slack</title>
             <link>http://engineering.khanacademy.org/posts/switching-to-slack.htm</link>
             <pubDate>Mon, 09 Nov 2015 11:00:00 GMT-8</pubDate>
