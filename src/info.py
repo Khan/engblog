@@ -79,9 +79,8 @@ authors = {
 }
 
 upcoming_post = {
-    "title": u"Forgo JavaScript packaging? Not so fast.",
-    "team": "Infrastructure",
-    "team_class": "team-infrastructure",
-    "author": authors["Craig Silverstein"],
-    "published_on_html": "November 23<sup aria-hidden='true'>rd</sup>",
+    "title": u"Kanbanning the LearnStorm dev process.",
+    "team": "Web Frontend",
+    "author": authors["Kevin Dangoor"],
+    "published_on_html": "December 7<sup aria-hidden='true'>th</sup>",
 }

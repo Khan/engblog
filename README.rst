@@ -78,8 +78,9 @@ If you'd like to add support for another markup language, see ``Post.get_html_co
 Publishing
 ----------
 
-To publish your changes to the live site, just push your changes to master. `Travis <https://travis-ci.org/Khan/engblog>`_ will take care of everything else. **If you're publishing a new blog post, make sure to update the upcoming post section**, which you can do by editing the file ``src/info.py``.
+**If you're publishing a new blog post, make sure to update the upcoming post section first**, which you can do by editing the file ``src/info.py``.  You can find the information to update to in the `publish queue <https://app.asana.com/0/33397771830491/68184404290301>`_ -- or, at least, everything except the team, which you may need to figure out (from the list of categories above) yourself.  Or better yet, ask the author!
 
+After this, just push your changes to master. `Travis <https://travis-ci.org/Khan/engblog>`_ will take care of everything else. 
 You can ping `brownhead <https://github.com/brownhead>`_ (``@johnsullivan`` on HipChat) for help if anything explodes.
 
 **If you're a KA employee**, make sure to follow `the remaining instructions on the forge page <https://sites.google.com/a/khanacademy.org/forge/for-khan-employees/ka-engineering-blog#TOC-Publishing->`_. This includes *at least* posting to the KA Engineering twitter account.
