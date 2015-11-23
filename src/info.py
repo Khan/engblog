@@ -70,7 +70,12 @@ authors = {
         "display_as": "David Wang",
         "primary_url": "http://ourracingthoughts.com/author/d15w/",
         "icon_url": "/images/author-icons/davidwang.jpg"
-    }
+    },
+    "Kevin Dangoor": {
+        "display_as": "Kevin Dangoor",
+        "primary_url": "http://blueskyonmars.com/",
+        "icon_url": "/images/author-icons/kevindangoor.jpg",
+    },
 }
 
 upcoming_post = {
