@@ -81,6 +81,7 @@ authors = {
 upcoming_post = {
     "title": u"Kanbanning the LearnStorm dev process.",
     "team": "Web Frontend",
+    "team_class": "team-web-frontend",
     "author": authors["Kevin Dangoor"],
     "published_on_html": "December 7<sup aria-hidden='true'>th</sup>",
 }
