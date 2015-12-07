@@ -79,9 +79,9 @@ authors = {
 }
 
 upcoming_post = {
-    "title": u"Kanbanning the LearnStorm dev process.",
+    "title": u"Stories from our latest intern class",
     "team": "Web Frontend",
     "team_class": "team-web-frontend",
-    "author": authors["Kevin Dangoor"],
-    "published_on_html": "December 7<sup aria-hidden='true'>th</sup>",
+    "author": authors["John Sullivan"],
+    "published_on_html": "December 21<sup aria-hidden='true'>st</sup>",
 }
