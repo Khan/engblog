@@ -78,10 +78,4 @@ authors = {
     },
 }
 
-upcoming_post = {
-    "title": u"Stories from our latest intern class",
-    "team": "Web Frontend",
-    "team_class": "team-web-frontend",
-    "author": authors["John Sullivan"],
-    "published_on_html": "December 21<sup aria-hidden='true'>st</sup>",
-}
+upcoming_post = None
