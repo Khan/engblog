@@ -5,6 +5,12 @@
         <link>http://engineering.khanacademy.org</link>
         <description>Khan Academy Engineering's blog</description>
         <item>
+            <title>Stories from our latest intern class</title>
+            <link>http://engineering.khanacademy.org/posts/stories-from-interns.htm</link>
+            <pubDate>Mon, 21 Dec 2015 11:00:00 GMT-8</pubDate>
+            <guid>http://engineering.khanacademy.org/posts/stories-from-interns.htm</guid>
+        </item>
+        <item>
             <title>Kanbanning the LearnStorm Dev Process</title>
             <link>http://engineering.khanacademy.org/posts/kanbanning-learnstorm-dev-process.htm</link>
             <pubDate>Mon, 07 Dec 2015 11:00:00 GMT-8</pubDate>
