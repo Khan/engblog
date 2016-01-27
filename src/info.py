@@ -79,9 +79,10 @@ authors = {
 }
 
 upcoming_post = {
-    "title": u"The weekly snippet-server: open-sourced",
-    "team": "Infrastructure",
-    "team_class": "team-infrastructure",
-    "author": authors["Craig Silverstein"],
-    "published_on_html": "February 1<sup aria-hidden='true'>st</sup>",
+    "title": u"Writing a JS Debugger in JS",
+    "team": "Web Frontend",
+    "team_class": "team-web-frontend",
+    "author": authors["Kevin Barabash"],
+    "published_on_html": "February 15<sup aria-hidden='true'>st</sup>",
 }
+
