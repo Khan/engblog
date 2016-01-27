@@ -78,4 +78,10 @@ authors = {
     },
 }
 
-upcoming_post = None
+upcoming_post = {
+    "title": u"The weekly snippet-server: open-sourced",
+    "team": "Infrastructure",
+    "team_class": "team-infrastructure",
+    "author": authors["Craig Silverstein"],
+    "published_on_html": "February 1<sup aria-hidden='true'>st</sup>",
+}
