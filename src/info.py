@@ -76,13 +76,18 @@ authors = {
         "primary_url": "http://blueskyonmars.com/",
         "icon_url": "/images/author-icons/kevindangoor.jpg",
     },
+    "Ben Komalo": {
+        "display_as": "Ben Komalo",
+        "primary_url": "https://github.com/benkomalo",
+        "icon_url": "/images/author-icons/benkomalo.jpg"
+    }
 }
 
 upcoming_post = {
-    "title": u"Writing a JS Debugger in JS",
-    "team": "Web Frontend",
-    "team_class": "team-web-frontend",
-    "author": authors["Kevin Barabash"],
-    "published_on_html": "February 15<sup aria-hidden='true'>st</sup>",
+    "title": u"Android development at Khan Academy",
+    "team": "Mobile",
+    "team_class": "mobile",
+    "author": authors["Ben Komalo"],
+    "published_on_html": "February 29<sup aria-hidden='true'>th</sup>",
 }
 

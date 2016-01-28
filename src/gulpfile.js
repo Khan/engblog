@@ -25,7 +25,7 @@ gulp.task("phial", shell.task([
 
 function inlinePostCss(inputGlob, outputDir) {
     return gulp.src(inputGlob)
-        .pipe(foreach(function(stream, file){
+        .pipe(foreach(function(stream, file) {
             // Gather all of the CSS we want to inline in this post
             var css = (gulp
                 .src(["styles/post-template.less",
@@ -38,12 +38,12 @@ function inlinePostCss(inputGlob, outputDir) {
             return stream
                 .pipe(inject(css, {
                     starttag: "<!-- inject:head:css -->",
-                    transform: function (filePath, file) {
+                    transform: function(filePath, file) {
                         // return file contents as string
                         return (
                             "<style>" + file.contents.toString("utf8") +
                             "</style>");
-                    }
+                    },
                 }));
         }))
         .pipe(minifyHTML({loose: true}))
@@ -94,6 +94,15 @@ gulp.task("images", function() {
     return source.pipe(gulp.dest("../output/images"));
 });
 
+/**
+ * Moves all of the videos into the output directory.
+ */
+gulp.task("videos", function() {
+    var source = gulp.src("videos/**");
+
+    return source.pipe(gulp.dest("../output/videos"));
+});
+
 gulp.task("supporting-files", function() {
     return gulp.src("supporting-files/**")
         .pipe(gulp.dest("../output/supporting-files"));
@@ -104,8 +113,10 @@ gulp.task("javascript", function() {
         .pipe(gulp.dest("../output/javascript"));
 });
 
-gulp.task("default", ["content", "images", "supporting-files", "javascript"],
-          function() {});
+gulp.task("default",
+    ["content", "images", "videos", "supporting-files", "javascript"],
+    function() {}
+);
 
 /**
  * Build and serve the site for testing.
@@ -113,7 +124,7 @@ gulp.task("default", ["content", "images", "supporting-files", "javascript"],
 gulp.task("serve", ["default"], function() {
     DEBUG_MODE = true;
 
-    gulp.watch(["**"], ["content", "images", "supporting-files"]);
+    gulp.watch(["**"], ["content", "images", "videos", "supporting-files"]);
 
     return gulp.src("../output")
         .pipe(webserver({
