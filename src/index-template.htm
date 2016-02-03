@@ -1,0 +1,21 @@
+{{> header }}
+{{> sidebar }}
+
+<main id="content">
+    <section>
+        <h2 class="title">Latest posts</h2>
+        {{#posts}}
+        <div class="post-blurb {{team_class}}">
+            <h3 class="title">
+                <a href="{{permalink}}">{{title}}</a>
+            </h3>
+            <div class="info">
+                <img class="inline-author-photo" src="{{author.icon_url}}" aria-hidden="true" role="presentation" />
+                <a class="author-link" href="{{author.primary_url}}">{{author.display_as}}</a> on {{{published_on_html}}}
+            </div>
+        </div>
+        {{/posts}}
+    </section>
+</main>
+
+{{> footer }}
