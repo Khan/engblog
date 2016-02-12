@@ -67,7 +67,7 @@ snippets as a simple "time and motion" study: when I have too many
 things to put into snippets one week, I know I'm being spread too
 thin!
 
-Another benefit of snippets is serendipidous helping: by reading
+Another benefit of snippets is serendipitous helping: by reading
 someone's snippet, you may discover a task or problem they're working
 on that you can help with, that otherwise you would never have known
 about.
@@ -91,7 +91,7 @@ are disappointed.
   to a team's progress).
 
 * Snippets do not provide context.  If you don't already know what
-  someone is working on, their snippet may englighten you, but it will
+  someone is working on, their snippet may enlighten you, but it will
   just as likely confuse you.
 
 At Khan Academy, the entire company uses one snippet server.  The
