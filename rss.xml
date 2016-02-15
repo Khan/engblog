@@ -5,6 +5,12 @@
         <link>http://engineering.khanacademy.org</link>
         <description>Khan Academy Engineering's blog</description>
         <item>
+            <title>Automating Highly Similar Translations</title>
+            <link>http://engineering.khanacademy.org/posts/translation_assistant.htm</link>
+            <pubDate>Mon, 15 Feb 2016 11:00:00 GMT-8</pubDate>
+            <guid>http://engineering.khanacademy.org/posts/translation_assistant.htm</guid>
+        </item>
+        <item>
             <title>The weekly snippet-server: open-sourced</title>
             <link>http://engineering.khanacademy.org/posts/snippet-server.htm</link>
             <pubDate>Mon, 01 Feb 2016 11:00:00 GMT-8</pubDate>
