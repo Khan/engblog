@@ -84,10 +84,10 @@ authors = {
 }
 
 upcoming_post = {
-    "title": u"Android development at Khan Academy",
-    "team": "Mobile",
-    "team_class": "mobile",
-    "author": authors["Ben Komalo"],
-    "published_on_html": "February 29<sup aria-hidden='true'>th</sup>",
+    "title": u"An experiment in Open Source: Community Leads",
+    "team": "Web Frontend",
+    "team_class": "team-web-frontend",
+    "author": authors["John Sullivan"],
+    "published_on_html": "March 14<sup aria-hidden='true'>th</sup>",
 }
 
