@@ -1,18 +1,18 @@
 {
     "name": "engblog",
     "version": "0.0.1",
-    "dependencies": {
-        "gulp": "*",
-        "gulp-shell": "*",
-        "gulp-inject": "*",
-        "gulp-foreach": "*",
-        "gulp-concat": "*",
-        "gulp-minify-css": "*",
-        "gulp-minify-html": "*",
-        "gulp-imagemin": "*",
-        "gulp-webserver": "*",
-        "gulp-minify-inline": "*",
-        "gulp-less": "*"
-    },
-    "private": true
+    "private": true,
+    "devDependencies": {
+        "gulp": "~3.9.0",
+        "gulp-concat": "~2.6.0",
+        "gulp-foreach": "~0.1.0",
+        "gulp-imagemin": "~2.4.0",
+        "gulp-inject": "~3.0.0",
+        "gulp-less": "~3.0.5",
+        "gulp-minify-css": "~1.2.3",
+        "gulp-minify-html": "~1.0.5",
+        "gulp-minify-inline": "~0.1.1",
+        "gulp-shell": "~0.5.2",
+        "gulp-webserver": "~0.9.1"
+    }
 }
