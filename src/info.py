@@ -80,6 +80,11 @@ authors = {
         "display_as": "Ben Komalo",
         "primary_url": "https://github.com/benkomalo",
         "icon_url": "/images/author-icons/benkomalo.jpg"
+    },
+    "Jamie Wong": {
+        "display_as": "Jamie Wong",
+        "primary_url": "http://jamie-wong.com",
+        "icon_url": "TODO",
     }
 }
 
