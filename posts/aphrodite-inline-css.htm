@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
         You can learn anything!
     <span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-</pre></div> <p>The intent here was for "You can learn anything" to appear bold and green, but because bold was injected into CSS after awesome, the second text ends up being black! This is somewhat surprising behaviour, but it gets worse. Imagine updating the component and change it to this:</p> <div class="codehilite"><pre>const Component = () =&gt; <span class="nt">&lt;div&gt;</span>
+</pre></div> <p>In a stylesheet, where there are two styles defined with equal specificity, the one that comes later in the stylesheet has precedence. In a hand-tuned stylesheet that can be confusing, but in an auto-generated one it can be disastrous!</p> <p>The intent here was for "You can learn anything" to appear bold and green, but because bold was injected into CSS after awesome, the second text ends up being black! This is somewhat surprising behaviour, but it gets worse. Imagine updating the component and change it to this:</p> <div class="codehilite"><pre>const Component = () =&gt; <span class="nt">&lt;div&gt;</span>
     <span class="nt">&lt;span</span> <span class="na">className=</span><span class="s">{css(styles.bold)}</span><span class="nt">&gt;</span>
         Nobody starts knowing everything.
     <span class="nt">&lt;/span&gt;</span>
@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
        You can learn anything!
     <span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-</pre></div> <p>This changes the order of the declarations, which changes the styling on "You can learn anything!". The order of calls to css affecting which style rules get applied is certainly surprising behaviour that we'd like to avoid.</p> <p>Our solution in Aphrodite is to always generate a single class name, and handle the precedence in JavaScript instead of letter the browser decide. The result we generate looks like this:</p> <div class="codehilite"><pre><span class="nt">&lt;style&gt;</span>
+</pre></div> <p>This changes the order of the declarations, which changes the styling on "You can learn anything!". The order of calls to css affecting which style rules get applied is certainly surprising behaviour that we'd like to avoid.</p> <p>Our solution in Aphrodite is to always generate a single class name, and handle the precedence in JavaScript instead of letting the browser decide. The result we generate looks like this:</p> <div class="codehilite"><pre><span class="nt">&lt;style&gt;</span>
 .bold_cfe213 {font-weight: bold; color: black;}
 .bold_cfe213-o_O-awesome_d1f3c2 {font-weight: bold; color: green;}
 .awesome_d1f3c2 {color: green;}
