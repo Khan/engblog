@@ -84,9 +84,19 @@ authors = {
     "Jamie Wong": {
         "display_as": "Jamie Wong",
         "primary_url": "http://jamie-wong.com",
-        "icon_url": "TODO",
+        "icon_url": "/images/author-icons/jamiewong.png",
+    },
+    "Ben Eater": {
+        "display_as": "Ben Eater",
+        "primary_url": "https://github.com/beneater",
+        "icon_url": "/images/author-icons/beneater.png",
     }
 }
 
-upcoming_post = None
-
+upcoming_post = {
+    "title": u"Career Development at Khan Academy",
+    "team": "Eng Leads",
+    "team_class": "team-eng-leads",
+    "author": authors["Ben Eater"],
+    "published_on_html": "April 11<sup aria-hidden='true'>th</sup>",
+}
