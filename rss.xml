@@ -5,6 +5,12 @@
         <link>http://engineering.khanacademy.org</link>
         <description>Khan Academy Engineering's blog</description>
         <item>
+            <title>Inline CSS at Khan Academy: Aphrodite</title>
+            <link>http://engineering.khanacademy.org/posts/aphrodite-inline-css.htm</link>
+            <pubDate>Tue, 29 Mar 2016 11:00:00 GMT-8</pubDate>
+            <guid>http://engineering.khanacademy.org/posts/aphrodite-inline-css.htm</guid>
+        </item>
+        <item>
             <title>Starting Android at Khan Academy</title>
             <link>http://engineering.khanacademy.org/posts/starting-android.htm</link>
             <pubDate>Mon, 29 Feb 2016 11:00:00 GMT-8</pubDate>
