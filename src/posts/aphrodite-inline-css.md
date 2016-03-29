@@ -335,6 +335,6 @@ Newly written React components at Khan Academy use Aphrodite for their styling n
 
 Despite our server-side application code being written in Python, we've managed to get server-side rendering working via dedicated rendering servers, and we've open sourced the implementation of that too. You can find it at [https://github.com/Khan/react-render-server](https://github.com/Khan/react-render-server). It won't be a drop in solution for you since it has Khan Academy specific dependencies, but it may serve as a good reference.
 
-I've omitted details on a number of things here, like dealing with fonts, batching CSS to inject into the <head>, and our [fork of inline-style-prefixer](https://github.com/Khan/inline-style-prefixer) to reduce the byte size of the library, so I hope if you're interested you'll take a look at [Aphrodite on GitHub](https://github.com/Khan/aphrodite)!
+I've omitted details on a number of things here, like dealing with fonts, batching CSS to inject into the `<head>`, and our [fork of inline-style-prefixer](https://github.com/Khan/inline-style-prefixer) to reduce the byte size of the library, so I hope if you're interested you'll take a look at [Aphrodite on GitHub](https://github.com/Khan/aphrodite)!
 
 
