@@ -247,6 +247,8 @@ If we take the naive approach and generate two classes for the second span and a
 </div>
 ```
 
+In a stylesheet, where there are two styles defined with equal specificity, the one that comes later in the stylesheet has precedence. In a hand-tuned stylesheet that can be confusing, but in an auto-generated one it can be disastrous!
+
 The intent here was for "You can learn anything" to appear bold and green, but because bold was injected into CSS after awesome, the second text ends up being black! This is somewhat surprising behaviour, but it gets worse. Imagine updating the component and change it to this:
 
 ```
@@ -285,7 +287,7 @@ Because `styles.bold` is passed to `css()` first, it gets injected first.
 
 This changes the order of the declarations, which changes the styling on "You can learn anything!". The order of calls to css affecting which style rules get applied is certainly surprising behaviour that we'd like to avoid.
 
-Our solution in Aphrodite is to always generate a single class name, and handle the precedence in JavaScript instead of letter the browser decide. The result we generate looks like this:
+Our solution in Aphrodite is to always generate a single class name, and handle the precedence in JavaScript instead of letting the browser decide. The result we generate looks like this:
 
 ```
 <style>
