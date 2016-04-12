@@ -90,13 +90,18 @@ authors = {
         "display_as": "Ben Eater",
         "primary_url": "https://github.com/beneater",
         "icon_url": "/images/author-icons/beneater.png",
+    },
+    "Evy Kassirer": {
+        "display_as": "Evy Kassirer",
+        "primary_url": "http://www.evykassirer.com/",
+        "icon_url": "/images/author-icons/evykassirer.png",
     }
 }
 
 upcoming_post = {
-    "title": u"Career Development at Khan Academy",
-    "team": "Eng Leads",
-    "team_class": "team-eng-leads",
-    "author": authors["Ben Eater"],
-    "published_on_html": "April 11<sup aria-hidden='true'>th</sup>",
+    "title": u"The autonomous Dumbledore",
+    "team": "Web Frontend",
+    "team_class": "team-web-frontend",
+    "author": authors["Evy Kassirer"],
+    "published_on_html": "April 25<sup aria-hidden='true'>th</sup>",
 }
