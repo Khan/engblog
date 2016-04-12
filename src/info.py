@@ -99,7 +99,7 @@ authors = {
 }
 
 upcoming_post = {
-    "title": u"The autonomous Dumbledore",
+    "title": u"The Autonomous Dumbledore",
     "team": "Web Frontend",
     "team_class": "team-web-frontend",
     "author": authors["Evy Kassirer"],
