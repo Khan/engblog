@@ -95,13 +95,18 @@ authors = {
         "display_as": "Evy Kassirer",
         "primary_url": "http://www.evykassirer.com/",
         "icon_url": "/images/author-icons/evykassirer.png",
+    },
+    "Bryan Clark": {
+        "display_as": "Bryan Clark",
+        "primary_url": "http://www.bryanjclark.com/",
+        "icon_url": "/images/author-icons/bryanclark.png",
     }
 }
 
 upcoming_post = {
-    "title": u"The Autonomous Dumbledore",
-    "team": "Web Frontend",
-    "team_class": "team-web-frontend",
-    "author": authors["Evy Kassirer"],
-    "published_on_html": "April 25<sup aria-hidden='true'>th</sup>",
+    "title": u"Introducing SwiftTweaks",
+    "team": "mobile",
+    "team_class": "team-mobile",
+    "author": authors["Bryan Clark"],
+    "published_on_html": "May 9<sup aria-hidden='true'>th</sup>",
 }
