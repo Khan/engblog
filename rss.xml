@@ -5,6 +5,12 @@
         <link>http://engineering.khanacademy.org</link>
         <description>Khan Academy Engineering's blog</description>
         <item>
+            <title>The Autonomous Dumbledore</title>
+            <link>http://engineering.khanacademy.org/posts/autonomous-dumbledore.htm</link>
+            <pubDate>Mon, 25 Apr 2016 11:00:00 GMT-8</pubDate>
+            <guid>http://engineering.khanacademy.org/posts/autonomous-dumbledore.htm</guid>
+        </item>
+        <item>
             <title>Engineering career development at Khan Academy</title>
             <link>http://engineering.khanacademy.org/posts/career-development.htm</link>
             <pubDate>Mon, 11 Apr 2016 11:00:00 GMT-8</pubDate>
