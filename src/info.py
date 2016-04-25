@@ -90,13 +90,23 @@ authors = {
         "display_as": "Ben Eater",
         "primary_url": "https://github.com/beneater",
         "icon_url": "/images/author-icons/beneater.png",
+    },
+    "Evy Kassirer": {
+        "display_as": "Evy Kassirer",
+        "primary_url": "http://www.evykassirer.com/",
+        "icon_url": "/images/author-icons/evykassirer.png",
+    },
+    "Bryan Clark": {
+        "display_as": "Bryan Clark",
+        "primary_url": "http://www.bryanjclark.com/",
+        "icon_url": "/images/author-icons/bryanclark.png",
     }
 }
 
 upcoming_post = {
-    "title": u"Career Development at Khan Academy",
-    "team": "Eng Leads",
-    "team_class": "team-eng-leads",
-    "author": authors["Ben Eater"],
-    "published_on_html": "April 11<sup aria-hidden='true'>th</sup>",
+    "title": u"Introducing SwiftTweaks",
+    "team": "mobile",
+    "team_class": "team-mobile",
+    "author": authors["Bryan Clark"],
+    "published_on_html": "May 9<sup aria-hidden='true'>th</sup>",
 }
