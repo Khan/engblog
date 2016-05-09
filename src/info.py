@@ -104,9 +104,9 @@ authors = {
 }
 
 upcoming_post = {
-    "title": u"Introducing SwiftTweaks",
-    "team": "mobile",
-    "team_class": "team-mobile",
-    "author": authors["Bryan Clark"],
-    "published_on_html": "May 9<sup aria-hidden='true'>th</sup>",
+    "title": u"Minimizing the Length of Regular Expressions, In Practice",
+    "team": "infrastructure",
+    "team_class": "team-infrastructure",
+    "author": authors["Craig Silverstein"],
+    "published_on_html": "May 23<sup aria-hidden='true'>th</sup>",
 }
