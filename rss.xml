@@ -5,6 +5,12 @@
         <link>http://engineering.khanacademy.org</link>
         <description>Khan Academy Engineering's blog</description>
         <item>
+            <title>Introducing SwiftTweaks</title>
+            <link>http://engineering.khanacademy.org/posts/introducing-swifttweaks.htm</link>
+            <pubDate>Mon, 09 May 2016 11:00:00 GMT-8</pubDate>
+            <guid>http://engineering.khanacademy.org/posts/introducing-swifttweaks.htm</guid>
+        </item>
+        <item>
             <title>The Autonomous Dumbledore</title>
             <link>http://engineering.khanacademy.org/posts/autonomous-dumbledore.htm</link>
             <pubDate>Mon, 25 Apr 2016 11:00:00 GMT-8</pubDate>
