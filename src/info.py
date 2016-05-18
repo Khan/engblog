@@ -100,6 +100,11 @@ authors = {
         "display_as": "Bryan Clark",
         "primary_url": "http://www.bryanjclark.com/",
         "icon_url": "/images/author-icons/bryanclark.png",
+    },
+    "Ben Kamens": {
+        "display_as": "Ben Kamens",
+        "primary_url": "http://bjk5.com",
+        "icon_url": "/images/author-icons/benkamens.png",
     }
 }
 
