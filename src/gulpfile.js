@@ -1,3 +1,7 @@
+/* eslint-disable no-var */      // TODO(csilvers): does gulp support const?
+
+var fs = require("fs");
+
 var concat = require("gulp-concat");
 var foreach = require("gulp-foreach");
 var gulp = require("gulp");
@@ -12,6 +16,15 @@ var webserver = require("gulp-webserver");
 
 var DEBUG_MODE = false;
 
+// Prefer PYTHON from the virtualenv, but if it doesn't exist, just
+// use the system python.
+var PYTHON = "../env/bin/python";
+try {
+    fs.statSync(PYTHON);
+} catch (e) {
+    PYTHON = "python";
+}
+
 /**
  * Runs the Phial app to generate the site.
  *
@@ -20,7 +33,7 @@ var DEBUG_MODE = false;
 gulp.task("phial", shell.task([
     "rm -rf /tmp/engblog-phial",
     "mkdir /tmp/engblog-phial",
-    "../env/bin/python ./app.py /tmp/engblog-phial",
+    PYTHON + " ./app.py /tmp/engblog-phial",
 ]));
 
 function inlinePostCss(inputGlob, outputDir) {

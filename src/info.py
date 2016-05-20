@@ -108,10 +108,14 @@ authors = {
     }
 }
 
+# To see the list of possible team-classes, search for `team-*` at
+# src/styles/post-template.less.  Just remove the 'team-' to get the
+# `team` value and replace dashes with spaces.
+# See README.rst for more info.
 upcoming_post = {
-    "title": u"Minimizing the Length of Regular Expressions, In Practice",
-    "team": "infrastructure",
-    "team_class": "team-infrastructure",
-    "author": authors["Craig Silverstein"],
-    "published_on_html": "May 23<sup aria-hidden='true'>th</sup>",
+    "title": u"Khan Academy's Engineering Principles",
+    "team": "Eng Leads",
+    "team_class": "team-eng-leads",
+    "author": authors["Ben Kamens"],
+    "published_on_html": "June 6<sup aria-hidden='true'>th</sup>",
 }
