@@ -105,7 +105,12 @@ authors = {
         "display_as": "Ben Kamens",
         "primary_url": "http://bjk5.com",
         "icon_url": "/images/author-icons/benkamens.png",
-    }
+    },
+    "Tom Yedwab": {
+        "display_as": "Tom Yedwab",
+        "primary_url": "http://www.arguingwithalgorithms.com",
+        "icon_url": "/images/author-icons/tomyedwab.png",
+    },
 }
 
 # To see the list of possible team-classes, search for `team-*` at
