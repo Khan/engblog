@@ -1,4 +1,5 @@
-.PHONY: serve server deps build build-prod ready-publish reset-output push-to-live
+.PHONY: serve server deps build build-prod ready-publish reset-output \
+		push-to-live phantomjs-tests
 
 build:
 	-mkdir output
@@ -12,8 +13,13 @@ serve server:
 	-mkdir output
 	cd src && gulp serve
 
+# Runs phantomjs tests on what's in the output directory
+phantomjs-tests:
+	./phantomjs-tests/run-tests.sh
+
 lint linc:
-	env/bin/python khan-linter/runlint.py src/*.py src/gulpfile.js
+	env/bin/python khan-linter/runlint.py src/*.py src/gulpfile.js \
+				   phantomjs-tests/*.js
 
 deps:
 	# Make sure we have a gh-pages branch so our output submodule has a proper

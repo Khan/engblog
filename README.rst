@@ -34,7 +34,7 @@ In order to build and host the blog on your computer, first clone the repo, then
 Linting
 -------
 
-Before committing any changes, make sure to run ``make lint``.
+Before committing any changes, make sure to run ``make lint phantomjs-tests``.
 
 
 Making a new post

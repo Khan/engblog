@@ -14,6 +14,7 @@
         "gulp-minify-inline": "~0.1.1",
         "gulp-shell": "~0.5.2",
         "gulp-webserver": "~0.9.1",
-        "yargs": "~4.7.1"
+        "yargs": "~4.7.1",
+        "http-server": "~0.9.0"
     }
 }
