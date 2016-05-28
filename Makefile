@@ -1,8 +1,12 @@
-.PHONY: serve server deps build ready-publish reset-output push-to-live
+.PHONY: serve server deps build build-prod ready-publish reset-output push-to-live
 
 build:
 	-mkdir output
 	cd src && gulp
+
+build-prod:
+	-mkdir output
+	cd src && gulp --production
 
 serve server:
 	-mkdir output

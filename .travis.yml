@@ -10,4 +10,4 @@ install:
   - make deps
 
 script:
-  - make build lint && ./travis-publish.sh
+  - make build-prod lint && ./travis-publish.sh

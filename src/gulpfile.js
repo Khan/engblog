@@ -13,8 +13,7 @@ var minifyHTML = require("gulp-minify-html");
 var minifyInline = require("gulp-minify-inline");
 var shell = require("gulp-shell");
 var webserver = require("gulp-webserver");
-
-var DEBUG_MODE = false;
+var argv = require("yargs").argv;
 
 // Prefer PYTHON from the virtualenv, but if it doesn't exist, just
 // use the system python.
@@ -99,7 +98,7 @@ gulp.task("content", ["inline-css", "inline-index-css", "rss-feed"],
 gulp.task("images", function() {
     var source = gulp.src("images/**");
 
-    if (!DEBUG_MODE) {
+    if (argv.production) {
         source = source.pipe(
             imagemin({optimizationLevel: 5, progressive: true}));
     }
@@ -135,8 +134,6 @@ gulp.task("default",
  * Build and serve the site for testing.
  */
 gulp.task("serve", ["default"], function() {
-    DEBUG_MODE = true;
-
     gulp.watch(["**"], ["content", "images", "videos", "supporting-files"]);
 
     return gulp.src("../output")
