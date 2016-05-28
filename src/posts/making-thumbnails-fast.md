@@ -2,8 +2,8 @@ title: Making thumbnails fast
 published_on: September 14, 2015
 author: William Chargin
 team: Web Frontend
-async_scripts: ["https://cdn.rawgit.com/Khan/KaTeX/v0.5.1/dist/katex.min.js", "https://cdn.rawgit.com/Khan/KaTeX/v0.5.1/dist/contrib/auto-render.min.js"]
-stylesheets: ["https://cdn.rawgit.com/Khan/KaTeX/v0.5.1/dist/katex.min.css"]
+async_scripts: ["https://cdn.rawgit.com/Khan/KaTeX/v0.6.0/dist/katex.min.js", "https://cdn.rawgit.com/Khan/KaTeX/v0.6.0/dist/contrib/auto-render.min.js"]
+stylesheets: ["https://cdn.rawgit.com/Khan/KaTeX/v0.6.0/dist/katex.min.css"]
 postcontent_scripts: ["/javascript/katex-entry.js"]
 ...
 
@@ -257,7 +257,9 @@ D \otimes
   r \\\\
   g \\\\
   b
-\end{bmatrix}
+\end{bmatrix}.
+$$
+$$
 =
 \begin{bmatrix}
   (1 - k_D) r + k_D (w_r r + w_g g + w_b b) \\\\
