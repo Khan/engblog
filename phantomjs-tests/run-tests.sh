@@ -5,7 +5,7 @@ TEST_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ROOT_DIR="$(cd "$TEST_DIR/.."; pwd)"
 OUTPUT_DIR="$(cd "$ROOT_DIR/output"; pwd)"
 
-"$ROOT_DIR/node_modules/http-server/bin/http-server" "$OUTPUT_DIR" -s -p 9104 -a 127.0.0.1 -d false -e htm &
+"$ROOT_DIR/node_modules/http-server/bin/http-server" "$OUTPUT_DIR" -p 9104 -a 127.0.0.1 -d false -e htm &
 SERVER_PID=$!
 
 # Wait until the server starts up
@@ -27,16 +27,15 @@ URLS=$(
 EXIT_CODE=0
 
 for script in $TEST_DIR/*.js; do
-    echo -n "Running $script"
+    echo "Running $script"
 
     # Start the test
     PHANTOM_OUTPUT_FILE="$(mktemp /tmp/phantom-output.XXXXXXX)"
-    phantomjs "$script" $URLS > "$PHANTOM_OUTPUT_FILE" 2>&1 &
+    phantomjs "$script" $URLS 2>&1 | tee "$PHANTOM_OUTPUT_FILE" &
     PHANTOM_PID="$!"
 
     # Wait until the test is finished
     until $(grep "TEST FINISHED" "$PHANTOM_OUTPUT_FILE" > /dev/null 2>&1); do
-        echo -n "."
         sleep 1
     done
 
@@ -49,7 +48,7 @@ for script in $TEST_DIR/*.js; do
     fi
 
     # Print the output of the test
-    echo
+    echo "Finished running $script. Output:"
     cat "$PHANTOM_OUTPUT_FILE"
     rm "$PHANTOM_OUTPUT_FILE"
 done
