@@ -1,151 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{{displayed_post.title}} | Khan Academy Engineering</title>
-    <link rel="icon" href="/images/favicon.ico" />
+{{> header }}
+{{> sidebar }}
 
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="We're the engineers behind Khan Academy. We're building a free, world-class education for anyone, anywhere.">
-
-    <!-- inject:head:css -->
-    <!-- endinject -->
-
-    {{#displayed_post.async_scripts}}
-    <script async src="{{.}}"></script>
-    {{/displayed_post.async_scripts}}
-
-    {{#displayed_post.stylesheets}}
-    <link rel="stylesheet" href="{{.}}"></link>
-    {{/displayed_post.stylesheets}}
-</head>
-<body>
-    <div id="left-bar">
-        <h1 class="logo">
-            <a href="/"><span aria-label="Khan Academy">KA</span> <span class="engineering">Engineering</span></a>
-        </h1>
-        <h1 class="logo mobile">
-            <!-- We'll bind a handler to this that'll toggle the menu -->
-            <a id="mobile-menu-button" href="javascript: void 0">
-                <svg class="font-awesome-svg" viewBox="0 0 1792 1792" aria-hidden="true"><path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z" fill="#fff"/></svg>
-                <span class="text"><span aria-label="Khan Academy">KA</span> <span class="engineering">Engineering</span></span>
-            </a>
-        </h1>
-        <section class="bio">
-            We're the engineers behind <a href="https://www.khanacademy.org">Khan Academy</a>. We're building a free, world-class education for anyone, anywhere.
-        </section>
-        <section class="subscription-info">
-            <h2 class="section-heading">Subscribe</h2>
-            <div class="links">
-                <a href="https://twitter.com/KAEngineering"><span class="sr-only">Subscribe with Twitter</span><svg class="font-awesome-svg" viewBox="0 0 1792 1792" aria-hidden="true"><path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z" fill="#fff"/></svg></a>
-                <a href="/rss.xml"><span class="sr-only">Subscribe with RSS</span><svg class="font-awesome-svg" viewBox="0 0 1792 1792" aria-hidden="true"><path d="M576 1344q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136zm512 123q2 28-17 48-18 21-47 21h-135q-25 0-43-16.5t-20-41.5q-22-229-184.5-391.5t-391.5-184.5q-25-2-41.5-20t-16.5-43v-135q0-29 21-47 17-17 43-17h5q160 13 306 80.5t259 181.5q114 113 181.5 259t80.5 306zm512 2q2 27-18 47-18 20-46 20h-143q-26 0-44.5-17.5t-19.5-42.5q-12-215-101-408.5t-231.5-336-336-231.5-408.5-102q-25-1-42.5-19.5t-17.5-43.5v-143q0-28 20-46 18-18 44-18h3q262 13 501.5 120t425.5 294q187 186 294 425.5t120 501.5z" fill="#fff"/></svg></a>
-            </div>
-        </section>
-        {{#upcoming_post}}
-        <section>
-            <h2 class="section-heading">Upcoming fortnightly post</h2>
-            <div class="post-blurb {{upcoming_post.team_class}}">
-                <h3 class="title">{{upcoming_post.title}}</h3>
-                <div class="info">
-                    <img class="inline-author-photo" src="{{upcoming_post.author.icon_url}}" aria-hidden="true" role="presentation" />
-                    <span class="sr-only">by</span> <a class="author-link" href="{{upcoming_post.author.primary_url}}">{{upcoming_post.author.display_as}}</a> on {{{upcoming_post.published_on_html}}}
-                </div>
-            </div>
-        </section>
-        {{/upcoming_post}}
-        <section>
-            <h2 class="section-heading">Latest posts</h2>
-            {{#posts}}
-            <div class="post-blurb {{team_class}}">
-                <h3 class="title">
-                    <a href="{{permalink}}">{{title}}</a>
-                </h3>
-                <div class="info">
-                    <img class="inline-author-photo" src="{{author.icon_url}}" aria-hidden="true" role="presentation" />
-                    <a class="author-link" href="{{author.primary_url}}">{{author.display_as}}</a> on {{{published_on_html}}}
-                </div>
-            </div>
-            {{/posts}}
-        </section>
-        <section class="meta-section">
-            <h2 class="section-heading">Meta</h2>
-            <ul class="link-list">
-                <li><a href="https://github.com/Khan/engblog">About this blog</a></li>
-                <li><a href="https://www.khanacademy.org/about">KA's mission</a></li>
-                <li><a href="https://github.com/khan/engblog/issues">Report a bug</a></li>
-                <li><a id="activate-tota11y" href="javascript: void 0">Activate tota11y</a></li>
-            </ul>
-        </section>
-    </div>
-    <main id="content">
-        <article class="post">
-            <h1 class="title">{{displayed_post.title}}</h1>
-            <div class="info">
-                <img class="inline-author-photo" src="{{displayed_post.author.icon_url}}" aria-hidden="true" role="presentation" />
-                <span class="sr-only">by</span> <a class="author-link" href="{{displayed_post.author.primary_url}}">{{displayed_post.author.display_as}}</a> on {{{displayed_post.published_on_html}}}
-            </div>
-            <div class="body">
-                {{{html_content}}}
-            </div>
-        </article>
-        {{#displayed_post.postcontent_scripts}}
-        <script async src="{{.}}"></script>
-        {{/displayed_post.postcontent_scripts}}
-        <div class="keep-reading-buttons">
-            <div class="keep-reading-cell keep-reading-left">
-                {{#previous_post}}
-                <div class="button prev-post-button {{previous_post.team_class}}">
-                    <div class="header">previous post</div>
-                    <a href="{{previous_post.permalink}}" class="post-title">{{previous_post.title}}</a>
-                </div>
-                {{/previous_post}}
-            </div>
-            <div class="keep-reading-cell keep-reading-right">
-                {{#next_post}}
-                <div class="button next-post-button {{next_post.team_class}}">
-                    <div class="header">next post</div>
-                    <a href="{{next_post.permalink}}" class="post-title">{{next_post.title}}</a>
-                </div>
-                {{/next_post}}
-            </div>
+<main id="content">
+    <article class="post">
+        <h1 class="title">{{displayed_post.title}}</h1>
+        <div class="info">
+            <img class="inline-author-photo" src="{{displayed_post.author.icon_url}}" aria-hidden="true" role="presentation" />
+            <span class="sr-only">by</span> <a class="author-link" href="{{displayed_post.author.primary_url}}">{{displayed_post.author.display_as}}</a> on {{{displayed_post.published_on_html}}}
         </div>
-    </main>
-    <script>
-        document.getElementById("mobile-menu-button").onclick = function() {
-            var body = document.body;
-            var leftBar = document.getElementById("left-bar");
-            var content = document.getElementById("content");
-            if (leftBar.className === "mobile-visible") {
-                body.className = "";
-                leftBar.className = "";
-                content.className = "";
-            } else {
-                body.className = "mobile-menu-visible";
-                leftBar.className = "mobile-visible";
-                content.className = "mobile-hidden";
-            }
-        };
+        <div class="body">
+            {{{html_content}}}
+        </div>
+    </article>
+    {{#displayed_post.postcontent_scripts}}
+    <script async src="{{.}}"></script>
+    {{/displayed_post.postcontent_scripts}}
+    <div class="keep-reading-buttons">
+        <div class="keep-reading-cell keep-reading-left">
+            {{#previous_post}}
+            <div class="button prev-post-button {{previous_post.team_class}}">
+                <div class="header">previous post</div>
+                <a href="{{previous_post.permalink}}" class="post-title">{{previous_post.title}}</a>
+            </div>
+            {{/previous_post}}
+        </div>
+        <div class="keep-reading-cell keep-reading-right">
+            {{#next_post}}
+            <div class="button next-post-button {{next_post.team_class}}">
+                <div class="header">next post</div>
+                <a href="{{next_post.permalink}}" class="post-title">{{next_post.title}}</a>
+            </div>
+            {{/next_post}}
+        </div>
+    </div>
+</main>
 
-        var totallyActivated = false;
-        document.getElementById("activate-tota11y").onclick = function() {
-            if (totallyActivated) {
-                console.log("Tota11y already activated. Doing nothing.");
-                return;
-            }
-
-            var script = document.createElement("script");
-            script.src = "/javascript/tota11y.min.js";
-            document.head.appendChild(script);
-            totallyActivated = true;
-        };
-
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-65856931-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-</body>
-</html>
+{{> footer }}

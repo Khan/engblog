@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        {{#displayed_post.title}}
+            {{displayed_post.title}} |
+        {{/displayed_post.title}}
+        Khan Academy Engineering
+    </title>
+    <link rel="icon" href="/images/favicon.ico" />
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="We're the engineers behind Khan Academy. We're building a free, world-class education for anyone, anywhere.">
+
+    <!-- inject:head:css -->
+    <!-- endinject -->
+
+    {{#displayed_post.async_scripts}}
+    <script async src="{{.}}"></script>
+    {{/displayed_post.async_scripts}}
+
+    {{#displayed_post.stylesheets}}
+    <link rel="stylesheet" href="{{.}}"></link>
+    {{/displayed_post.stylesheets}}
+</head>
+<body>

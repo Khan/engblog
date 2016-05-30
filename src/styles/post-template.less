@@ -350,6 +350,71 @@ body {
         }
     }
 
+    .post-blurb {
+        margin-top: 30px;
+        padding-bottom: 4px;
+        border-left: 1px solid transparent;
+        padding-left: 10px;
+        margin-left: -10px;
+
+        @media (max-width: @doubleColumnMaxWidth) {
+            border-left: 10px solid transparent;
+            padding-left: 17px;
+            margin-left: -26px;
+        }
+
+        &:first-of-type {
+            margin-top: 20px;
+        }
+
+        &.team-infrastructure {
+            border-color: @infrastructureColor;
+        }
+
+        &.team-web-frontend {
+            border-color: @frontendColor;
+        }
+
+        &.team-eng-leads {
+            border-color: @engLeadsColor;
+        }
+
+        &.team-design {
+            border-color: @designColor;
+        }
+
+        .title {
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: 400;
+            margin: 0 0 9px 0;
+
+            a {
+                color: @contentTextColor;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .info {
+            font-size: 12px;
+
+            .author-link {
+                color: @contentTextColor;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 11px;
+            }
+
+            .author-link:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
     .keep-reading-buttons {
         display: table;
         margin-top: 30px;
