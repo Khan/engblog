@@ -257,7 +257,7 @@ D \otimes
   r \\\\
   g \\\\
   b
-\end{bmatrix}.
+\end{bmatrix}
 $$
 $$
 =
