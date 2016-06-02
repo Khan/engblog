@@ -111,6 +111,11 @@ authors = {
         "primary_url": "http://www.arguingwithalgorithms.com",
         "icon_url": "/images/author-icons/tomyedwab.png",
     },
+    "2015 Interns": {
+        "display_as": "2015 Interns",
+        "primary_url": "https://www.khanacademy.org/careers/interns",
+        "icon_url": "/images/author-icons/khanacademy.png",
+    },
 }
 
 # To see the list of possible team-classes, search for `team-*` at

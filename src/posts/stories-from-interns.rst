@@ -1,10 +1,10 @@
 title: "Stories from our latest intern class"
 published_on: December 21, 2015
-author: John Sullivan
+author: 2015 Interns
 team: Web Frontend
 ...
 
-I sent an email out to all of the 2015 interns in early November, shortly after they had left KA. The email said that I was hoping to write a blog post on our intern class, and asked them “do you have a most memorable moment, a project you liked, a lesson learned, or really anything you'd like to share with the world in this way?” Here are four responses...
+We sent an email out to all of the 2015 interns in early November, shortly after they had left KA. The email said that we were hoping to write a blog post on our intern class, and asked them “do you have a most memorable moment, a project you liked, a lesson learned, or really anything you'd like to share with the world in this way?” Here are four responses...
 
 Chelsea Voss: Mobile!
 =====================
