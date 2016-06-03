@@ -16,8 +16,8 @@ Who can contribute?
 Anyone can contribute patches (`we're open source <https://github.com/Khan/engblog/blob/master/LICENSE.rst>`_) but posting to the blog is generally restricted to Khan Academy employees.
 
 
-Building locally
-----------------
+Serving locally
+---------------
 
 The blog is a static website built using the code in this repo, from the content that is also in this repo.
 
@@ -35,6 +35,18 @@ Linting
 -------
 
 Before committing any changes, make sure to run ``make lint``.
+
+
+Responsive PhantomJS Tests
+--------------------------
+
+The blog has a responsive design and will resize itself to match small viewports. To ensure this remains true, Travis will run a set of PhantomJS tests to check the width of each page on the blog before updating the live site.
+
+You can run these tests yourself by running ``make phantomjs-tests`` (you'll need PhantomJS to be installed, which is available on many package managers including Homebrew).
+
+If your post is failing these tests, you should open up view your post with an "iPhone 5" viewport (320x568) via Chrome DevTools. Then look for an element in your page that's too wide. You can then either modify the element in your post's markup, or add styling to the ``src/styles/post-template.less`` stylesheet to fix the problem.
+
+If you have any trouble with this, anyone on the Web Frontend team should be able to help you. John Sullivan is also a good resource.
 
 
 Making a new post
