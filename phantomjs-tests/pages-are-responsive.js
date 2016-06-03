@@ -1,16 +1,8 @@
 /**
- * Test that all pages resize to fit the width of the viewport.
- *
- * This script will render all the URLs that are passed into it at a specific
- * viewport width, and then ensure that the width of the body element is
- * exactly that width.
+ * Test that a page resizes to perfectly fit the width of the viewport.
  *
  * The script will return with an exit status of 0 on success, and 1 on
  * failure.
- *
- * Usage:
- *
- *     phantomjs phantomjs-tests/pages-are-responsive.js [URL [URL] ...]
  */
 
 var system = require("system");
