@@ -16,76 +16,34 @@
 var system = require("system");
 var webpage = require("webpage");
 
-// The width we'll set the viewport to (we expect the content to resize to
-// match this number).
-VIEWPORT_WIDTH = 568;
-
-// The results of the testing (each item will be a 2-list with [url, width])
-results = [];
-
-// Bind polyfill from
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
-if (!Function.prototype.bind) {
-  Function.prototype.bind = function(oThis) {
-    if (typeof this !== 'function') {
-      // closest thing possible to the ECMAScript 5
-      // internal IsCallable function
-      throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
-    }
-
-    var aArgs   = Array.prototype.slice.call(arguments, 1),
-        fToBind = this,
-        fNOP    = function() {},
-        fBound  = function() {
-          return fToBind.apply(
-                this instanceof fNOP ? this : oThis,
-                aArgs.concat(Array.prototype.slice.call(arguments)));
-        };
-
-    if (this.prototype) {
-      // Function.prototype doesn't have a prototype property
-      fNOP.prototype = this.prototype;
-    }
-    fBound.prototype = new fNOP();
-
-    return fBound;
-  };
+if (system.args.length !== 3) {
+    console.log("USAGE:", system.args[0], " [URL] [VIEWPORT_WIDTH]");
+    phantom.exit(1);
 }
+var url = system.args[1];
+var viewportWidth = parseInt(system.args[2])
 
-// Exit if all the tests have finished
-var maybeExit = function() {
-    if (results.length !== system.args.length - 1) {
+var page = webpage.create();
+page.viewportSize = {width: viewportWidth, height: 320};
+page.onLoadFinished = function(status) {
+    if (status !== "success") {
+        console.log("\tResponsiveness test failed. Failed to fetch", url);
+        phantom.exit(1);
         return;
     }
 
-    var success = true;
-    for (var i = 0; i < results.length; ++i) {
-        if (results[i][1] !== VIEWPORT_WIDTH) {
-            console.log("TEST FAILURE: " + results[i][0] +
-                        " failed with width " + results[i][1]);
-            success = false;
-        }
+    var width = page.evaluate(function() {
+        // scrollWidth takes into account any oversized content, which is
+        // exactly what we're looking for.
+        return document.body.scrollWidth;
+    });
+
+    var testPassed = width === viewportWidth;
+    if (!testPassed) {
+        console.log("\tResponsiveness test failed. Expected width",
+                    viewportWidth, "got", width);
     }
 
-    console.log("TEST FINISHED");
+    phantom.exit(width === viewportWidth ? 0 : 1);
 };
-
-var args = system.args;
-for (var i = 1; i < args.length; ++i) {
-    var page = webpage.create();
-    page.viewportSize = {width: VIEWPORT_WIDTH, height: 320};
-
-    page.onLoadFinished = function(url) {
-        setTimeout(function() {
-            var width = this.evaluate(function() {
-                return document.body.scrollWidth;
-            });
-            results.push([url, width]);
-            maybeExit();
-        }.bind(this), 1000);
-    }.bind(page, args[i]);
-
-    page.onError = function() {};
-
-    page.open(args[i]);
-}
+page.open(url);
