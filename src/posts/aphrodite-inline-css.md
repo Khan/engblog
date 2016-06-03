@@ -327,7 +327,7 @@ This can generate larger CSS, however it's not quite a combinatorial explosion. 
 
 ## In production!
 
-Newly written React components at Khan Academy use Aphrodite for their styling needs. If you visit [https://www.khanacademy.org/science/physics](https://www.khanacademy.org/science/physics) and view source, you should see something like this:
+Newly written React components at Khan Academy use Aphrodite for their styling needs. If you visit [khanacademy.org/science/physics](https://www.khanacademy.org/science/physics) and view source, you should see something like this:
 
 ```
 <style data-aphrodite>.wrapper_npd2t8{...

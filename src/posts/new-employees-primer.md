@@ -20,7 +20,7 @@ I said something stupid:
 
 ...and I got **the coolest** response ever:
 
-> OK!! [https://www.khanacademy.org/r/flipendo](https://www.khanacademy.org/r/flipendo)
+> OK!! [khanacademy.org/r/flipendo](https://www.khanacademy.org/r/flipendo)
 
 Wat. He… wat? He made that? For… me? Wat.[^1]
 
