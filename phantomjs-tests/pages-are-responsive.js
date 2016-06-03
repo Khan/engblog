@@ -21,7 +21,7 @@ if (system.args.length !== 3) {
     phantom.exit(1);
 }
 var url = system.args[1];
-var viewportWidth = parseInt(system.args[2])
+var viewportWidth = parseInt(system.args[2]);
 
 var page = webpage.create();
 page.viewportSize = {width: viewportWidth, height: 320};
