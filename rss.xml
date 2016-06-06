@@ -5,6 +5,12 @@
         <link>http://engineering.khanacademy.org</link>
         <description>Khan Academy Engineering's blog</description>
         <item>
+            <title>Khan Academy's Engineering Principles</title>
+            <link>http://engineering.khanacademy.org/posts/engineering-principles.htm</link>
+            <pubDate>Mon, 06 Jun 2016 11:00:00 GMT-8</pubDate>
+            <guid>http://engineering.khanacademy.org/posts/engineering-principles.htm</guid>
+        </item>
+        <item>
             <title>Minimizing the length of regular expressions, in practice</title>
             <link>http://engineering.khanacademy.org/posts/shortest-regex.htm</link>
             <pubDate>Mon, 23 May 2016 11:00:00 GMT-8</pubDate>
