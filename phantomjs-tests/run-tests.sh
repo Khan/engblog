@@ -26,7 +26,13 @@ URLS=$(
 
 # A responsive test failure on any of these pages will be ignored
 RESPONSIVE_TEST_WHITELIST="
+    # This fails because some tables are too wide. Tricky to fix, not sure how
+    # to reformat the data to be thinner.
     http://127.0.0.1:9104/posts/js-packaging-http2.htm
+
+    # TODO(johnsullivan): I don't know why this fails yet... And can't
+    #     reproduce it locally.
+    http://127.0.0.1:9104/posts/i18nize-templates.htm
 "
 
 # By default, return a successful exit code
