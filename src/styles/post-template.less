@@ -293,11 +293,17 @@ body {
         }
     }
 
-    .title {
+    .title a {
         letter-spacing: 1px;
         margin-bottom: 8px;
         font-size: 28px;
         line-height: 1;
+        color: @contentTextColor;
+        text-decoration: none;
+
+        &:hover, &:focus {
+            text-decoration: underline;
+        }
     }
 
     .info {

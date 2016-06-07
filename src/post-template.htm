@@ -79,7 +79,11 @@
     </div>
     <main id="content">
         <article class="post">
-            <h1 class="title">{{displayed_post.title}}</h1>
+            <h1 class="title">
+                <a href="{{displayed_post.permalink}}">
+                    {{displayed_post.title}}
+                </a>
+            </h1>
             <div class="info">
                 <img class="inline-author-photo" src="{{displayed_post.author.icon_url}}" aria-hidden="true" role="presentation" />
                 <span class="sr-only">by</span> <a class="author-link" href="{{displayed_post.author.primary_url}}">{{displayed_post.author.display_as}}</a> on {{{displayed_post.published_on_html}}}
