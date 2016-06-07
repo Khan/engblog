@@ -33,6 +33,10 @@ RESPONSIVE_TEST_WHITELIST="
     # TODO(johnsullivan): I don't know why this fails yet... And can't
     #     reproduce it locally.
     http://127.0.0.1:9104/posts/i18nize-templates.htm
+
+    # This test fails intermittently (if the JS renders quickly enough it will
+    # fail because of its long equations).
+    http://127.0.0.1:9104/posts/making-thumbnails-fast.htm
 "
 
 # By default, return a successful exit code
