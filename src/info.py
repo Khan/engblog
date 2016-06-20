@@ -123,7 +123,7 @@ authors = {
 # `team` value and replace dashes with spaces.
 # See README.rst for more info.
 upcoming_post = {
-    "title": u"Ensure Transaction-Safety in Google App Engine",
+    "title": u"Ensuring Transaction-Safety in Google App Engine",
     "team": "Infrastructure",
     "team_class": "team-infrastructure",
     "author": authors["Craig Silverstein"],
