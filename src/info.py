@@ -123,10 +123,9 @@ authors = {
 # `team` value and replace dashes with spaces.
 # See README.rst for more info.
 upcoming_post = {
-    "title": (u"The User Write Lock: an Alternative to Transactions "
-               "for Google Appengine"),
+    "title": u"Ensure Transaction-Safety in Google App Engine",
     "team": "Infrastructure",
     "team_class": "team-infrastructure",
     "author": authors["Craig Silverstein"],
-    "published_on_html": "June 20<sup aria-hidden='true'>th</sup>",
+    "published_on_html": "June 27<sup aria-hidden='true'>th</sup>",
 }
