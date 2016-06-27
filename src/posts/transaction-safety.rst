@@ -74,7 +74,7 @@ place, and then tracing through the code to find the problematic
 A Taxonomy of Data Stomping Errors
 ----------------------------------
 
-While the GET-outisde-transaction error is the most common, there are
+While the GET-outside-transaction error is the most common, there are
 many related types of data corruption.  The infrastructure we put in
 place catches the following three types:
 
@@ -112,16 +112,16 @@ place catches the following three types:
     .. code:: python
 
         @ndb.transactional
-        def _internal_fn(user_data):
-           user_data1 = user_data.key.get()
+        def _internal_fn(uid):
+           user_data1 = get_user(uid)
            user_data1.points += 5
            user_data1.put()
         
         @ndb.transactional
         def public_fn(uid):
-           user_data2 = user_data.key.get()
+           user_data2 = get_user(uid)
            user_data2.points += 10
-           _internal_fn()
+           _internal_fn(uid)
            user_data2.put()
 
     The problem here is that ``user_data1`` and ``user_data2`` are totally
