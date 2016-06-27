@@ -59,7 +59,7 @@ a transaction, but there are many ways to get this wrong:
   seems mostly-fine -- are done inside the transaction
 - The ``get()`` call gives a cached result
 
-This third cause was a big problem for us: we would cache the entity
+This last cause was a big problem for us: we would cache the entity
 corresponding to the current user, for efficiency.  Then, whenever we
 wanted to update the current user, we'd do
 ``get_current_user().modify().put()`` inside a transaction, without
