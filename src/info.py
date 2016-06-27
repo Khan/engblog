@@ -120,12 +120,12 @@ authors = {
 
 # To see the list of possible team-classes, search for `team-*` at
 # src/styles/post-template.less.  Just remove the 'team-' to get the
-# `team` value and replace dashes with spaces.
+# `team` value, replace dashes with spaces, and capitalize words.
 # See README.rst for more info.
 upcoming_post = {
-    "title": u"Ensuring Transaction-Safety in Google App Engine",
-    "team": "Infrastructure",
-    "team_class": "team-infrastructure",
-    "author": authors["Craig Silverstein"],
-    "published_on_html": "June 27<sup aria-hidden='true'>th</sup>",
+    "title": u"Hackathons Can Be Healthy",
+    "team": "Eng Leads",
+    "team_class": "team-eng-leads",
+    "author": authors["Tom Yedwab"],
+    "published_on_html": "July 11<sup aria-hidden='true'>th</sup>",
 }
