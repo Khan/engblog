@@ -5,6 +5,12 @@
         <link>http://engineering.khanacademy.org</link>
         <description>Khan Academy Engineering's blog</description>
         <item>
+            <title>Ensuring transaction-safety in Google App Engine</title>
+            <link>http://engineering.khanacademy.org/posts/transaction-safety.htm</link>
+            <pubDate>Mon, 27 Jun 2016 11:00:00 GMT-8</pubDate>
+            <guid>http://engineering.khanacademy.org/posts/transaction-safety.htm</guid>
+        </item>
+        <item>
             <title>The User Write Lock: an Alternative to Transactions for Google App Engine</title>
             <link>http://engineering.khanacademy.org/posts/user-write-lock.htm</link>
             <pubDate>Mon, 20 Jun 2016 11:00:00 GMT-8</pubDate>
