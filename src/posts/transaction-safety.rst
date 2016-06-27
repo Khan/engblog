@@ -13,7 +13,7 @@ effective at avoiding a particular form of database corruption -- call
 it "data stomping."  Data stomping happens when two requests try to
 modify the same datastore entity at the same time.
 
-.. image:: images/txn-timeline.png
+.. image:: /images/txn-timeline.png
   :align: center
 
 Request B does not see A's modifications, and its PUT overwrites A's
