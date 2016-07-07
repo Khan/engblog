@@ -116,6 +116,11 @@ authors = {
         "primary_url": "https://www.khanacademy.org/careers/interns",
         "icon_url": "/images/author-icons/khanacademy.png",
     },
+    "Multiple": {
+        "display_as": "Several Authors",
+        "primary_url": "https://www.khanacademy.org/careers",
+        "icon_url": "/images/author-icons/khanacademy.png",
+    },
 }
 
 # To see the list of possible team-classes, search for `team-*` at
@@ -123,9 +128,9 @@ authors = {
 # `team` value, replace dashes with spaces, and capitalize words.
 # See README.rst for more info.
 upcoming_post = {
-    "title": u"Hackathons Can Be Healthy",
-    "team": "Eng Leads",
-    "team_class": "team-eng-leads",
-    "author": authors["Tom Yedwab"],
-    "published_on_html": "July 11<sup aria-hidden='true'>th</sup>",
+    "title": u"Time Management at Khan Academy - Part 1",
+    "team": "Web Frontend",
+    "team_class": "team-web-frontend",
+    "author": authors["Multiple"],
+    "published_on_html": "July 25<sup aria-hidden='true'>th</sup>",
 }
