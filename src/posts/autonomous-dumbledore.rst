@@ -15,7 +15,6 @@ Unfortunately, due to scheduled system maintenance periods, this feature occasio
 .. image:: /images/auto-dumble/sign-into-cb.png
     :alt: The prompt to sign into CollegeBoard.
     :class: align-center
-    :height: 300px
 
 .. class:: caption
 
@@ -25,7 +24,6 @@ Unfortunately, due to scheduled system maintenance periods, this feature occasio
 .. image:: /images/auto-dumble/cb-maintenance.png
     :alt: Notice of CollegeBoard maintenance.
     :class: align-center
-    :height: 150px
 
 .. class:: caption
 
@@ -41,7 +39,6 @@ Introducing the Autonomous Dumbledore
 .. image:: /images/auto-dumble/robot-wizard.png
     :alt: A robot wizard
     :class: align-center
-    :height: 400px
 
 .. class:: caption
 
