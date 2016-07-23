@@ -130,7 +130,12 @@ authors = {
         "display_as": "Charlie Marsh",
         "primary_url": "http://www.crmarsh.com",
         "icon_url": "/images/author-icons/charliemarsh.jpg",
-    }
+    },
+    "Eli Feasley": {
+        "display_as": "Eli Feasley",
+        "primary_url": "http://eliana.io/",
+        "icon_url": "/images/author-icons/elifeasley.jpg",
+    },
 }
 
 # To see the list of possible team-classes, search for `team-*` at
@@ -138,9 +143,9 @@ authors = {
 # `team` value, replace dashes with spaces, and capitalize words.
 # See README.rst for more info.
 upcoming_post = {
-    "title": u"Building a Really, Really Small Android App",
-    "team": "Web Frontend",
-    "team_class": "team-web-frontend",
-    "author": authors["Charlie Marsh"],
-    "published_on_html": "August 22<sup aria-hidden='true'>nd</sup>",
+    "title": u"Mentorship at Khan Academy",
+    "team": "Workflow Task Force",
+    "team_class": "team-wtf",
+    "author": authors["Eli Feasley"],
+    "published_on_html": "September 5<sup aria-hidden='true'>th</sup>",
 }
