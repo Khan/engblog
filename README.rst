@@ -79,8 +79,8 @@ The available options of the frontmatter are:
   The author's name. Must exactly match one of the keys of the ``authors`` dictionary in ``src/info.py``.
 
 ``team``
-  The team at KA that the author belongs to (or feels like posting under). Must be one of ``Infrastructure``, ``Web Frontend``, ``Eng Leads``, or ``Team Design``. If your team is not listed, you can add another by adding a class to ``src/styles/post-template.less``. Search for ``team-infrastructure`` for the relevant code.
-  
+  The team at KA that the author belongs to (or feels like posting under). Must be one of ``Infrastructure``, ``Web Frontend``, ``Mobile``, ``Eng Leads``, or ``Team Design``. If your team is not listed, you can add another by adding a class to ``src/styles/post-template.less``. Search for ``team-infrastructure`` for the relevant code.
+
 ``async_scripts``
   A list of scripts to load. These will be loaded with the `async <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-async>`_ attribute.
 
@@ -92,7 +92,7 @@ Publishing
 
 **If you're publishing a new blog post, make sure to update the upcoming post section first**, which you can do by editing the file ``src/info.py``.  You can find the information to update to in the `publish queue <https://app.asana.com/0/33397771830491/68184404290301>`_ -- or, at least, everything except the team, which you may need to figure out (from the list of categories above) yourself.  Or better yet, ask the author!  For team_class, just do ``team.lower().replace(' ', '-')``.
 
-After this, just push your changes to master. `Travis <https://travis-ci.org/Khan/engblog>`_ will take care of everything else. 
+After this, just push your changes to master. `Travis <https://travis-ci.org/Khan/engblog>`_ will take care of everything else.
 You can ping `brownhead <https://github.com/brownhead>`_ (``@johnsullivan`` on HipChat) for help if anything explodes.
 
 **If you're a KA employee**, make sure to follow `the remaining instructions on the forge page <https://sites.google.com/a/khanacademy.org/forge/for-khan-employees/ka-engineering-blog#TOC-Publishing->`_. This includes *at least* posting to the KA Engineering twitter account.
