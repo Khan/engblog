@@ -121,6 +121,11 @@ authors = {
         "primary_url": "https://www.khanacademy.org/careers",
         "icon_url": "/images/author-icons/khanacademy.png",
     },
+    "Oliver Northwood": {
+        "display_as": "Oliver Northwood",
+        "primary_url": "https://github.com/allofthenorthwood",
+        "icon_url": "/images/author-icons/olivernorthwood.jpg",
+    },
 }
 
 # To see the list of possible team-classes, search for `team-*` at
@@ -128,9 +133,9 @@ authors = {
 # `team` value, replace dashes with spaces, and capitalize words.
 # See README.rst for more info.
 upcoming_post = {
-    "title": u"Time Management at Khan Academy - Part 1",
+    "title": u"A Case for Time Tracking: Data Driven Time-Management",
     "team": "Web Frontend",
     "team_class": "team-web-frontend",
-    "author": authors["Multiple"],
-    "published_on_html": "July 25<sup aria-hidden='true'>th</sup>",
+    "author": authors["Oliver Northwood"],
+    "published_on_html": "August 8<sup aria-hidden='true'>th</sup>",
 }
