@@ -5,7 +5,7 @@ team: Infrastructure
 ...
 
 In last week's exciting post, I described an `alternative to
-transactions </posts/user-write-lock.html>`_ that we use at Khan
+transactions </posts/user-write-lock.htm>`_ that we use at Khan
 Academy, to ensure atomic datastore operations.
 
 When used correctly, both the user-write lock and transactions are
