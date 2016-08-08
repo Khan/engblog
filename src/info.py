@@ -126,6 +126,11 @@ authors = {
         "primary_url": "https://github.com/allofthenorthwood",
         "icon_url": "/images/author-icons/olivernorthwood.jpg",
     },
+    "Charlie Marsh": {
+        "display_as": "Charlie Marsh",
+        "primary_url": "http://www.crmarsh.com",
+        "icon_url": "/images/author-icons/charliemarsh.jpg",
+    }
 }
 
 # To see the list of possible team-classes, search for `team-*` at
@@ -133,9 +138,9 @@ authors = {
 # `team` value, replace dashes with spaces, and capitalize words.
 # See README.rst for more info.
 upcoming_post = {
-    "title": u"A Case for Time Tracking: Data Driven Time-Management",
+    "title": u"Building a Really, Really Small Android App",
     "team": "Web Frontend",
     "team_class": "team-web-frontend",
-    "author": authors["Oliver Northwood"],
-    "published_on_html": "August 8<sup aria-hidden='true'>th</sup>",
+    "author": authors["Charlie Marsh"],
+    "published_on_html": "August 22<sup aria-hidden='true'>nd</sup>",
 }
