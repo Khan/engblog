@@ -142,10 +142,4 @@ authors = {
 # src/styles/post-template.less.  Just remove the 'team-' to get the
 # `team` value, replace dashes with spaces, and capitalize words.
 # See README.rst for more info.
-upcoming_post = {
-    "title": u"Evolving our content infrastructure",
-    "team": "Infrastructure",
-    "team_class": "team-infrastructure",
-    "author": authors["William Chargin"],
-    "published_on_html": "September 19<sup aria-hidden='true'>th</sup>",
-}
+upcoming_post = None  # TODO!
