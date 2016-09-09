@@ -143,9 +143,9 @@ authors = {
 # `team` value, replace dashes with spaces, and capitalize words.
 # See README.rst for more info.
 upcoming_post = {
-    "title": u"Mentorship at Khan Academy",
-    "team": "Workflow Task Force",
-    "team_class": "team-wtf",
-    "author": authors["Eli Feasley"],
-    "published_on_html": "September 5<sup aria-hidden='true'>th</sup>",
+    "title": u"Evolving our content infrastructure",
+    "team": "Infrastructure",
+    "team_class": "team-infrastructure",
+    "author": authors["William Chargin"],
+    "published_on_html": "September 19<sup aria-hidden='true'>th</sup>",
 }
