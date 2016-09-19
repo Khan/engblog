@@ -5,6 +5,12 @@
         <link>http://engineering.khanacademy.org</link>
         <description>Khan Academy Engineering's blog</description>
         <item>
+            <title>Evolving our content infrastructure</title>
+            <link>http://engineering.khanacademy.org/posts/evolving-our-content-infrastructure.htm</link>
+            <pubDate>Mon, 19 Sep 2016 11:00:00 GMT-8</pubDate>
+            <guid>http://engineering.khanacademy.org/posts/evolving-our-content-infrastructure.htm</guid>
+        </item>
+        <item>
             <title>Building a Really, Really Small Android App</title>
             <link>http://engineering.khanacademy.org/posts/a-really-small-app.htm</link>
             <pubDate>Mon, 22 Aug 2016 11:00:00 GMT-8</pubDate>
