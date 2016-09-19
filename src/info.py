@@ -136,6 +136,11 @@ authors = {
         "primary_url": "http://eliana.io/",
         "icon_url": "/images/author-icons/elifeasley.jpg",
     },
+    "Nick Breen": {
+        "display_as": "Nick Breen",
+        "primary_url": "http://nickbreen.ca/",
+        "icon_url": "/images/author-icons/nickbreen.jpg",
+    },
 }
 
 # To see the list of possible team-classes, search for `team-*` at
@@ -143,9 +148,9 @@ authors = {
 # `team` value, replace dashes with spaces, and capitalize words.
 # See README.rst for more info.
 upcoming_post = {
-    "title": u"Evolving our content infrastructure",
-    "team": "Infrastructure",
-    "team_class": "team-infrastructure",
-    "author": authors["William Chargin"],
-    "published_on_html": "September 19<sup aria-hidden='true'>th</sup>",
+    "title": u"Prototyping with Framer",
+    "team": "Web Frontend",
+    "team_class": "team-web-frontend",
+    "author": authors["Nick Breen"],
+    "published_on_html": "October 3<sup aria-hidden='true'>rd</sup>",
 }
