@@ -138,8 +138,13 @@ authors = {
     },
     "Nick Breen": {
         "display_as": "Nick Breen",
-        "primary_url": "http://nickbreen.ca/",
+        "primary_url": "https://github.com/MrNickBreen",
         "icon_url": "/images/author-icons/nickbreen.jpg",
+    },
+    "Ben Kraft": {
+        "display_as": "Ben Kraft",
+        "primary_url": "http://www.benkraft.org/",
+        "icon_url": "/images/author-icons/ben-kraft.png"
     },
 }
 
@@ -148,9 +153,9 @@ authors = {
 # `team` value, replace dashes with spaces, and capitalize words.
 # See README.rst for more info.
 upcoming_post = {
-    "title": u"Prototyping with Framer",
-    "team": "Web Frontend",
-    "team_class": "team-web-frontend",
-    "author": authors["Nick Breen"],
-    "published_on_html": "October 3<sup aria-hidden='true'>rd</sup>",
+    "title": u"App Engine Memcache Performance",
+    "team": "Infrastructure",
+    "team_class": "team-infrastructure",
+    "author": authors["Ben Kraft"],
+    "published_on_html": "October 17<sup aria-hidden='true'>th</sup>",
 }
