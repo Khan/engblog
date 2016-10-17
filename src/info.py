@@ -157,5 +157,5 @@ upcoming_post = {
     "team": "Infrastructure",
     "team_class": "team-infrastructure",
     "author": authors["Ben Kraft"],
-    "published_on_html": "October 17<sup aria-hidden='true'>th</sup>",
+    "published_on_html": "October 19<sup aria-hidden='true'>th</sup>",
 }
