@@ -1,5 +1,5 @@
 title: "Interning at Khan Academy: from student to intern"
-published_on: November 19, 2016
+published_on: December 12, 2016
 author: Shadaj Laddad
 team: Web Frontend
 ...
