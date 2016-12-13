@@ -146,6 +146,11 @@ authors = {
         "primary_url": "http://www.benkraft.org/",
         "icon_url": "/images/author-icons/ben-kraft.png"
     },
+    "Shadaj Laddad": {
+        "display_as": "Shadaj Laddad",
+        "primary_url": "http://shadaj.me",
+        "icon_url": "/images/author-icons/shadajladdad.png",
+    },
 }
 
 # To see the list of possible team-classes, search for `team-*` at
