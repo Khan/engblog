@@ -44,7 +44,7 @@ Moving on from the mobile-first content editor, I began work on my next project:
 
 *some changes to the graph widget: larger points and deletion tooltips*
 
-One of the most interesting things I learned in this project was the `shape-rendering` CSS style. On SVG elements, you can apply the `shape-rendering` stygle to give the renderer hints on what to prioritize when rendering the elements. In the case of this project, I used the `shape-rendering` property with the `crispEdges` value to make lines render more crisply. This is especially useful for grid lines, which sit perfectly horizontal and vertical. By setting `crispEdges` on these lines, the renderer knows to render them lined up with pixel rows instead of blurring the line to higher and lower rows. On mobile devices, especially those with higher resolutions, this small change makes a large difference in how the graphs look.
+One of the most interesting things I learned in this project was the `shape-rendering` CSS style. On SVG elements, you can apply the `shape-rendering` style to give the renderer hints on what to prioritize when rendering the elements. In the case of this project, I used the `shape-rendering` property with the `crispEdges` value to make lines render more crisply. This is especially useful for grid lines, which sit perfectly horizontal and vertical. By setting `crispEdges` on these lines, the renderer knows to render them lined up with pixel rows instead of blurring the line to higher and lower rows. On mobile devices, especially those with higher resolutions, this small change makes a large difference in how the graphs look.
 
 ![the effects of crispEdges](/images/interning-at-khan-academy/image_3.png)
 
