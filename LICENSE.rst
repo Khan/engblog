@@ -13,7 +13,7 @@ All code in this repository (**except for** code in submodules, code that is emb
 
 All posts in this repository in ``src/posts/`` and images for those posts in ``src/images/`` are licensed per the terms of the Creative Commons Attribution 4.0 International available at `creativecommons.org/licenses/by/4.0/ <http://creativecommons.org/licenses/by/4.0/>`_.
 
-Use of the Khan Academy brand has `separate restrictions under trademark law <https://khanacademy.zendesk.com/hc/en-us/articles/202263034-Trademark-and-Brand-Usage-Policy>`_, that are not affected by this licensing. So please don't create a site that seems like its affiliated with Khan Academy.
+Use of the Khan Academy brand has `separate restrictions under trademark law <https://khanacademy.zendesk.com/hc/en-us/articles/202263034-Trademark-and-Brand-Usage-Policy>`_, that are not affected by this licensing. So please don't create a site that seems like it's affiliated with Khan Academy.
 
 The MIT License
 ---------------
