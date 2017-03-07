@@ -151,10 +151,22 @@ authors = {
         "primary_url": "http://shadaj.me",
         "icon_url": "/images/author-icons/shadajladdad.png",
     },
+    "Kimerie Green": {
+        "display_as": "Kimerie Green",
+        "primary_url": "https://github.com/Kimerie",
+        "icon_url": "/images/author-icons/kimeriegreen.jpg",
+    },
 }
+
 
 # To see the list of possible team-classes, search for `team-*` at
 # src/styles/post-template.less.  Just remove the 'team-' to get the
 # `team` value, replace dashes with spaces, and capitalize words.
 # See README.rst for more info.
-upcoming_post = None
+upcoming_post = {
+    "title": "Automating App Store Screenshots",
+    "team": "Mobile",
+    "team_class": "team-mobile",
+    "author": authors["Bryan Clark"],
+    "published_on_html": "March 20<sup aria-hidden='true'>th</sup>",        
+}
