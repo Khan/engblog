@@ -168,5 +168,5 @@ upcoming_post = {
     "team": "Mobile",
     "team_class": "team-mobile",
     "author": authors["Bryan Clark"],
-    "published_on_html": "March 20<sup aria-hidden='true'>th</sup>",        
+    "published_on_html": "March 27<sup aria-hidden='true'>th</sup>",        
 }
