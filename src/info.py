@@ -156,6 +156,11 @@ authors = {
         "primary_url": "https://github.com/Kimerie",
         "icon_url": "/images/author-icons/kimeriegreen.jpg",
     },
+    "Brian Genisio": {
+        "display_as": "Brian Genisio",
+        "primary_url": "https://github.com/BrianGenisio",
+        "icon_url": "/images/author-icons/brian-genisio.png",
+    },
 }
 
 
@@ -164,9 +169,9 @@ authors = {
 # `team` value, replace dashes with spaces, and capitalize words.
 # See README.rst for more info.
 upcoming_post = {
-    "title": "Automating App Store Screenshots",
-    "team": "Mobile",
-    "team_class": "team-mobile",
-    "author": authors["Bryan Clark"],
-    "published_on_html": "March 27<sup aria-hidden='true'>th</sup>",        
+    "title": "What's New in OSS at Khan Academy",
+    "team": "Web Frontend",
+    "team_class": "team-web-frontend",
+    "author": authors["Brian Genisio"],
+    "published_on_html": "April 3<sup aria-hidden='true'>th</sup>",        
 }
