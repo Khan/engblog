@@ -174,9 +174,9 @@ authors = {
 # `team` value, replace dashes with spaces, and capitalize words.
 # See README.rst for more info.
 upcoming_post = {
-    "title": "App Engine Memcache Performance",
+    "title": "Memcached-backed Content Infrastructure",
     "team": "Infrastructure",
     "team_class": "team-infrastructure",
     "author": authors["Ben Kraft"],
-    "published_on_html": "May 1<sup aria-hidden='true'>st</sup>",
+    "published_on_html": "May 15<sup aria-hidden='true'>th</sup>",
 }
