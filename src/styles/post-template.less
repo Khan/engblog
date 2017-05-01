@@ -465,8 +465,13 @@ body {
     word-wrap: break-word;
 }
 
-figcaption {
+figcaption, caption {
     font-style: italic;
+}
+
+caption {
+    caption-side: bottom;
+    text-align: left;
 }
 
 table {
@@ -483,4 +488,10 @@ td {
 
 td, th {
     padding: 0px 5px;
+    white-space: nowrap;
+}
+
+// Make a div left-right scrollable, like code.
+.x-scrollable {
+    overflow-x: auto;
 }

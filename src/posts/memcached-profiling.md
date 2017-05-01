@@ -76,7 +76,7 @@ If you also use App Engine's dedicated Memcached service, you may find the below
 
 ### Fetch latency by size
 
-<figure>
+<div class="x-scrollable">
     <table>
         <thead>
             <tr><th>%ile</th><th>1B</th><th>10B</th><th>100B</th><th>1KB</th><th>10KB</th><th>100KB</th><th>1MB</th></tr>
@@ -91,15 +91,15 @@ If you also use App Engine's dedicated Memcached service, you may find the below
             <tr><th>99</th><td>10.56</td><td>9.93</td><td>11.35</td><td>9.47</td><td>11.83</td><td>12.11</td><td>21.09</td></tr>
             <tr><th>99.9</th><td>34.59</td><td>24.57</td><td>38.44</td><td>26.97</td><td>30.57</td><td>41.15</td><td>42.84</td></tr>
         </tbody>
+        <caption>
+            Memcache latency for a single get of a string value of the given size, over 10,000 samples for each size, in milliseconds.
+        </caption>
     </table>
-    <figcaption>
-        Memcache latency for a single get of a string value of the given size, over 10,000 samples for each size, in milliseconds.
-    </figcaption>
-</figure>
+</div>
 
 ### Multi-get latency
 
-<figure>
+<div class="x-scrollable">
     <table>
         <thead>
             <tr><th>%ile</th><th>1 key</th><th>3 keys</th><th>5 keys</th><th>10 keys</th><th>100 keys</th></tr>
@@ -112,8 +112,8 @@ If you also use App Engine's dedicated Memcached service, you may find the below
             <tr><th>99</td><td>17.22</td><td>17.64</td><td>25.23</td><td>23.01</td><td>32.20</td></tr>
             <tr><th>99.9</td><td>92.18</td><td>234.90</td><td>225.22</td><td>70.10</td><td>108.81</td></tr>
         </tbody>
+        <caption>
+            Memcache latency for a multi-get get of several 1KB string values, over 10,000 samples for each size, in milliseconds.
+        </caption>
     </table>
-    <figcaption>
-        Memcache latency for a multi-get get of several 1KB string values, over 10,000 samples for each size, in milliseconds.
-    </figcaption>
-</figure>
+</div>
