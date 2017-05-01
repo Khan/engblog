@@ -100,7 +100,7 @@ If you also use App Engine's dedicated Memcached service, you may find the below
 ### Multi-get latency
 
 <div class="x-scrollable">
-    <table>
+    <table class="data-table">
         <thead>
             <tr><th>%ile</th><th>1 key</th><th>3 keys</th><th>5 keys</th><th>10 keys</th><th>100 keys</th></tr>
         </thead>
