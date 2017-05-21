@@ -165,7 +165,12 @@ authors = {
         "display_as": "Amos Latteier",
         "primary_url": "https://github.com/latteier",
         "icon_url": "/images/author-icons/amos-latteier.jpg",
-    }
+    },
+    "Jared Forsyth": {
+        "display_as": "Jared Forsyth",
+        "primary_url": "http://jaredforsyth.com/",
+        "icon_url": "/images/author-icons/jared.jpg",
+    },
 }
 
 
@@ -174,9 +179,9 @@ authors = {
 # `team` value, replace dashes with spaces, and capitalize words.
 # See README.rst for more info.
 upcoming_post = {
-    "title": "Memcached-backed Content Infrastructure",
-    "team": "Infrastructure",
-    "team_class": "team-infrastructure",
-    "author": authors["Ben Kraft"],
-    "published_on_html": "May 15<sup aria-hidden='true'>th</sup>",
+    "title": "Migrating to a Mobile Monorepo for React Native",
+    "team": "Mobile",
+    "team_class": "team-mobile",
+    "author": authors["Jared Forsyth"],
+    "published_on_html": "May 29<sup aria-hidden='true'>th</sup>",
 }
