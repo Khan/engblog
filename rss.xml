@@ -5,6 +5,12 @@
         <link>http://engineering.khanacademy.org</link>
         <description>Khan Academy Engineering's blog</description>
         <item>
+            <title>Memcached-Backed Content Infrastructure</title>
+            <link>http://engineering.khanacademy.org/posts/memcached-fms.htm</link>
+            <pubDate>Mon, 15 May 2017 11:00:00 GMT-8</pubDate>
+            <guid>http://engineering.khanacademy.org/posts/memcached-fms.htm</guid>
+        </item>
+        <item>
             <title>Profiling App Engine Memcached</title>
             <link>http://engineering.khanacademy.org/posts/memcached-profiling.htm</link>
             <pubDate>Mon, 01 May 2017 11:00:00 GMT-8</pubDate>
