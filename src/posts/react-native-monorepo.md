@@ -56,13 +56,13 @@ easier to verify correctness between codebases.
 
 Make a fresh monorepo
 
-```
+```sh
 mkdir mobile; cd mobile; git init .
 ```
 
 Have all the repos that you want to combine cloned & fully up to date
 
-```
+```sh
 $ ls .
 mobile
 android
@@ -75,7 +75,7 @@ react-native
 Clone each repo into `m_reponame` (using `android` as the example) and then
 move all files into a subfolder (except for `.git`, of course).
 
-```
+```sh
 cd m_android
 mkdir android
 mv * .* android
@@ -124,10 +124,11 @@ mobile/
 Turns out git has super powers, and can totally merge in multiple unrelated
 repositories and preserve all the relevant git history. Who knew?
 
-```
+```sh
 cd mobile
 git fetch ../m_android
-g merge FETCH_HEAD --no-ff --allow-unrelated-histories -m 'merging in android repo'
+git merge FETCH_HEAD --no-ff --allow-unrelated-histories \
+    -m 'merging in android repo'
 ```
 
 Again, do this for each repository that you need to merge in.
@@ -151,10 +152,11 @@ changes that they had inflight and move over at their own pace.
 If you do the same, here's how to bring in new changes to the old
 repositories:
 
-```
+```sh
 (cd android && git pull)
 cd m_android
-git pull ../android --no-ff -m 'merging in latest changes'
+git pull ../android --no-ff \
+    -m 'merging in latest android changes'
 ```
 
 At this point **check for new files**. Files that were added in the `android`
@@ -164,10 +166,11 @@ directory in the `m_android` repo should be `android`. If there's anything
 else there, `git mv the_new_thing android && git commit -am "moving new files
 into subdirectory"` before continuing.
 
-```
+```sh
 cd ../mobile
 git fetch ../m_android
-g merge FETCH_HEAD --no-ff -m 'merging in latest android changes'
+git merge FETCH_HEAD --no-ff \
+    -m 'merging in latest android changes'
 ```
 
 This will even work if there's been changes committed to the monorepo,
