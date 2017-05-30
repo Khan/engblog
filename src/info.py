@@ -178,10 +178,12 @@ authors = {
 # src/styles/post-template.less.  Just remove the 'team-' to get the
 # `team` value, replace dashes with spaces, and capitalize words.
 # See README.rst for more info.
-upcoming_post = {
+upcoming_post = None
+'''Leaving this here so we know what shape this wants to be
+{
     "title": "Migrating to a Mobile Monorepo for React Native",
     "team": "Mobile",
     "team_class": "team-mobile",
     "author": authors["Jared Forsyth"],
     "published_on_html": "May 29<sup aria-hidden='true'>th</sup>",
-}
+}'''
