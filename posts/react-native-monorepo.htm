@@ -9,7 +9,7 @@ react-native
 mkdir android
 mv * .* android
 mv android/.git .
-</pre></div> <p>commit result; <code>git add . -m'move to subfolder'</code></p> <p>With the code for each respective codebase moved into a subdirectory, we're then able to move them all into a single repository without having them clash with each other. To illustrate, here's what the rough directory structure looks like:</p> <div class="codehilite"><pre>android/
+</pre></div> <p>Then commit the result: <code>git add . &amp;&amp; git commit -m'move to subfolder'</code></p> <p>With the code for each respective codebase moved into a subdirectory, we're then able to move them all into a single repository without having them clash with each other. To illustrate, here's what the rough directory structure looks like:</p> <div class="codehilite"><pre>android/
   build.gradle, etc.
 ios/
   AppDelegate.m, etc.
