@@ -84,7 +84,7 @@ mv * .* android
 mv android/.git .
 ```
 
-commit result; `git add . -m'move to subfolder'`
+Then commit the result: `git add . && git commit -m'move to subfolder'`
 
 With the code for each respective codebase moved into a subdirectory, we're
 then able to move them all into a single repository without having them clash
