@@ -161,6 +161,16 @@ authors = {
         "primary_url": "https://github.com/BrianGenisio",
         "icon_url": "/images/author-icons/brian-genisio.png",
     },
+    "Amos Latteier": {
+        "display_as": "Amos Latteier",
+        "primary_url": "https://github.com/latteier",
+        "icon_url": "/images/author-icons/amos-latteier.jpg",
+    },
+    "Jared Forsyth": {
+        "display_as": "Jared Forsyth",
+        "primary_url": "http://jaredforsyth.com/",
+        "icon_url": "/images/author-icons/jared.jpg",
+    },
 }
 
 
@@ -168,10 +178,12 @@ authors = {
 # src/styles/post-template.less.  Just remove the 'team-' to get the
 # `team` value, replace dashes with spaces, and capitalize words.
 # See README.rst for more info.
-upcoming_post = {
-    "title": "What's New in OSS at Khan Academy",
-    "team": "Web Frontend",
-    "team_class": "team-web-frontend",
-    "author": authors["Brian Genisio"],
-    "published_on_html": "April 3<sup aria-hidden='true'>th</sup>",        
-}
+upcoming_post = None
+'''Leaving this here so we know what shape this wants to be
+{
+    "title": "Migrating to a Mobile Monorepo for React Native",
+    "team": "Mobile",
+    "team_class": "team-mobile",
+    "author": authors["Jared Forsyth"],
+    "published_on_html": "May 29<sup aria-hidden='true'>th</sup>",
+}'''

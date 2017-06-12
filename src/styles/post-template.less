@@ -465,6 +465,34 @@ body {
     word-wrap: break-word;
 }
 
-figcaption {
+figcaption, caption {
     font-style: italic;
+}
+
+caption {
+    caption-side: bottom;
+    text-align: left;
+}
+
+table.data-table {
+    margin: 0 auto;
+
+    th {
+        text-align: left;
+    }
+
+    td {
+        text-align: right;
+    }
+
+    td, th {
+        padding: 0px 5px;
+        white-space: nowrap;
+    }
+}
+
+// Make a div left-right scrollable, like code.
+// TODO(benkraft): Fix various past posts to use this
+.x-scrollable {
+    overflow-x: auto;
 }
