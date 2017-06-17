@@ -171,6 +171,11 @@ authors = {
         "primary_url": "http://jaredforsyth.com/",
         "icon_url": "/images/author-icons/jared.jpg",
     },
+    "Josh Comeau": {
+        "display_as": "Josh Comeau",
+        "primary_url": "https://github.com/joshwcomeau",
+        "icon_url": "/images/author-icons/joshcomeau.jpeg",
+    },
 }
 
 
@@ -178,7 +183,13 @@ authors = {
 # src/styles/post-template.less.  Just remove the 'team-' to get the
 # `team` value, replace dashes with spaces, and capitalize words.
 # See README.rst for more info.
-upcoming_post = None
+upcoming_post = {
+    "title": "Let's Reduce! A Gentle Introduction to Array.prototype.reduce",
+    "team": "Web Frontend",
+    "team_class": "team-web-frontend",
+    "author": authors["Josh Comeau"],
+    "published_on_html": "July 10<sup aria-hidden='true'>th</sup>",
+}
 '''Leaving this here so we know what shape this wants to be
 {
     "title": "Migrating to a Mobile Monorepo for React Native",
