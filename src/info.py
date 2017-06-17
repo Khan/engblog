@@ -184,11 +184,6 @@ authors = {
 # `team` value, replace dashes with spaces, and capitalize words.
 # See README.rst for more info.
 upcoming_post = {
-    "title": "Let's Reduce! A Gentle Introduction to Array.prototype.reduce",
-    "team": "Web Frontend",
-    "team_class": "team-web-frontend",
-    "author": authors["Josh Comeau"],
-    "published_on_html": "July 10<sup aria-hidden='true'>th</sup>",
 }
 '''Leaving this here so we know what shape this wants to be
 {
