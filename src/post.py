@@ -29,17 +29,23 @@ def render_rst(text):
     return parts["html_body"]
 
 
-def datetime_to_html_string(datetime):
-    month = datetime.strftime("%B")
+def datetime_to_html_string(dt):
+    # Use a shorter string when we're including the year. We could solve this
+    # by wrapping the date in the side bar, but I think consistently using the
+    # shorter form for dates that aren't from this year should be reasonable.
+    if datetime.datetime.today().year != dt.year:
+        return "{} {}, {}".format(dt.strftime("%b"), dt.day, dt.year)
+
+    month = dt.strftime("%B")
 
     day_suffix = "th"
-    if not (11 <= datetime.day <= 13) and 1 <= datetime.day % 10 <= 3:
+    if not (11 <= dt.day <= 13) and 1 <= dt.day % 10 <= 3:
         day_suffix = {
             1: "st",
             2: "nd",
             3: "rd"
-        }[datetime.day % 10]
-    day = "{}<sup aria-hidden='true'>{}</sup>".format(str(datetime.day),
+        }[dt.day % 10]
+    day = "{}<sup aria-hidden='true'>{}</sup>".format(str(dt.day),
                                                       day_suffix)
 
     return "{} {}".format(month, day)
