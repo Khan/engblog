@@ -1,10 +1,10 @@
 title: Let's Reduce! A Gentle Introduction to Array.prototype.reduce
-published_on: June 26, 2017
+published_on: July 10, 2017
 author: Josh Comeau
 team: Web Frontend
 ...
 
-![](/images/lets-reduce/reduce-shapes.png)
+<img role="presentation" src="/images/lets-reduce/reduce-shapes.png" />
 
 
 Every summer, Khan Academy recruits a few software engineer interns. As part of their onboarding, we host several brief talks introducing the technology we work with: React, Flow, Google AppEngine, and so on. I volunteered to introduce [Redux](http://redux.js.org/docs/introduction/), a tool to manage front-end state.
@@ -92,7 +92,7 @@ The hardest part of learning `reduce` is developing an intuitive understanding o
 This visualization showcases the above example of adding values. Click the GIF to view it in its entirety:
 
 <a href="http://reduce.surge.sh/">
-![Visualization of the Reduce process](/images/lets-reduce/visualization.gif)
+<img alt="Visualization of the Reduce process" src="/images/lets-reduce/visualization.gif" />
 <center><strong style="font-size: 18px;">View the visualization</strong></center>
 </a>
 
@@ -109,8 +109,8 @@ Because `reduce` gives you full control over its output, it's extremely flexible
 Let's look at a common data-wrangling concern. Let's say we have an array of user objects, and we want to create a map-like object. This is actually a pretty common problem, as libraries like Redux advocate storing data in a database-like tree structure:
 
 ```js
-// Let's say our data comes back from the API
-// as an array of objects:
+// Let's say our data comes back from
+// the API as an array of objects:
 const inputFromServer = [
   {id: 'a', name: 'Amy'},
   {id: 'b', name: 'Blanche'},
@@ -167,7 +167,10 @@ _Stuck? You can view the solutions [here](http://jsbin.com/nabotejeyo/edit?js,co
 For example, you might think that this is a perfect problem statement for `reduce`:
 
 ```
-Given an array of values, filter out all negative values, and double all remaining values.
+Given an array of values, filter out
+all negative values, and double all
+remaining values.
+
 eg. [2, -4, 6] -> [4, 12]
 ```
 
