@@ -5,6 +5,12 @@
         <link>http://engineering.khanacademy.org</link>
         <description>Khan Academy Engineering's blog</description>
         <item>
+            <title>Let's Reduce! A Gentle Introduction to Array.prototype.reduce</title>
+            <link>http://engineering.khanacademy.org/posts/lets-reduce.htm</link>
+            <pubDate>Mon, 10 Jul 2017 11:00:00 GMT-8</pubDate>
+            <guid>http://engineering.khanacademy.org/posts/lets-reduce.htm</guid>
+        </item>
+        <item>
             <title>Creating Query Components with Apollo</title>
             <link>http://engineering.khanacademy.org/posts/creating-query-components-with-apollo.htm</link>
             <pubDate>Mon, 12 Jun 2017 11:00:00 GMT-8</pubDate>
