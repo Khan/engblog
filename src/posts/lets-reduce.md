@@ -1,4 +1,4 @@
-title: Let's Reduce! A Gentle Introduction to Array.prototype.reduce
+title: Let's Reduce! A Gentle Introduction to Javascript's Reduce Method
 published_on: July 10, 2017
 author: Josh Comeau
 team: Web Frontend
