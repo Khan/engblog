@@ -176,6 +176,11 @@ authors = {
         "primary_url": "https://github.com/joshwcomeau",
         "icon_url": "/images/author-icons/joshcomeau.jpeg",
     },
+    "Scott Grant": {
+        "display_as": "Scott Grant",
+        "primary_url": "https://github.com/scotchfield",
+        "icon_url": "/images/author-icons/scottgrant.png",
+    },
 }
 
 
