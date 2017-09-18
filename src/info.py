@@ -176,11 +176,6 @@ authors = {
         "primary_url": "https://github.com/joshwcomeau",
         "icon_url": "/images/author-icons/joshcomeau.jpeg",
     },
-    "Hannah Blumberg": {
-        "display_as": "Hannah Blumberg",
-        "primary_url": "http://hannahblumberg.com/",
-        "icon_url": "/images/author-icons/hannah.jpg",
-    },
 }
 
 
