@@ -22,6 +22,13 @@ if [[ "$TRAVIS" != "true" ]]; then
 	exit 0
 fi
 
+if [[ $(find ./output -type f | wc -l) < 100 ]]; then
+	echo "Failed to generate output correctly."
+	echo "Current Directory is $PWD"
+	tree .
+	exit 1
+fi
+
 # Install the publish key so SSH will use it. The publish key is encrypted in
 # the git repo using Travis's public key, and is decrypted in the
 # before_install step (see the .travis.yml file).
