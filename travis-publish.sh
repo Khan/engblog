@@ -23,7 +23,7 @@ if [[ "$TRAVIS" != "true" ]]; then
 fi
 
 if [[ $(find ./output -type f | wc -l) < 100 ]]; then
-	echo "Failed to generate output correctly."
+	echo "Output directory is empty."
 	echo "Current Directory is $PWD"
 	tree .
 	exit 1
@@ -41,6 +41,14 @@ rsync -rv --delete --exclude=.git ./output/ ~/engblog/
 
 # Actually push to GitHub
 cd ~/engblog
+
+if [[ $(find . -type f | wc -l) < 100 ]]; then
+	echo "Refusing to push a mostly empty site"
+	echo "Current Directory is $PWD"
+	tree .
+	exit 1
+fi
+
 git add -f .
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Sir Travis"
