@@ -37,7 +37,7 @@ chmod 600 ~/.ssh/id_rsa
 
 # Clone the gh-pages branch into its own repo and update it with the new output
 git clone --branch gh-pages git@github.com:Khan/engblog.git ~/engblog
-rsync -rv --delete --exclude=.git ./output/ ~/engblog/
+rsync -rv --exclude=.git ./output/ ~/engblog/
 
 # Actually push to GitHub
 cd ~/engblog
