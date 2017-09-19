@@ -22,6 +22,13 @@ if [[ "$TRAVIS" != "true" ]]; then
 	exit 0
 fi
 
+if [[ $(find ./output -type f | wc -l) < 100 ]]; then
+	echo "Output directory is empty."
+	echo "Current Directory is $PWD"
+	tree .
+	exit 1
+fi
+
 # Install the publish key so SSH will use it. The publish key is encrypted in
 # the git repo using Travis's public key, and is decrypted in the
 # before_install step (see the .travis.yml file).
@@ -30,10 +37,18 @@ chmod 600 ~/.ssh/id_rsa
 
 # Clone the gh-pages branch into its own repo and update it with the new output
 git clone --branch gh-pages git@github.com:Khan/engblog.git ~/engblog
-rsync -rv --delete --exclude=.git ./output/ ~/engblog/
+rsync -rv --exclude=.git ./output/ ~/engblog/
 
 # Actually push to GitHub
 cd ~/engblog
+
+if [[ $(find . -type f | wc -l) < 100 ]]; then
+	echo "Refusing to push a mostly empty site"
+	echo "Current Directory is $PWD"
+	tree .
+	exit 1
+fi
+
 git add -f .
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "Sir Travis"
