@@ -194,6 +194,11 @@ authors = {
 # `team` value, replace dashes with spaces, and capitalize words.
 # See README.rst for more info.
 upcoming_post = {
+    "title": "Working Remotely",
+    "team": "Web Frontend",
+    "team_class": "team-web-frontend",
+    "author": authors["Scott Grant"],
+    "published_on_html": "Oct 2<sup aria-hidden='true'>nd</sup>",
 }
 '''Leaving this here so we know what shape this wants to be
 {
