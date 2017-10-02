@@ -1,5 +1,5 @@
 title: Working Remotely
-published_on: September 12, 2017
+published_on: October 2, 2017
 author: Scott Grant
 team: Web Frontend
 ...
@@ -22,7 +22,7 @@ When I started working at Khan Academy, my joke was that I'd bought some new wor
 
 ### Regular Working Hours
 
-Working remotely, whether at home, at a coffee shop or restaurant, or in a co-working space, requires a certain amount of self-discipline. When I was a graduate student and living with a newborn baby, I worked whenever there was time in my schedule (and when I wasn't too tired!) Now, it's been helpful for me to set up a routine, which is key for getting into the "you're at work now" mindset and not into thinking about all the house tasks that could get done. I'm used to starting work at eight in the morning because that's the time that my wife and kids go to school and the house is empty except for me, my cat, and my fish.
+Working remotely, whether at home, at a coffee shop/restaurant, or in a co-working space, requires a certain amount of self-discipline. When I was a graduate student and living with a newborn baby, I worked whenever there was time in my schedule (and when I wasn't too tired!) Nowadays, it's been helpful for me to set up a routine, which is key for getting into the "you're at work now" mindset and not into thinking about all the house tasks that could get done. I'm used to starting work at eight in the morning because that's the time that my wife and kids go to school and the house is empty except for me, my cat, and my fish.
 
 A large part of my work schedule revolves around my family life. My work day tends to start right after my kids have hopped on the school bus. I grab lunch at 11 or 12, usually on the hour, and I don't eat at my desk. I take a small break at around 3:45 each day to pick up my kids from the bus, hear about how their day went, and get them settled in at home, before returning to work for an hour or so. That's what my average weekday looks like. It's a comfortable routine that lets me be productive during my best hours while still being available for my family.
 
@@ -40,7 +40,7 @@ I did buy the pajama pants and socks! It's too cold in the Canadian winter to wa
 
 One of the most striking differences between Khan Academy and my other remote working experiences is that there's a visible effort by everybody to be inclusive. Our office is in Mountain View, California. For me (and for the other East Coasters), this means that we have a three-hour difference between the on-site work day. We don't have a rigid set of core working hours, and employees are free to work when they're able. We try to be mindful of people's schedules, of course. This means that teams make a conscious effort to share a few hours of each day for meetings and synchronous conversation.
 
-Every meeting room has teleconferencing hardware that's easy to use. If there's a problem with audio and remote employees aren't able to take part, the meeting either halts until the problem gets solved, or (as I saw recently), on-site employees will band together to start taking realtime notes in a shared Google Doc. And when there's discussion in or after a meeting, everybody is aware of the small delay when teleconferencing, and patiently waits to make sure they won't be speaking over top of somebody else.
+Every meeting room has teleconferencing hardware that's easy to use. If there's a technical issue that prevents remote employees from taking part, the meeting typically halts until the problem gets solved. Sometimes the solution is creative; when the audio stopped working in a recent meeting, on-site employees banded together to communicate via realtime notes in a shared Google Doc. And when there's discussion in or after a meeting, everybody is aware of the small delay when teleconferencing, and patiently waits to make sure they won't be speaking over top of somebody else.
 
 This mindfulness is the biggest work-related difference that I've found here. Khan Academy is always thoughtful of the fact that there are people who work outside of the main office. As an organization, everybody is reflective about communication strategies. We consciously make time for face-to-face meetings. We try to write documentation in a way that enables asynchronous work. And we're respectful about the fact that some people are most comfortable working in the early hours of the day while others prefer to start in the late morning and work into the evening.
 
@@ -48,9 +48,9 @@ This mindfulness is the biggest work-related difference that I've found here. Kh
 
 Khan Academy is also mindful of the value of having enough face-to-face time. As employees, we're encouraged to travel to Mountain View several times a year, especially at the same time as others. We use Slack to keep in touch, but there's no substitute for getting to know people in person.
 
-There's a long-standing tradition of <a href="http://life.khanacademy.org/post/28663353260/bread">baking bread</a>.
+There's a long-standing tradition of <a href="http://life.khanacademy.org/post/28663353260/bread" target="_blank">baking bread</a>.
 
-<img role="presentation" src="/images/working-remotely/bread.jpg" alt="Khan Academy has a bread baking tradition. Being remote doesn't have to get in the way!" />
+<a href="http://life.khanacademy.org/post/28663353260/bread" target="_blank"><img role="presentation" src="/images/working-remotely/bread.jpg" alt="Khan Academy has a bread baking tradition. Being remote doesn't have to get in the way!" /></a>
 
 And being at a distance doesn't mean that you miss out on the fun benefits of working in an office that supplies you with healthy snacks and other goodies. A delicious banquet of cookies arrived at my front door shortly after starting at KA. My kids even let me have one or two of them. :)
 
@@ -68,7 +68,7 @@ That said, there are other challenges involved in remote work, too—some of whi
 
 ## Conclusion
 
-Khan Academy is a really special place. Everybody here is vested in maintaining a company culture founded on respect and inclusion. As remote employees, we see that reflected in the conscious effort made to keep us as closely informed as on-site employees. And while there are unique challenges that come with working in a separate location from one of the <a href="http://life.khanacademy.org/">most fun workplaces ever</a>, the tradeoffs make the choice easy.
+Khan Academy is a really special place. Everybody here is vested in maintaining a company culture founded on respect and inclusion. As remote employees, we see that reflected in the conscious effort made to keep us as closely informed as on-site employees. And while there are unique challenges that come with working in a separate location from one of the <a href="http://life.khanacademy.org/" target="_blank">most fun workplaces ever</a>, the tradeoffs make the choice easy.
 
 Onward!
 
