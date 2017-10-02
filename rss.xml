@@ -5,6 +5,12 @@
         <link>http://engineering.khanacademy.org</link>
         <description>Khan Academy Engineering's blog</description>
         <item>
+            <title>Working Remotely</title>
+            <link>http://engineering.khanacademy.org/posts/working-remotely.htm</link>
+            <pubDate>Mon, 02 Oct 2017 11:00:00 GMT-8</pubDate>
+            <guid>http://engineering.khanacademy.org/posts/working-remotely.htm</guid>
+        </item>
+        <item>
             <title>Tips for giving your first code reviews</title>
             <link>http://engineering.khanacademy.org/posts/tips-for-code-reviews.htm</link>
             <pubDate>Mon, 18 Sep 2017 11:00:00 GMT-8</pubDate>
