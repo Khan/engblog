@@ -186,6 +186,11 @@ authors = {
         "primary_url": "https://github.com/scotchfield",
         "icon_url": "/images/author-icons/scottgrant.png",
     },
+    "Ian Reynolds": {
+        "display_as": "Ian Reynolds",
+        "primary_url": "https://github.com/idreyn",
+        "icon_url": "/images/author-icons/ian-reynolds.png",
+    },
 }
 
 
