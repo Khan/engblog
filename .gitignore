@@ -26,10 +26,10 @@ pip-log.txt
 .tox
 nosetests.xml
 
-#Translations
+# Translations
 *.mo
 
-#Mr Developer
+# Mr Developer
 .mr.developer.cfg
 
 .backup
@@ -50,8 +50,12 @@ docs/_build/
 venv*/
 env/
 
+# IDEs
+.vscode/
+
 # JS!
 bower_components/
 node_modules/
+package-lock.json
 
 output/

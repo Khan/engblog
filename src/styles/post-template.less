@@ -311,6 +311,14 @@ body {
         }
     }
 
+    .bigquote {
+        color: @leftBarBackgroundColor;
+        border-left: 5px solid @leftBarBackgroundColor;
+        font-size: 1.2em;
+        font-style: italic;
+        padding-left: 10px;
+    }
+
     .info {
         .author-link {
             color: @contentTextColor;
@@ -356,9 +364,15 @@ body {
             text-decoration: underline;
         }
 
-        img {
-            max-width: 100%
+        img, video {
+            max-width: 100%;
         }
+
+        figure > figcaption {
+            text-align: center;
+            font-size: 0.85em;
+        }
+
     }
 
     .keep-reading-buttons {
