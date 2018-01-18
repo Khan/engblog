@@ -11,12 +11,12 @@ team: Web Frontend
     <figcaption>Something here is amiss.</figcaption>
 </figure>
 
-This kind of error can happen when rounding errors propagate or a cache tucks a stale value in with a bundle or fresh ones. But I had never seen anything this drastic or elusive. I was neck deep in logs and had six different test browsers open in six different BrowserStack tabs, and from Firefox Nightly to Internet Explorer 10, none of them allowed me to reproduce the error that the user was seeing, even when (with explicitly granted permission) I logged into his account.
+This kind of error can happen when rounding errors propagate or a cache tucks a stale value in with a bundle of fresh ones. But I had never seen anything this drastic or elusive. I was neck deep in logs and had six different test browsers open in six different BrowserStack tabs, and from Firefox Nightly to Internet Explorer 10, none of them allowed me to reproduce the error that the user was seeing, even when (with explicitly granted permission) I logged into his account.
 
 Odd, for this bug was extraordinarily well-documented, with an excess of screenshots sent in over nine weeks all showing the same problem. These were interspersed with increasingly concerned messages from the user’s parents, who pleaded with us that these errors were discouraging their son from learning math and causing them to lose trust in our platform. I was determined to make this right, so I had carefully audited the code and concluded that no such bug could exist. I was as sure as I could ever be about a piece of code that it was error-free, and this bug was impossible.
 
 <div class="bigquote">
-    When you have eliminated the impossible, whatever remains, however improbable, must be the truth."
+    When you have eliminated the impossible, whatever remains, however improbable, must be the truth.
     <b>— Sherlock Holmes, The Sign of the Four</b>
 </div>
 
@@ -76,7 +76,7 @@ At this point, I returned to the Zendesk thread and inspected the messages caref
     </figcaption>
 </figure>
 
-But how to catch him in the act? Now exposed to the possibility of this kind of fiddling being reported as a real error, it was worth finding out how widespread it was, lest we spend even more support time on a deluge of ersatz bug reports. My coworker and team lead Brian, now as deeply invested in this tale of intrigue as I was, suggested using the [`MutationObserver`](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) API, cooked up a few years back as a performant way to watch changes to a webpage as they occur. So I built a React component, [reproduced more fully here](https://gist.github.com/idreyn/a7e513b9ed4e31e2785fee007020db6d), that would render the displayed progress percentage and automatically revert and report any changes made to its value:
+But how to catch him in the act? Now exposed to the possibility of this kind of fiddling being reported as a real error, it was worth finding out how widespread it was, lest we spend even more support time on a deluge of ersatz bug reports. My coworker and team lead [Brian](http://briangenisio.com/), now as deeply invested in this tale of intrigue as I was, suggested using the [`MutationObserver`](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) API, cooked up a few years back as a performant way to watch changes to a webpage as they occur. So I built a React component, [reproduced more fully here](https://gist.github.com/idreyn/a7e513b9ed4e31e2785fee007020db6d), that would render the displayed progress percentage and automatically revert and report any changes made to its value:
 
 ```
 class MutationWatcher extends React.Component {
@@ -106,16 +106,14 @@ class MutationWatcher extends React.Component {
         const {value} = this.props;
         return React.createElement(
             "span",
-            {
-                ref: ref => (this._node = ref),
-            },
+            {ref: ref => (this._node = ref)},
             value,
         );
     }
 }
 ```
 
-We installed this devious contraption into the Missions progress wheel, waited a few days, and, lo and behold, the user ID from our support ticket appeared in the logs, attempting to change his percentage from around 34% to 79% in a ludicrous leap of algebraic prowess. But where he was at least putting forth plausible numbers, we saw dozens more users attempting to change their progress to things like `100%`, `1000000%`, and `Jorge sucks!!!`.
+We installed this devious contraption into the Missions progress wheel, waited a few days, and, lo and behold, the user ID from our support ticket appeared in the logs, attempting to change his percentage from around 34% to 79% in a ludicrous leap of algebraic prowess. But where he was at least putting forth plausible numbers, we saw dozens more users attempting to change their progress to things like `100%`, `1000000%`, and `I'm sorry mom!`.
 
 <figure>
     <img
