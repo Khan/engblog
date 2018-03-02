@@ -5,7 +5,7 @@ team: Infrastructure
 ...
 
 In last week's exciting post, I described an `alternative to
-transactions </posts/user-write-lock.html>`_ that we use at Khan
+transactions </posts/user-write-lock.htm>`_ that we use at Khan
 Academy, to ensure atomic datastore operations.
 
 When used correctly, both the user-write lock and transactions are
@@ -144,7 +144,7 @@ guarantee safe ``put()``'s:
 #. ``@written_in_transaction_model()`` -- you put get-modify-put in a
    transaction
 #. ``@written_with_user_lock_model(lockid_fn)`` -- you put
-   get-modify-put in a `user write lock </posts/user-write-lock.html>`_
+   get-modify-put in a `user write lock </posts/user-write-lock.htm>`_
 #. ``@written_via_cron_model()`` -- appengine lets you schedule
    cron jobs; if an entity is only accessed via a cron job, we know
    two requests will never access that entity at the same time
@@ -213,7 +213,7 @@ some user-data, and ``send_certificate_notifications`` does a nested
 For power users, the source code documents functions like
 ``disable_user_write_lock_checking_in_test()``.
 
-In the `last blog post </posts/user-write-lock.html>`_ I mentioned
+In the `last blog post </posts/user-write-lock.htm>`_ I mentioned
 that ``lock_util.py``'s ``fetch_under_user_write_lock`` could not be
 used at that time.  Well, with the functionality in this blog post, it
 can be!, making it really easy to re-fetch an entity -- or not, as

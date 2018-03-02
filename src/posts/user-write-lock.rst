@@ -209,7 +209,7 @@ parallel.  (But see "batch processing," below.)
 
 In general we consider transactions to be superior to locks when they
 work: when a model only needs protection in idempotent, low-level,
-query-free code.  When possible, we'll use transacations ever for
+query-free code.  When possible, we'll use transacations even for
 per-user models.  Likewise, we've never replaced existing uses of
 transactions with locks.  Instead, we use locks to protect code that
 previously ran entirely unprotected.
