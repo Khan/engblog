@@ -1,3 +1,4 @@
+/* eslint-disable no-var, no-console */  /* because we are using es5 */
 /**
  * Test that a page resizes to perfectly fit the width of the viewport.
  *

@@ -94,5 +94,6 @@ def main(output_directory):
     with open(os.path.join(output_directory, "rss.xml"), "wb") as f:
         f.write(render_rss_page(posts).encode("utf-8"))
 
+
 if __name__ == "__main__":
     main(sys.argv[1])
