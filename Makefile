@@ -1,25 +1,28 @@
-.PHONY: serve server deps build build-prod ready-publish reset-output \
-		push-to-live phantomjs-tests
+.PHONY: serve server deps build build-prod ready-publish reset-output
+.PHONY: push-to-live phantomjs-tests deps
 
-build:
-	-mkdir output
-	cd src && gulp
+build: node_modules/.bin/gulp
+	mkdir -p output
+	cd src && ../node_modules/.bin/gulp
 
-build-prod:
-	-mkdir output
-	cd src && gulp --production
+build-prod: node_modules/.bin/gulp
+	mkdir -p output
+	cd src && ../node_modules/.bin/gulp --production
 
-serve server:
-	-mkdir output
-	cd src && gulp serve
+serve server: node_modules/.bin/gulp
+	mkdir -p output
+	cd src && ../node_modules/.bin/gulp serve
 
 # Runs phantomjs tests on what's in the output directory
 phantomjs-tests:
 	./phantomjs-tests/run-tests.sh
 
-lint linc:
+lint linc: khan-linter/runlint.py
 	env/bin/python khan-linter/runlint.py src/*.py src/gulpfile.js \
 				   phantomjs-tests/*.js
+
+node_modules/.bin/gulp khan-linter/runlint.py:
+	$(MAKE) deps
 
 deps:
 	# Make sure we have a gh-pages branch so our output submodule has a proper
@@ -35,13 +38,11 @@ deps:
 	env/bin/pip install -r ./khan-linter/requirements.txt -r ./requirements.txt
 
 	# Install our bower dependencies
-	npm install -g bower
-	bower install normalize.css
+	npm install bower
+	node_modules/.bin/bower install normalize.css
 
 	# Install khan-linter's dependencies
 	cd ./khan-linter; npm install
 
-	# Install our own dependencies (gulp likes to be installed globally and
-	# locally).
-	npm install -g gulp
+	# Install our own dependencies
 	npm install
