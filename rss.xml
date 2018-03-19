@@ -5,6 +5,12 @@
         <link>http://engineering.khanacademy.org</link>
         <description>Khan Academy Engineering's blog</description>
         <item>
+            <title>The Great Python Refactor of 2017 And Also 2018</title>
+            <link>http://engineering.khanacademy.org/posts/python-refactor-1.htm</link>
+            <pubDate>Mon, 19 Mar 2018 11:00:00 GMT-8</pubDate>
+            <guid>http://engineering.khanacademy.org/posts/python-refactor-1.htm</guid>
+        </item>
+        <item>
             <title>Working Remotely</title>
             <link>http://engineering.khanacademy.org/posts/working-remotely.htm</link>
             <pubDate>Mon, 02 Oct 2017 11:00:00 GMT-8</pubDate>
