@@ -35,7 +35,10 @@ deps:
 
 	# Create a virtual environment with all of our Python dependencies
 	virtualenv --prompt '(engblog)' env
-	env/bin/pip install -r ./khan-linter/requirements.txt -r ./requirements.txt
+	# These next two are separate so if they have conflicting/duplicate
+	# requirements, ours win.
+	env/bin/pip install -r ./khan-linter/requirements.txt
+	env/bin/pip install -r ./requirements.txt
 
 	# Install our bower dependencies
 	npm install bower
