@@ -186,6 +186,11 @@ authors = {
         "primary_url": "https://github.com/scotchfield",
         "icon_url": "/images/author-icons/scottgrant.png",
     },
+    "Carter Bastian": {
+        "display_as": "Carter J. Bastian",
+        "primary_url": "http://carterjbastian.com/",
+        "icon_url": "/images/author-icons/carter.jpg",
+    },
 }
 
 
