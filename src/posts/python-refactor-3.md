@@ -68,7 +68,7 @@ Specifically, this was big list of all the dependencies in our codebase broken d
 
 > **Flags:**
 
-> * **flags/experiments.py:** depends on <span style="color:red">analytics/survey/questions.py, coaches/parents.py, coaches/students.py, coaches/teachers.py, notifications/promo\_record\_model.py, sat/util.py, translations/videos.py,</span> <span style="color:green">appengine/transaction\_util.py, flags/bigbingo/bigbingo.py, flags/bingo\_identity.py, flags/feature\_flags/core.py, flags/gandalf/bridge.py, intl/request.py, lib/request\_cache\_decorators.py, web/request/current\_user.py, web/request/ip\_util.py, web/request/url\_util.py</span>
+> * **flags/experiments.py:** depends on <span style="color:red">analytics/survey/questions.py, coaches/parents.py, coaches/students.py, coaches/teachers.py, sat/util.py, translations/videos.py,</span> <span style="color:green">appengine/transaction\_util.py, flags/bigbingo/bigbingo.py, flags/bingo\_identity.py, flags/feature\_flags/core.py, flags/gandalf/bridge.py, intl/request.py, lib/request\_cache\_decorators.py, web/request/current\_user.py, web/request/ip\_util.py, web/request/url\_util.py</span>
 
 > ...
 
@@ -84,7 +84,7 @@ More often than not, a file with lots of bad dependencies was indicative of bad 
  
 For example, consider the following excerpt from from `flags/experiments.py`, which has both a function used for logging opt-in experiments, and also a function used to determine if a user is in a classroom so that we can consider showing them coach-related experiments:
 
-```
+```python
 from __future__ import absolute_import
 
 import coaches.students  # BAD DEPENDENCY
@@ -117,7 +117,7 @@ After moving this function, flags/experiments.py won’t depend on `coaches.teac
 
 > **Flags:**
 
-> * **flags/experiments.py:** depends on <span style="color:red">analytics/survey/questions.py, coaches/parents.py, notifications/promo\_record\_model.py, sat/util.py, translations/videos.py,</span> <span style="color:green">appengine/transaction\_util.py, flags/bigbingo/bigbingo.py, flags/bingo\_identity.py, flags/feature\_flags/core.py, flags/gandalf/bridge.py, intl/request.py, lib/request\_cache\_decorators.py, web/request/current\_user.py, web/request/ip\_util.py, web/request/url\_util.py</span>
+> * **flags/experiments.py:** depends on <span style="color:red">analytics/survey/questions.py, coaches/parents.py, sat/util.py, translations/videos.py,</span> <span style="color:green">appengine/transaction\_util.py, flags/bigbingo/bigbingo.py, flags/bingo\_identity.py, flags/feature\_flags/core.py, flags/gandalf/bridge.py, intl/request.py, lib/request\_cache\_decorators.py, web/request/current\_user.py, web/request/ip\_util.py, web/request/url\_util.py</span>
 
 > ...
 
