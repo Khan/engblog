@@ -191,6 +191,11 @@ authors = {
         "primary_url": "http://carterjbastian.com/",
         "icon_url": "/images/author-icons/carter.jpg",
     },
+    "Ragini Gupta": {
+        "display_as": "Ragini Gupta",
+        "primary_url": "https://github.com/guptaragini",
+        "icon_url": "/images/author-icons/ragini.jpg",
+    },
 }
 
 
