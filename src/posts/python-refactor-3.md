@@ -141,7 +141,7 @@ When we first took this measurement, we found that about 15.2% of all of our int
 
 ![A picture of a huge dependency graph; there is still a tangle at the center but there are some other, more distinct groupings](/images/python-refactor-3/after_deps.png)
 
-What’s more, the benefits of this continue to help us develop clean code quickly. We now have a check that’s run at commit time that will let you know if your changes added an new bad import. In other words, you can’t accidently introduce dependencies on higher-level code; if you’re going to violate the new rules, you have to do so explicitly.
+What’s more, the benefits of this continue to help us develop clean code quickly. We now have a check that’s run at commit time that will let you know if your changes added a new bad import. In other words, you can’t accidentally introduce dependencies on higher-level code; if you’re going to violate the new rules, you have to do so explicitly.
 
 These effects, in tandem with the clean-ups and refactors that came along with our dependency-chasing process above, left our codebase in a good place. Our self-imposed dependency order will help us develop faster and better in 2018 and beyond.
 
