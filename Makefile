@@ -40,10 +40,6 @@ deps:
 	env/bin/pip install -r ./khan-linter/requirements.txt
 	env/bin/pip install -r ./requirements.txt
 
-	# Install our bower dependencies
-	npm install bower
-	node_modules/.bin/bower install normalize.css
-
 	# Install khan-linter's dependencies
 	cd ./khan-linter; npm install
 
