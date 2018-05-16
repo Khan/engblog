@@ -74,8 +74,8 @@ class Post(object):
         self.title = frontmatter["title"]
         self.team = frontmatter["team"]
         self.published_on = (
-                datetime.datetime.strptime(frontmatter["published_on"],
-                                           "%B %d, %Y"))
+            datetime.datetime.strptime(frontmatter["published_on"],
+                                       "%B %d, %Y"))
         self.author = frontmatter["author"]
         self.async_scripts = frontmatter.get("async_scripts", [])
         self.postcontent_scripts = frontmatter.get("postcontent_scripts", [])
@@ -88,10 +88,10 @@ class Post(object):
             return render_rst(self.raw_content)
         elif self.file_path.endswith(".md"):
             return markdown.markdown(
-                    self.raw_content,
-                    extensions=["markdown.extensions.footnotes",
-                                "markdown.extensions.fenced_code",
-                                "markdown.extensions.codehilite"])
+                self.raw_content,
+                extensions=["markdown.extensions.footnotes",
+                            "markdown.extensions.fenced_code",
+                            "markdown.extensions.codehilite"])
         else:
             raise ValueError(
                 "Unknown post type (file_path=%r)" % self.file_path)
