@@ -41,7 +41,7 @@ function inlinePostCss(inputGlob, outputDir) {
             // Gather all of the CSS we want to inline in this post
             var css = (gulp
                 .src(["styles/post-template.less",
-                      "../bower_components/normalize.css",
+                      "../node_modules/normalize.css/normalize.css",
                       "styles/pygments.css"])
                 .pipe(less())
                 .pipe(concat("all.css")))
