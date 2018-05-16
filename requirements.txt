@@ -2,5 +2,4 @@ PyYAML==3.12
 Pygments==2.0.2
 docutils==0.12
 pystache==0.5.4
-wsgiref==0.1.2
 Markdown==2.6.2
