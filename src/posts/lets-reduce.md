@@ -18,7 +18,7 @@ That flexibility comes at a price, though: it's pretty tough to get the hang of.
 I had initially set out to write a blog post introducing Redux, but `reduce` warrants a blog post of its own. It's foundational to understanding Redux, and it's also a really neat tool to have in your toolbelt.
 
 
-_**Prerequisite Knowledge:** I’ll be assuming you have an understanding of modern Javascript, including [arrow functions](http://wesbos.com/arrow-functions/), [enhanced object literals](https://www.eventbrite.com/engineering/learning-es6-enhanced-object-literals/), and the [array spread operator](https://ponyfoo.com/articles/es6-spread-and-butter-in-depth#spread-operator). It’s probably also helpful if you know about [Array.prototype.map](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/map) and [Array.prototype.filter](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/filter). Once you’ve gotten that stuff down, come on back._
+_**Prerequisite Knowledge:** I’ll be assuming you have an understanding of modern JavaScript, including [arrow functions](http://wesbos.com/arrow-functions/), [enhanced object literals](https://www.eventbrite.com/engineering/learning-es6-enhanced-object-literals/), and the [array spread operator](https://ponyfoo.com/articles/es6-spread-and-butter-in-depth#spread-operator). It’s probably also helpful if you know about [Array.prototype.map](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/map) and [Array.prototype.filter](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/filter). Once you’ve gotten that stuff down, come on back._
 
 
 ## Some Words That Probably Won’t Help
@@ -208,7 +208,7 @@ The moral of the story? `reduce` is awesome, but sometimes there are simpler sol
 
 ## Shorthand Syntax
 
-Javascript's implementation of `reduce` offers a convenient shorthand.
+JavaScript's implementation of `reduce` offers a convenient shorthand.
 
 I didn't mention this earlier, because I wanted to strip away all the non-essential bits before covering this little bit of syntactic sugar. In fact, if you still don't feel like you have a firm grasp on `reduce`, I'd advise skipping this section for now. It's not necessary knowledge to use `reduce`.
 

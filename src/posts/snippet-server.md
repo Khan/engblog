@@ -20,7 +20,7 @@ While there are [many](https://weekdone.com/)
 [systems](https://www.teamsnippets.com/) out there, this one is
 optimized for simplicity (also, free-ness).  For instance, it prefers
 single webpages with lots of info over paging, queries, or fancy
-javascript.  Filling out a snippet involves writing into a textbox: no
+JavaScript.  Filling out a snippet involves writing into a textbox: no
 fields or text editors or other barriers to productivity.  (Markdown
 is available for those who want nice formatting.)  This makes it easy
 to learn and easy to program against.
