@@ -156,7 +156,7 @@ that.  Contributors welcome!
 
 We believe that snippets can be a useful tool for a small to
 medium-sized team, and while there are several snippet server
-implementations out there, this one's ease of use and low price
+implementations out there, this one's ease of use and low low price
 makes it an appealing alternative.  Try out the server and see what
 you think.
 
