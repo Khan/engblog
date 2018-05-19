@@ -82,7 +82,7 @@ The **third and final step** was to fix hubs of bad dependencies. This process c
  
 More often than not, a file with lots of bad dependencies was indicative of bad code organization — either the file was in the wrong place, or the file was doing too many things. In these cases, we were able to use that code smell to refactor files relatively easily and improve our code organization.
  
-For example, consider the following excerpt from from `flags/experiments.py`, which has both a function used for logging opt-in experiments, and also a function used to determine if a user is in a classroom so that we can consider showing them coach-related experiments:
+For example, consider the following excerpt from `flags/experiments.py`, which has both a function used for logging opt-in experiments, and also a function used to determine if a user is in a classroom so that we can consider showing them coach-related experiments:
 
 ```python
 from __future__ import absolute_import

@@ -11,7 +11,7 @@ Prevailing wisdom in the React/GraphQL space these days suggests that queries be
 As queries and component interactions become more complicated, however, the presentation and query layers become intertwined in a way that can feel overwhelming, especially from a [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) perspective.  Because of this, we've started to adopt a pattern we are calling "Query Components".  I'll explain in more detail later in this post, but a Query Component is a component which abstracts the data definition from the [Presentational Component](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0), allowing the Presentational Component to be agnostic of Apollo or GraphQL.
 
 ## Demo code
-All of the demo code for this post can be found in in this [Schools](https://github.com/BrianGenisio/schools) repo.  You can play with it [live](http://briangenisio.com/schools/) if you'd like.  There is not a ton of data, but it is an example of searching for schools by postal code.  Some postal codes with data include 48103, 48104, and 48105.  
+All of the demo code for this post can be found in this [Schools](https://github.com/BrianGenisio/schools) repo.  You can play with it [live](http://briangenisio.com/schools/) if you'd like.  There is not a ton of data, but it is an example of searching for schools by postal code.  Some postal codes with data include 48103, 48104, and 48105.  
 
 It uses [GraphCool](https://www.graph.cool/) as the backend GraphQL implementation.  GraphCool is a really great way to experiment with GraphQL without learning how to implement a GraphQL server.  It is a Backend as a Service (BaaS) for implementing a data store with a GraphQL interface.
 

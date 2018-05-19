@@ -14,7 +14,7 @@ If you're ever curious to see what we're up to with OSS, take a look at [https:/
 ## React Balance text
 [React Balance Text](https://github.com/khan/react-balance-text) is a React wrapper for the Adobe Web Platform's [Balance-Text](https://github.com/adobe-webplatform/balance-text) project which aims to help eliminate [text rags and widows](https://www.fonts.com/content/learning/fontology/level-2/text-typography/rags-widows-orphans) in page copy by making sure the text is as "balanced" as possible across all lines.
 
-Before we built our wrapper, we contributed to their project to help remove the jQuery dependancy.  It didn't seem prudent to have a React component which which relied on jQuery.  In today's browser ecosystem, a component like Balance-Text no longer needs anything that jQuery can offer.  We collaborated with Adobe to create version 3.0 of Balance-Text and then wrote a simple wrapper around it for React.
+Before we built our wrapper, we contributed to their project to help remove the jQuery dependancy.  It didn't seem prudent to have a React component which relied on jQuery.  In today's browser ecosystem, a component like Balance-Text no longer needs anything that jQuery can offer.  We collaborated with Adobe to create version 3.0 of Balance-Text and then wrote a simple wrapper around it for React.
 
 The usage is simple and clean:
 
