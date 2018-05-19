@@ -72,7 +72,7 @@ Well, this looks promising! But the day is young: could i... animate this?
 
 Stepping back, let's do a small crit[^crytime] here: part of what makes the learnstorm identity cool is that you get this round vibe *even though* everything is stuck on a grid. Breaking the grid in this case would not only require me animating each dart but animating them along circular paths which, i mean, would look *awesome* but... umm... maybe let's save that for LearnStorm 2016 when we have more time...
 
-[^crytime]: a crit (not *[that crit](https://en.wikipedia.org/wiki/Criterium)*) is a time to look over design work with your peers, evaluate and discuss what's succeeding, what's not (and for both, *why*), and offer suggestions for how it could communicate what it needs to most efectively.
+[^crytime]: a crit (not *[that crit](https://en.wikipedia.org/wiki/Criterium)*) is a time to look over design work with your peers, evaluate and discuss what's succeeding, what's not (and for both, *why*), and offer suggestions for how it could communicate what it needs to most effectively.
 
 Also, let's take this moment to visibly and vocally *Pivot*.[^sandhillfootnote] Because i spent the morning trying to figure out how to procedurally draw slope fields, i *already* have (a sort of) infrastructure for generating slope fields, but the problem is that i want something i can easily animate. Time for a new differential equation!
 
