@@ -10,6 +10,19 @@
 @designColor: #ab59c6;
 @wtfColor: #ff00af;
 
+@baseFontSize: 14px;
+// Modular scale: Major second
+@ratioSm: 1.125em;
+// Title font size is two steps up in the scale
+@titleFontSizeSm: pow(@ratioSm, 2);
+
+// Use a larger base font size and higher contrast
+// between title and copy on larger viewports
+@baseFontSizeLg: 16px;
+// Modular scale: Major third
+@ratioLg: 1.25em;
+@titleFontSizeLg: pow(@ratioLg, 2);
+
 html, body {
     height: 100%;
     margin: 0;
@@ -18,8 +31,12 @@ html, body {
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: #FEFEFE;
-    font-size: 14px;
+    font-size: @baseFontSize;
     width: 920px;
+
+    @media (min-width: @doubleColumnMaxWidth) {
+        font-size: @baseFontSizeLg;
+    }
 
     @media (max-width: @doubleColumnMaxWidth) {
         width: 100%;
@@ -189,6 +206,7 @@ body {
         border-left: 1px solid transparent;
         padding-left: 10px;
         margin-left: -10px;
+        font-size: @baseFontSize;
 
         @media (max-width: @doubleColumnMaxWidth) {
             border-left: 10px solid transparent;
@@ -301,10 +319,14 @@ body {
     .title a {
         letter-spacing: 1px;
         margin-bottom: 8px;
-        font-size: 28px;
+        font-size: @titleFontSizeSm;
         line-height: 1;
         color: @contentTextColor;
         text-decoration: none;
+
+        @media (min-width: @doubleColumnMaxWidth) {
+            font-size: @titleFontSizeLg;
+        }
 
         &:hover, &:focus {
             text-decoration: underline;
@@ -341,7 +363,7 @@ body {
     .body {
         margin-top: 30px;
         line-height: 1.5;
-        width: 500px;
+        width: 580px;
 
         @media (max-width: @doubleColumnMaxWidth) {
             width: 100%;
