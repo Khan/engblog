@@ -184,7 +184,7 @@ although you may have to resolve merge conflicts.
 
 ### Following Git history across the monorepo divide
 
-One of the things that suprised me the most was that Git was totally able to
+One of the things that surprised me the most was that Git was totally able to
 track the changes, even though they came from three different repositories.
 When doing `git log` for a specific file, you just need to add the `--follow`
 option (which tells Git to follow the file across renames), and everything

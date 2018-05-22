@@ -61,7 +61,7 @@ usually looks something like:
 
 The `[[☃ image 1]]` is a placeholder that tells Perseus that there is an
 image widget there. Then, there is the metadata associated with the widget
-itself, such as the image URL. This metadata is stored in a Javascript object as
+itself, such as the image URL. This metadata is stored in a JavaScript object as
 a React prop in Perseus, which means that if we can move that metadata around
 properly along with the basic text we'll have what we want. For example, the
 metadata for an image widget can look something like:
@@ -94,7 +94,7 @@ widget we find and save 'em in `localStorage`. On a paste, we see if
 pull it in.
 
 [You can find the basic implementation in this commit][commit1]. It
-ended up being just a few lines of Javascript and I was very pleased with how it
+ended up being just a few lines of JavaScript and I was very pleased with how it
 worked. One nice bonus from using `localStorage` was that widgets could be
 copied over from different web pages entirely. For example, if a content creator
 wants to move widgets from one question to another, he/she can copy the widgets
