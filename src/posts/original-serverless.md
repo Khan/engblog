@@ -39,3 +39,5 @@ A framework like [.architect](https://arc.codes) pulls together the setup of a w
 To sum up, I’m excited about all of the work going on around Kubernetes and function-based server architectures. The Kubernetes ecosystem is working out ways to provide tons of flexibility while improving manageability of services. The serverless crowd is working out new ways to spin up microservices where the hardware and networking is abstracted away. Setting aside that excitement, for people shipping apps today, the “original serverless” setup of App Engine is still a great choice for bringing up a service that scales well with minimal management headache, even as the amount of code you’re managing grows.
 
 _Thanks to Ben Kraft, Craig Silverstein, and Amos Latteier for their feedback on drafts of this article._
+
+Discuss [on Hacker News](https://news.ycombinator.com/item?id=17197085)
