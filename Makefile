@@ -15,7 +15,8 @@ serve server: node_modules/.bin/gulp
 
 # Runs phantomjs tests on what's in the output directory
 phantomjs-tests:
-	./phantomjs-tests/run-tests.sh
+	# TODO (INFRA-1347): tests are disabled because of unreliability
+	#./phantomjs-tests/run-tests.sh
 
 lint linc: khan-linter/runlint.py
 	env/bin/python khan-linter/runlint.py src/*.py src/gulpfile.js \
