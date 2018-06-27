@@ -196,6 +196,11 @@ authors = {
         "primary_url": "https://github.com/guptaragini",
         "icon_url": "/images/author-icons/ragini.jpg",
     },
+    "Colin Fuller": {
+        "display_as": "Colin Fuller",
+        "primary_url": "https://github.com/cjfuller",
+        "icon_url": "/images/author-icons/colin.png",
+    },
 }
 
 
