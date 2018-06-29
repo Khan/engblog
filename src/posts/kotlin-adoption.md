@@ -145,6 +145,7 @@ In addition, because the particular App Engine Flex instances we’re using are
 about 4x cheaper than the (App Engine Standard) Python instances we used
 before, this represents even more than a 10x cost savings on this route for us.
 
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 ![Server hours are down more than 10x](/images/kotlin_adoption_instance_hours.svg)
 
 ## Challenges
