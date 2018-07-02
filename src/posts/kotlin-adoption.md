@@ -135,7 +135,7 @@ Because our old Python API was running on a set of multithreaded instances
 not straightforward to directly compare the cost and performance of the old
 version to the new one. Instead, we looked at our peak daytime instance counts
 before and after the rollout to estimate how many instances were required to
-serve all the API traffic on the two versions. After the rollout, te module
+serve all the API traffic on the two versions. After the rollout, the module
 serving our Python API requests peaked at requiring around 400 instances fewer
 than it needed before the rollout, and the Kotlin module (serving only this one
 API) stayed below 50 instances, meaning that one of our Kotlin instances is
