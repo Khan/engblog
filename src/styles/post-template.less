@@ -74,6 +74,9 @@ body {
 }
 
 #left-bar {
+    position: fixed;
+    overflow-y: auto;
+    height: 100%;
     box-sizing: border-box;
     display: table-cell;
     background-color: @leftBarBackgroundColor;
@@ -82,6 +85,8 @@ body {
     padding: 10px 35px 35px 35px;
 
     @media (max-width: @doubleColumnMaxWidth) {
+        position: static;
+        height: auto;
         display: block;
         width: 100%;
         padding: 0px 20px 0px 20px;
@@ -304,7 +309,7 @@ body {
 
 #content {
     display: table-cell;
-    padding: 10px 35px 35px 50px;
+    padding: 10px 35px 35px 375px;
     color: @contentTextColor;
 
     @media (max-width: @doubleColumnMaxWidth) {
