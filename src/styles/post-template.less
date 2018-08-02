@@ -1,7 +1,14 @@
-@contentTextColor: #404040;
-@leftBarTextColor: #f0f0f0;
 @doubleColumnMaxWidth: 920px;
-@leftBarBackgroundColor: #252F3D;
+@wonderBlocksBlue: #1865f2;
+@wonderBlocksOffBlack: #21242C;
+@wonderBlocksOffBlack64: rgba(33, 36, 44, 0.64);
+@wonderBlocksOffBlack50: rgba(33, 36, 44, 0.50);
+@wonderBlocksOffBlack32: rgba(33, 36, 44, 0.32);
+@wonderBlocksOffWhite: #F7F8FA;
+@wonderBlocksWhite: #FFFFFF;
+@wonderBlocksDarkBlue: #0A2A66;
+@wonderBlocksTeal: #00E5AE;
+
 
 @infrastructureColor: #E57281;
 @frontendColor: #63BBD9;
@@ -29,8 +36,9 @@ html, body {
 }
 
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #FEFEFE;
+    font-family: 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=Lato');
+    background-color: @wonderBlocksOffWhite;
     font-size: @baseFontSize;
     width: 920px;
 
@@ -41,7 +49,7 @@ body {
     @media (max-width: @doubleColumnMaxWidth) {
         width: 100%;
         &.mobile-menu-visible {
-            background-color: @leftBarBackgroundColor;
+            background-color: @wonderBlocksDarkBlue;
         }
     }
 }
@@ -76,9 +84,9 @@ body {
 #left-bar {
     box-sizing: border-box;
     display: table-cell;
-    background-color: @leftBarBackgroundColor;
-    color: @leftBarTextColor;
-    width: 325px;
+    background-color: @wonderBlocksDarkBlue;
+    color: @wonderBlocksWhite;
+    min-width: 325px;
     padding: 10px 35px 35px 35px;
 
     @media (max-width: @doubleColumnMaxWidth) {
@@ -96,7 +104,8 @@ body {
     }
 
     .logo {
-        font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+        font-family: 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
+        src: url('https://fonts.googleapis.com/css?family=Lato');
         font-size: 28px;
         letter-spacing: 1px;
         line-height: 1em;
@@ -107,7 +116,7 @@ body {
         text-transform: uppercase;
 
         a {
-            color: @leftBarTextColor;
+            color: @wonderBlocksWhite;
             text-decoration: none;
         }
 
@@ -123,7 +132,7 @@ body {
                     margin: 0 -20px -15px -20px;
                     display: block;
                     text-decoration: none;
-                    color: @leftBarTextColor;
+                    color: @wonderBlocksWhite;
                 }
 
                 svg {
@@ -145,7 +154,7 @@ body {
         }
 
         .engineering {
-            color: #9cb53b;
+            color: @wonderBlocksTeal;
         }
     }
 
@@ -155,7 +164,7 @@ body {
         margin-top: 10px;
 
         &, * {
-            color: #dbdcde;
+            color: @wonderBlocksWhite;
         }
 
         a {
@@ -176,11 +185,11 @@ body {
             a {
                 margin-right: 7px;
                 text-decoration: none;
-                color: @leftBarTextColor;
+                color: @wonderBlocksWhite;
             }
 
             a:hover {
-                border-bottom: 1px solid @leftBarTextColor;
+                border-bottom: 1px solid @wonderBlocksWhite;
             }
 
             .email {
@@ -192,7 +201,7 @@ body {
     }
 
     .section-heading {
-        color: #dbdcde;
+        color: @wonderBlocksOffWhite;
         font-size: 12px;
         font-weight: 300;
         letter-spacing: 0.5px;
@@ -247,7 +256,7 @@ body {
             margin: 0 0 9px 0;
 
             a {
-                color: @leftBarTextColor;
+                color: @wonderBlocksWhite;
                 text-decoration: none;
             }
 
@@ -260,7 +269,7 @@ body {
             font-size: 12px;
 
             .author-link {
-                color: @leftBarTextColor;
+                color: @wonderBlocksWhite;
                 text-decoration: none;
                 font-weight: bold;
                 font-size: 11px;
@@ -291,7 +300,7 @@ body {
             }
 
             a {
-                color: @leftBarTextColor;
+                color: @wonderBlocksWhite;
                 text-decoration: none;
             }
 
@@ -305,7 +314,7 @@ body {
 #content {
     display: table-cell;
     padding: 10px 35px 35px 50px;
-    color: @contentTextColor;
+    color: @wonderBlocksOffBlack;
 
     @media (max-width: @doubleColumnMaxWidth) {
         padding: 10px 20px 50px 20px;
@@ -321,7 +330,7 @@ body {
         margin-bottom: 8px;
         font-size: @titleFontSizeSm;
         line-height: 1;
-        color: @contentTextColor;
+        color: @wonderBlocksOffBlack;
         text-decoration: none;
 
         @media (min-width: @doubleColumnMaxWidth) {
@@ -335,7 +344,7 @@ body {
 
     .info {
         .author-link {
-            color: @contentTextColor;
+            color: @wonderBlocksOffBlack;
             font-weight: bold;
             text-decoration: none;
         }
@@ -355,7 +364,7 @@ body {
             margin-right: 4px;
 
             &.web-frontend {
-                background-color: #63BBD9;
+                background-color: @frontendColor;
             }
         }
     }
@@ -370,7 +379,7 @@ body {
         }
 
         a {
-            color: #6c7d28;
+            color: @wonderBlocksBlue;
             text-decoration: none;
         }
 
@@ -404,17 +413,17 @@ body {
             padding: 3px 0;
             display: inline-block;
             max-width: 90%;
-            color: @contentTextColor;
+            color: @wonderBlocksOffBlack;
 
             .header {
                 font-size: 12px;
-                color: #767676;
+                color: @wonderBlocksOffBlack64;
                 // text-transform: uppercase;
             }
 
             .post-title {
                 margin-top: 8px;
-                color: #6c7d28;
+                color: @wonderBlocksBlue;
                 text-decoration: none;
                 display: block;
 
