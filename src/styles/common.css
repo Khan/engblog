@@ -2,16 +2,14 @@
  * generated with the Roman font at http://www.network-science.de/ascii/ */
 
 body {
-    /* Open Sans is a nice easy font-family to work with and usually
-     * yields good looking pages. The user likely has a cached copy of
-     * it already too. */
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=Lato');
 
     /* True white is often too bright to use as a background */
-    background-color: #FEFEFE;
+    background-color: #F7F8FA;
 
     /* True black is often too dark to use as a base font color */
-    color: #161616;
+    color: #21242C;
 
     /* This will keep any text from riding up too close to any of the
      * edges of the page. */
@@ -43,9 +41,9 @@ strong, b {
 }
 
 a {
-    /* Our links will be blue and not have underlines */
+    /* Our links will be Wonder Blocks blue and not have underlines */
     text-decoration: none;
-    color: #778A2D;
+    color: #1865F2;
 }
 
 a:hover {
