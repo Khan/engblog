@@ -3,6 +3,7 @@
 var fs = require("fs");
 
 var concat = require("gulp-concat");
+var connect = require("gulp-connect");
 var foreach = require("gulp-foreach");
 var gulp = require("gulp");
 var imagemin = require("gulp-imagemin");
@@ -11,8 +12,8 @@ var less = require("gulp-less");
 var minifyCss = require("gulp-minify-css");
 var minifyHTML = require("gulp-minify-html");
 var minifyInline = require("gulp-minify-inline");
+var path = require("path");
 var shell = require("gulp-shell");
-var webserver = require("gulp-webserver");
 var argv = require("yargs").argv;
 
 // Prefer PYTHON from the virtualenv, but if it doesn't exist, just
@@ -66,31 +67,31 @@ function inlinePostCss(inputGlob, outputDir) {
 /**
  * Embeds each post page's CSS.
  */
-gulp.task("inline-css", ["phial"], function() {
+gulp.task("inline-css", gulp.series(["phial"], function() {
     return inlinePostCss("/tmp/engblog-phial/posts/*", "../output/posts/");
-});
+}));
 
 /**
  * The index page (which is just one of the posts) needs the same treatment
  */
-gulp.task("inline-index-css", ["phial"], function() {
+gulp.task("inline-index-css", gulp.series(["phial"], function() {
     return inlinePostCss("/tmp/engblog-phial/index.htm", "../output/");
-});
+}));
 
 /**
  * Move the RSS feed into the output directory.
  */
-gulp.task("rss-feed", ["phial"], function() {
+gulp.task("rss-feed", gulp.series(["phial"], function() {
     // TODO(johnsullivan): Minify this. Stripping whitespace is probably the
     //     only safe thing we can do.
     return gulp.src("/tmp/engblog-phial/rss.xml").pipe(gulp.dest("../output"));
-});
+}));
 
 /**
  * Shortcut task to create the site's content.
  */
-gulp.task("content", ["inline-css", "inline-index-css", "rss-feed"],
-          function() {});
+gulp.task("content", gulp.series(["inline-css", "inline-index-css", "rss-feed"],
+          function(done) { done(); }));
 
 /**
  * Moves all of the images into the output directory (and optimizes them).
@@ -110,9 +111,8 @@ gulp.task("images", function() {
  * Moves all of the videos into the output directory.
  */
 gulp.task("videos", function() {
-    var source = gulp.src("videos/**");
-
-    return source.pipe(gulp.dest("../output/videos"));
+    return gulp.src("videos/**")
+        .pipe(gulp.dest("../output/videos"));
 });
 
 gulp.task("supporting-files", function() {
@@ -126,25 +126,32 @@ gulp.task("javascript", function() {
 });
 
 gulp.task("default",
-    ["content", "images", "videos", "supporting-files", "javascript"],
-    function() {}
-);
+    gulp.parallel(["content", "images", "videos", "supporting-files", "javascript"],
+    function(done) { done(); }
+));
+
+gulp.task("watch", function(done) {
+    gulp.watch(["**"], gulp.parallel(
+        ["content", "images", "videos", "supporting-files"]));
+    done();
+});
+
+gulp.task("connect", gulp.series(["default"], function(done) {
+    connect.server({
+        // Uncomment this line to expose the webserver to your private
+        // network (you would never do this on an unsafe public network
+        // would you?).
+        // host: "0.0.0.0",
+        livereload: true,
+        port: 9103,
+        root: path.resolve(path.join(__dirname, '..', 'output')),
+        fallback: path.resolve(path.join(__dirname, '..', 'output', 'index.htm')),
+        open: "",
+    });
+    done();
+}));
 
 /**
  * Build and serve the site for testing.
  */
-gulp.task("serve", ["default"], function() {
-    gulp.watch(["**"], ["content", "images", "videos", "supporting-files"]);
-
-    return gulp.src("../output")
-        .pipe(webserver({
-            // Uncomment this line to expose the webserver to your private
-            // network (you would never do this on an unsafe public network
-            // would you?).
-            // host: "0.0.0.0",
-            livereload: true,
-            port: 9103,
-            fallback: "index.htm",
-            open: "",
-        }));
-});
+gulp.task("serve", gulp.parallel(["connect", "watch"]));
