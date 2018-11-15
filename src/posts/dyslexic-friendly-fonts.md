@@ -1,16 +1,16 @@
 title: "Dyslexic Friendly Font - Khan Academy's New Accessibility Feature"
-published_on: December 15, 2018
+published_on: November 15, 2018
 author: Dasani Madipalli
 team: Web Frontend
 ...
 
-Khan Academy's mission is to bring free world class education for anyone, anywhere.
+Khan Academy's mission is to provide a free, world-class education for anyone, anywhere.
 This includes making our written content accessible for everyone. In order to make our content
-more accessible to our dyslexic users, we added a new [accessibility user setting](https://www.khanacademy.org/settings/account) to change the websites font more dyslexic friendly! This change will allow users to change the website's font from Lato, our standard body text font, to [OpenDyslexic](https://www.opendyslexic.org).
+more accessible to our dyslexic users, we added a new [accessibility user setting](https://www.khanacademy.org/settings/account) to make the website’s font more dyslexic-friendly! This change will allow users to change the website’s font from Lato, our standard body text font, to [OpenDyslexic](https://www.opendyslexic.org).
 
-This setting is currently only available in the English and Spanish versions of the site. Additionally the font will not override reading passages in the test prep sections as the font there is attempting to mimic actual test prep environments. The font will also not override fonts used for mathematical equations since they have special characters that might not be present.
+This setting is currently only available in the English and Spanish versions of the site. Additionally, the font will not override the one used in reading passages in the test preparation sections as the font there is attempting to mimic actual test prep environments. Finally, the font will also not override those used for mathematical equations since they have special characters that might not be present in OpenDyslexic.
 
-If it sounds like something that may help you or someone you know digest Khan Academy’s written content better, here’s how you can access it:
+If this sounds like something that may help you or someone you know to digest Khan Academy’s written content better, here’s how you can access it:
 
 ### Enabling the Setting
 
@@ -28,21 +28,21 @@ If it sounds like something that may help you or someone you know digest Khan Ac
 
 ### How it Helps
 
-The aim of this setting is to allow users to have the opportunity to change the font of the website to something that is might be more comforting and easier to read. While the font does not “cure” dyslexia it remedies some symptoms that some people with dyslexia experience. As described in the OpenDyslexic website, the font acts as a form of additional support similar to how highlighting a text book might help someone remember important facts of a passage.
+Our goal with this setting is to allow users to change the font of the website to something that is might be more comfortable and easier to read. While the font does not “cure” dyslexia, it remedies some symptoms that some people with dyslexia experience. As described in the OpenDyslexic website, the font acts as a form of additional support, similar to how highlighting a textbook might help someone remember important facts of a passage.
 
-Fonts intended to help dyslexic users take measures to make certain letters more distinguishable from one another. For instance in OpenDyslexic, the letters are weighted in certain areas to indicate direction. A capital W is more weighted on the bottom and a capital M is more weighted on the top. This helps a dyslexic user distinguish between an M and a W, which can sometimes be confusing due to their similar shape. Below you can see an image that shows the contrast on how different letters that are often confusing for dyslexic users are displayed in different fonts.
+Fonts intended to help dyslexic users take measures to make certain letters more distinguishable from one another. For instance, the letters in OpenDyslexic are weighted in certain areas to indicate direction. A capital W is more weighted on the bottom and a capital M is more weighted on the top. This helps a dyslexic user distinguish between an M and a W, which can sometimes be confusing due to their similar shape. Below, you can see an image that shows the contrast between how different letters that are often confusing for dyslexic users are displayed in different fonts.
 
 ![Image Comparing different letters in different fonts](/images/dyslexic-friendly-fonts/font-comparision.png)
 
-OpenDyslexic font may not work for all people with dyslexia, but attempts to remedy some of its symptoms. You can find more information about the font and how it was created [here](https://www.opendyslexic.org/about).
+OpenDyslexic may not work for all people with dyslexia, but attempts to remedy some of its symptoms. You can find [more information about the font and how it was created](https://www.opendyslexic.org/about) on their website.
 
-The research around dyslexic friendly fonts is still in the preliminary stages and there is no hard evidence to show that it significantly improves reading experiences for people with dyslexia.
+The research around dyslexic-friendly fonts is still in the preliminary stages and there is no hard evidence to show that it significantly improves reading experiences for people with dyslexia.
 
-Everyone is different, and some fonts work better for people with dyslexia than others. Our intention in releasing this feature was to provide the option to change Khan Academy’s font to one that may provide some ease. We feel that if there’s some chance that this feature will help some learners absorb information more effectively, we’re willing to give it a try.
+Everyone is different, and certain fonts appear to work better for people with dyslexia than others. We feel that if there’s a chance that this feature will help some learners absorb information more effectively, we’re willing to give it a try.
 
 ### The Making
 
-Overriding our standard body text font with OpenDyslexic was a fairly straightforward approach. I first accessed our font files from the website. Once I added the font files to our GitHub repo, I created a css template for the font using @fontface. Here’s an example of what that might look like:
+Overriding our standard body text font with OpenDyslexic was a fairly straightforward approach. I first accessed downloaded the font files from their website. Once I added the font files to our GitHub repository, I created a css template for the font using @fontface. Here’s an example of what that might look like:
 
 ```css
 /* regular Open Dyslexic font */
@@ -82,9 +82,9 @@ Overriding our standard body text font with OpenDyslexic was a fairly straightfo
 }
 ```
 
-At Khan Academy we [lazy load](https://www.filamentgroup.com/lab/font-events.html) our fonts. In order to override our standard body text font Lato I just needed to see where it was loaded, check if the user settings were being used and load OpenDyslexic instead.
+At Khan Academy, we [lazy load](https://www.filamentgroup.com/lab/font-events.html) our fonts. In order to override our standard body text font, Lato, I just needed to see where it was used, check if the dyslexic-friendly font setting was turned on, and load OpenDyslexic instead.
 
-In order to do that, I first set up our css styling for the default and upgraded fonts. The upgraded font will only be used if it has already been downloaded onto the user’s machine while the default font face allows the user to still see and read the page if the download is still happening:
+To do that, I first set up our css styling for the default and upgraded fonts. The upgraded font will only be used if it has already been downloaded onto the user’s machine while the default font face allows the user to still see and read the page if the download is still happening:
 
 ```less
 body {
@@ -118,9 +118,9 @@ Then I overrode the body styling:
 </script>
 ```
 
-Also please note that this not the actual code I wrote, but a similar representation of the logic we used. Hope this helps you to add a similar feature to your own websites and applications
+Also please note that this not the actual code I wrote, but an approximation of the logic we used. Hope this helps you to add a similar feature to your own websites and applications
 
 
 ### Help Make Khan Academy More Accessible
 
-A lot of our accessibility features were motivated by user feedback and requests. We really do value user input and would love to hear what you think will help make Khan Academy easier to access and use. Do you have any other suggestions for how we can make Khan Academy more accessible to everyone? Please let us know [here](https://khanacademy.zendesk.com/hc/en-us).
+A lot of our accessibility features have been motivated by user feedback and requests. We really do value user input and would love to hear what you think will help make Khan Academy easier to access and use. Do you have any other suggestions for how we can make Khan Academy more accessible to everyone? Please [let us know](https://khanacademy.zendesk.com/hc/en-us).
