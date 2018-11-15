@@ -201,6 +201,11 @@ authors = {
         "primary_url": "https://github.com/cjfuller",
         "icon_url": "/images/author-icons/colin.png",
     },
+    "Dasani Madipalli": {
+        "display_as": "Dasani Madipalli",
+        "primary_url": "https://www.linkedin.com/in/dasani-m",
+        "icon_url": "images/author-icons/dasani.jpg",
+    }
 }
 
 
