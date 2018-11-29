@@ -205,7 +205,12 @@ authors = {
         "display_as": "Dasani Madipalli",
         "primary_url": "https://www.linkedin.com/in/dasani-m",
         "icon_url": "images/author-icons/dasani.jpg",
-    }
+    },
+    "Aasmund Eldhuset": {
+        "display_as": "Aasmund Eldhuset",
+        "primary_url": "https://eldhuset.net/",
+        "icon_url": "/images/author-icons/aasmundeldhuset.png",
+    },
 }
 
 
