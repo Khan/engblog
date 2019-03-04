@@ -211,6 +211,11 @@ authors = {
         "primary_url": "https://eldhuset.net/",
         "icon_url": "/images/author-icons/aasmundeldhuset.png",
     },
+    "Diedra Rater": {
+        "display_as": "Diedra Rater",
+        "primary_url": "https://github.com/dierat",
+        "icon_url": "/images/author-icons/diedra.gif",
+    },
 }
 
 
