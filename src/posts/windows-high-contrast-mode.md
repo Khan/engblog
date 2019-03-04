@@ -4,7 +4,7 @@ author: Diedra Rater
 team: Web Frontend
 ...
 
-At Khan Academy, we've recently started working to make our web product more accessible to a variety of users. Part of this work has involved updating our styling to be able to work well with Windows high contrast mode. This required a little bit of learning via trial-and-error, so I wanted to share some of the things we discovered to make it easier for other developers working with accessibility.
+At Khan Academy, we've been working to make our web product more accessible to a variety of users. Part of this work has involved updating our styling to be able to work well with Windows high contrast mode. This required a little bit of learning via trial-and-error, so I wanted to share some of the things we discovered to make it easier for other developers working with accessibility.
 
 ## What is it and who uses it?
 Window high contrast mode is an accessibility settings feature in the Windows operating system. As the name suggests, it changes the visual appearance of everything displayed to have higher contrast. This includes applications that are native to the Windows platform as well as web apps.
@@ -34,7 +34,7 @@ There are several different versions of high contrast mode that can be used. **T
 ### Background colors and images
 Background colors and background images are removed and replaced with white.
 
-Both of these styles would be overridden and replaced with white:
+Both of these styles would be overridden:
 ```css
 background-color: lawngreen; /* No color for you. */
 background-image: url("cousin_fal.gif"); /* No image either. */
@@ -83,7 +83,7 @@ Here's a section of the screenshots of the Khan Academy logged out homepage. Her
     alt="Section of the Khan Academy logged out homepage shown in two versions side by side. On the left side is the default mode, and on the right side is the Windows high contrast mode. The section shown includes a button that reads 'Learners, start here'. In the default version, the button has a dark blue background, white text, and no visible outline. In the Windows high contrast mode version, the button has a white background, black text, and a black outline. Behind the button is an image of a sky, which is the same in both versions."
 />
 
-## How to improve web applications in Windows high contrast mode
+## Improve web applications in Windows high contrast mode - practical examples from our work
 ### Background colors and images
 Use HTML `<img>`s and `<svg>`s instead of `background-color` and `background-image` CSS **for important elements in the design**. Windows high contrast mode removes these characteristics of the page for a reason, so I don't want to encourage you to override that override altogether. But sometimes there are elements on the page that are visually necessary for users to understand the user interface and interact with it accordingly.
 
