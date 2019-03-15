@@ -56,8 +56,8 @@ outline: 2px dotted lavenderblush; /* Black as your heart. */
 border: 2px solid lemonchiffon; /* And my coffee. */
 ```
 
-### `<img>` and `<svg>` elements
-`<img>` and `<svg>` elements are immune and will remain intact.
+### `<img>` and SVG elements
+`<img>` and SVG elements are immune and will remain intact.
 
 ```html
 <img src="cousin_fall.gif" alt="Cousin Fal's at it again"> <!-- Impervious to Windows High Contrast Mode. -->
@@ -65,7 +65,7 @@ border: 2px solid lemonchiffon; /* And my coffee. */
 ```
 
 ### Font colors
-Font colors work the same as border and outline colors but with one more detail - the text element's background will be set to white. This is because the `<img>` and `<svg>` elements are unchanged. If you have text on top of an `<img>` or `<svg>` element, the text could become impossible to see if the image were dark when the text becomes black. By forcing the text to be black *and* have a white background, Windows High Contrast Mode ensures that the user will be able to read the text regardless of what `<img>` or `<svg>` you may have behind it.
+Font colors work the same as border and outline colors but with one more detail - the text element's background will be set to white. This is because the `<img>` and SVG elements are unchanged. If you have text on top of an `<img>` or SVG element, the text could become impossible to see if the image were dark when the text becomes black. By forcing the text to be black *and* have a white background, Windows High Contrast Mode ensures that the user will be able to read the text regardless of what `<img>` or SVG you may have behind it.
 
 In this example, the text will be black with a white background.
 ```css
@@ -77,8 +77,8 @@ Here's a section of the screenshots of the Khan Academy logged out homepage. Her
 
 1. The background color of the dark blue button and the light gray horizontal list of domains below the image are now white.
 2. The borders on all three buttons are now black.
-3. The image of the sky remains intact because it's been added as an `<svg>` element.
-4. All the text on the page has returned to its default browser color (black for non-links and blue for links), and the text on top of the `<svg>` image has a white background.
+3. The image of the sky remains intact because it's been added as an SVG element.
+4. All the text on the page has returned to its default browser color (black for non-links and blue for links), and the text on top of the SVG image has a white background.
 
 <img
     src="/images/windows-high-contrast-mode/comparison.png"
@@ -87,7 +87,7 @@ Here's a section of the screenshots of the Khan Academy logged out homepage. Her
 
 ## Improve web applications in Windows High Contrast Mode - practical examples from our work
 ### Background colors and images
-Use HTML `<img>`s and `<svg>`s instead of `background-color` and `background-image` CSS **for important elements in the design**. Windows High Contrast Mode removes these characteristics of the page for a reason, so I don't want to encourage you to override that override altogether. But sometimes there are elements on the page that are visually necessary for users to understand the user interface and interact with it accordingly.
+Use HTML `<img>`s and SVG's instead of `background-color` and `background-image` CSS **for important elements in the design**. Windows High Contrast Mode removes these characteristics of the page for a reason, so I don't want to encourage you to override that override altogether. But sometimes there are elements on the page that are visually necessary for users to understand the user interface and interact with it accordingly.
 
 #### Replacing CSS `background-image` with `<img>` element
 In the discussions feature on video pages, users can add in their posts a link to a specific point in the video. We visually communicate that the button jumps to a specific time in the video with a little blue play image to the left of the timestamp. This image was originally added using CSS's `background-image`. Of course, it was being removed in Windows High Contrast Mode and a big empty space was left instead.
@@ -162,10 +162,10 @@ return (
 );
 ```
 
-#### Replacing CSS `background-color` with `<svg>` element
-Above the discussions feature on video pages, the video itself has a large play button on top. The actual play icon is an `<svg>` HTML element, but it's white, and the color for the area around it was added using `background-color` CSS. Of course, in Windows High Contrast Mode, the `background-color` CSS was removed and replaced with white, which left users with a white icon on a white background. Oops!
+#### Replacing CSS `background-color` with SVG element
+Above the discussions feature on video pages, the video itself has a large play button on top. The actual play icon is an SVG HTML element, but it's white, and the color for the area around it was added using `background-color` CSS. Of course, in Windows High Contrast Mode, the `background-color` CSS was removed and replaced with white, which left users with a white icon on a white background. Oops!
 
-There are a couple of different ways to fix this, but, in this case, we chose to replace the element behind the icon with another `<svg>`, which would retain its color. (Another option would be to allow the color of the `<svg>` element to be overridden, which is illustrated in the next example.)
+There are a couple of different ways to fix this, but, in this case, we chose to replace the element behind the icon with another SVG, which would retain its color. (Another option would be to allow the color of the SVG element to be overridden, which is illustrated in the next example.)
 
 ##### Before
 Screenshot:
@@ -260,8 +260,8 @@ const PLAY_BUTTON_RADIUS = Math.floor(PLAY_BUTTON_DIAMETER / 2);
 </button>
 ```
 
-#### Allowing the `<svg>` color to be overridden using `fillColor`
-The colors of `<svg>`s will remain intact in Windows High Contrast Mode, but only if the colors are set directly on `fill`. If the `svg` image is white in your design, you should avoid setting that white color using `fill: yourColor`. Instead set `fill` to `currentColor` and set the `color` on a wrapper element. Then, in Windows High Contrast Mode, the `color` will be set to black and the `svg` will adjust accordingly.
+#### Allowing the SVG color to be overridden using `fillColor`
+The colors of SVG's will remain intact in Windows High Contrast Mode, but only if the colors are set directly on `fill`. If the `svg` image is white in your design, you should avoid setting that white color using `fill: yourColor`. Instead set `fill` to `currentColor` and set the `color` on a wrapper element. Then, in Windows High Contrast Mode, the `color` will be set to black and the `svg` will adjust accordingly.
 
 Here's an example of one place where we fixed this - logo in the global header on Khan Academy.
 
