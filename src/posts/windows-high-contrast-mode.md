@@ -4,7 +4,9 @@ author: Diedra Rater
 team: Web Frontend
 ...
 
-At Khan Academy, we've been working to make our web product more accessible to a variety of users. Part of this work has involved updating our styling to be able to work well with Windows High Contrast Mode. This required a little bit of learning via trial-and-error, so I wanted to share some of the things we discovered to make it easier for other developers working with accessibility.
+At Khan Academy, we've been working to make our web product more accessible to a variety of users, including those who experience blurry vision and/or severe color-blindness. Part of this work has involved updating our styling to be able to work well with Windows High Contrast Mode.
+
+This project required a little bit of learning via trial-and-error, so I wanted to share some of the things we discovered to make it easier for other developers working with accessibility. In this post, you'll learn about how to optimize web applications for the benefit of other users with visual accessibility needs.
 
 ## What is it and who uses it?
 Windows High Contrast Mode is an accessibility settings feature in the Windows operating system. As the name suggests, it changes the visual appearance of everything displayed to have higher contrast. This includes applications that are native to the Windows platform as well as web apps.
@@ -13,17 +15,17 @@ Khan Academy's logged out homepage without Windows High Contrast Mode:
 
 <img
     src="/images/windows-high-contrast-mode/lohp_default.png"
-    alt="Sreenshot of Khan Academy's logged out homepage without Windows High Contrast Mode. There are light gray borders, light gray backgrounds, a dark blue button, and text of different colors."
+    alt="Screenshot of Khan Academy's logged out homepage without Windows High Contrast Mode. There are light gray borders, light gray backgrounds, a dark blue button, and text of different colors."
 />
 
 Khan Academy's logged out homepage with Windows High Contrast Mode:
 
 <img
     src="/images/windows-high-contrast-mode/lohp_whc.png"
-    alt="Sreenshot of Khan Academy's logged out homepage with Windows High Contrast Mode. All the borders are now black, the background colors are white (including buttons), and all of the text is either blue (if it's a link) or black (if it's not a link)."
+    alt="Screenshot of Khan Academy's logged out homepage with Windows High Contrast Mode. All the borders are now black, the background colors are white (including buttons), and all of the text is either blue (if it's a link) or black (if it's not a link)."
 />
 
-The high contrast version of the web may not be as pretty, but it is easier to see and understand. It's especially useful for users with blurry vision and users who experience severe color-blindness.
+The high contrast version of the web may not be as pretty, but it is easier to see and understand.
 
 There are several different versions of Windows High Contrast Mode that can be used. **The examples in this post use High Contrast White.**
 
