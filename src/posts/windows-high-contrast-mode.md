@@ -362,6 +362,12 @@ CSS:
 }
 ```
 
+## Summary
+In the end, the best approach to accessibility that I've found is to follow the web development standards when possible.
+
+1. **Use semantic HTML for elements and CSS for styling.** If an image is decorative, use `background-image` CSS. If an image is imperative for all users to see, use an `<img>` or SVG element (with appropriate `alt` text). If the element links to something, use an `<a>` element. Following these standardized patterns will get you most of the way for Windows High Contrast Mode (as well as screen readers and keyboard navigation too).
+2. **Be careful when overriding default styling.** When you override the default styling for an element (for example the focus outline, text decoration, or border on interactive elements), it has an effect that may be invisible to you based on your specific testing environment. Consider making the style invisible using 0% opacity color instead of removing it altogether.
+
 ## Questions / comments / sweet memes?
 You can reach out to us on [Twitter](https://twitter.com/khanacademy/) or [send us a support ticket](https://khanacademy.zendesk.com/hc/en-us)!
 
