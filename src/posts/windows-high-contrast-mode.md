@@ -52,8 +52,8 @@ background-color: rgba(0, 0, 0, 0.5); /* White as the driven snow if the driven 
 ### Border and outline colors
 For border colors and outline colors, it actually goes the other way. No matter what color or opacity you set, they'll be set to 100% black in Windows High Contrast Mode.
 ```css
-outline: 2px dotted lavenderblush; /* Black as your heart. */
-border: 2px solid lemonchiffon; /* And my coffee. */
+outline: 2px dotted lightsalmon; /* Black as your heart. */
+border: 2px solid lavenderblush; /* And my coffee. */
 ```
 
 ### `<img>` and SVG elements
@@ -65,11 +65,11 @@ border: 2px solid lemonchiffon; /* And my coffee. */
 ```
 
 ### Font colors
-Font colors work the same as border and outline colors but with one more detail - the text element's background will be set to white. This is because the `<img>` and SVG elements are unchanged. If you have text on top of an `<img>` or SVG element, the text could become impossible to see if the image were dark when the text becomes black. By forcing the text to be black *and* have a white background, Windows High Contrast Mode ensures that the user will be able to read the text regardless of what `<img>` or SVG you may have behind it.
+Font colors work the same as border and outline colors but with one more detail —— the text element's background will be set to white. This is because the `<img>` and SVG elements are unchanged. If you have text on top of an `<img>` or SVG element, the text could become impossible to see if the image were dark when the text becomes black. By forcing the text to be black *and* have a white background, Windows High Contrast Mode ensures that the user will be able to read the text regardless of what `<img>` or SVG you may have behind it.
 
 In this example, the text will be black with a white background.
 ```css
-color: someothercsscolornameyoudidntknowexisted;
+color: lemonchiffon;
 ```
 
 ### Comparison
@@ -85,12 +85,15 @@ Here's a section of the screenshots of the Khan Academy logged out homepage. Her
     alt="Section of the Khan Academy logged out homepage shown in two versions side by side. On the left side is the default mode, and on the right side is the Windows High Contrast Mode. The section shown includes a button that reads 'Learners, start here'. In the default version, the button has a dark blue background, white text, and no visible outline. In the Windows High Contrast Mode version, the button has a white background, black text, and a black outline. Behind the button is an image of a sky, which is the same in both versions."
 />
 
-## Improve web applications in Windows High Contrast Mode - practical examples from our work
+## Improve web applications in Windows High Contrast Mode —— practical examples from our work
+### Quick note..
+I wanted to mention up-front that there is [a `-ms-high-contrast` CSS media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/-ms-high-contrast) that allows you to detect if the page is being viewed in Windows High Contrast Mode. However, it is non-standard and unreliable; therefore, none of the examples shown here utilize this feature.
+
 ### Background colors and images
 Use HTML `<img>`s and SVG's instead of `background-color` and `background-image` CSS **for important elements in the design**. Windows High Contrast Mode removes these characteristics of the page for a reason, so I don't want to encourage you to override that override altogether. But sometimes there are elements on the page that are visually necessary for users to understand the user interface and interact with it accordingly.
 
 #### Replacing CSS `background-image` with `<img>` element
-In the discussions feature on video pages, users can add in their posts a link to a specific point in the video. We visually communicate that the button jumps to a specific time in the video with a little blue play image to the left of the timestamp. This image was originally added using CSS's `background-image`. Of course, it was being removed in Windows High Contrast Mode and a big empty space was left instead.
+Khan Academy video pages enable people to discuss the video, including links to specific points in the video in their comments. We visually communicate that the button jumps to a specific time in the video with a little blue play image to the left of the timestamp. This image was originally added using CSS's `background-image`. Of course, it was being removed in Windows High Contrast Mode and a big empty space was left instead.
 
 To fix this, we removed the `background-image` from the CSS and added the image back with a `img` element so it would appear in both default and Windows High Contrast Modes.
 
@@ -260,10 +263,21 @@ const PLAY_BUTTON_RADIUS = Math.floor(PLAY_BUTTON_DIAMETER / 2);
 </button>
 ```
 
+#### Add CSS `background-color` via a pseudo-element
+You can also force the `background-color` CSS to remain by adding it to a pseudo-element. This isn't a tactic that we happened to use, but it is available if necessary.
+
+CSS:
+```css
+.element:after {
+  content:"";
+  background-color: someothercsscolornameyoudidntknowexisted;
+}
+```
+
 #### Allowing the SVG color to be overridden using `fillColor`
 The colors of SVG's will remain intact in Windows High Contrast Mode, but only if the colors are set directly on `fill`. If the `svg` image is white in your design, you should avoid setting that white color using `fill: yourColor`. Instead set `fill` to `currentColor` and set the `color` on a wrapper element. Then, in Windows High Contrast Mode, the `color` will be set to black and the `svg` will adjust accordingly.
 
-Here's an example of one place where we fixed this - logo in the global header on Khan Academy.
+Here's an example of one place where we fixed this —— the logo in the global header on Khan Academy.
 
 ##### Before
 Screenshot:
@@ -345,3 +359,10 @@ CSS:
     border: 1px solid rgba(0,0,0,0);
 }
 ```
+
+## Questions / comments / sweet memes?
+You can reach out to us on [Twitter](https://twitter.com/khanacademy/), [Facebook](https://www.facebook.com/khanacademy), or [send us a support ticket](https://khanacademy.zendesk.com/hc/en-us)!
+
+Thank you for reading this post (or at least scrolling to the end)! I hope that it's been educational to you in some way and helps in your journey to make the web a better place.
+
+Onward!
