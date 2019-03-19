@@ -67,7 +67,7 @@ border: 2px solid lavenderblush; /* And my coffee. */
 ```
 
 ### Font colors
-Font colors work the same as border and outline colors but with one more detail —— the text element's background will be set to white. This is because the `<img>` and SVG elements are unchanged. If you have text on top of an `<img>` or SVG element, the text could become impossible to see if the image were dark when the text becomes black. By forcing the text to be black *and* have a white background, Windows High Contrast Mode ensures that the user will be able to read the text regardless of what `<img>` or SVG you may have behind it.
+Font colors work the same as border and outline colors but with one more detail — the text element's background will be set to white. This is because the `<img>` and SVG elements are unchanged. If you have text on top of an `<img>` or SVG element, the text could become impossible to see if the image were dark when the text becomes black. By forcing the text to be black *and* have a white background, Windows High Contrast Mode ensures that the user will be able to read the text regardless of what `<img>` or SVG you may have behind it.
 
 In this example, the text will be black with a white background.
 ```css
@@ -87,14 +87,14 @@ Here's a section of the screenshots of the Khan Academy logged out homepage. Her
     alt="Section of the Khan Academy logged out homepage shown in two versions side by side. On the left side is the default mode, and on the right side is the Windows High Contrast Mode. The section shown includes a button that reads 'Learners, start here'. In the default version, the button has a dark blue background, white text, and no visible outline. In the Windows High Contrast Mode version, the button has a white background, black text, and a black outline. Behind the button is an image of a sky, which is the same in both versions."
 />
 
-## Improve web applications in Windows High Contrast Mode —— practical examples from our work
+## Improve web applications in Windows High Contrast Mode — practical examples from our work
 ### Quick note..
 I wanted to mention up-front that there is [a `-ms-high-contrast` CSS media feature](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/-ms-high-contrast) that allows you to detect if the page is being viewed in Windows High Contrast Mode. However, it is non-standard and unreliable; therefore, none of the examples shown here utilize this feature.
 
 ### Background colors and images
 Use HTML `<img>`s and SVG's instead of `background-color` and `background-image` CSS **for important elements in the design**. Windows High Contrast Mode removes these characteristics of the page for a reason, so I don't want to encourage you to override that override altogether. But sometimes there are elements on the page that are visually necessary for users to understand the user interface and interact with it accordingly.
 
-#### Replacing CSS `background-image` with `<img>` element
+#### Replacing CSS `background-image` with an `<img>` element
 Khan Academy video pages enable people to discuss the video, including links to specific points in the video in their comments. We visually communicate that the button jumps to a specific time in the video with a little blue play image to the left of the timestamp. This image was originally added using CSS's `background-image`. Of course, it was being removed in Windows High Contrast Mode and a big empty space was left instead.
 
 To fix this, we removed the `background-image` from the CSS and added the image back with a `img` element so it would appear in both default and Windows High Contrast Modes.
@@ -167,7 +167,7 @@ return (
 );
 ```
 
-#### Replacing CSS `background-color` with SVG element
+#### Replacing CSS `background-color` with an SVG element
 Above the discussions feature on video pages, the video itself has a large play button on top. The actual play icon is an SVG HTML element, but it's white, and the color for the area around it was added using `background-color` CSS. Of course, in Windows High Contrast Mode, the `background-color` CSS was removed and replaced with white, which left users with a white icon on a white background. Oops!
 
 There are a couple of different ways to fix this, but, in this case, we chose to replace the element behind the icon with another SVG, which would retain its color. (Another option would be to allow the color of the SVG element to be overridden, which is illustrated in the next example.)
@@ -279,7 +279,7 @@ CSS:
 #### Allowing the SVG color to be overridden using `fillColor`
 The colors of SVG's will remain intact in Windows High Contrast Mode, but only if the colors are set directly on `fill`. If the `svg` image is white in your design, you should avoid setting that white color using `fill: yourColor`. Instead set `fill` to `currentColor` and set the `color` on a wrapper element. Then, in Windows High Contrast Mode, the `color` will be set to black and the `svg` will adjust accordingly.
 
-Here's an example of one place where we fixed this —— the logo in the global header on Khan Academy.
+Here's an example of one place where we fixed this — the logo in the global header on Khan Academy.
 
 ##### Before
 Screenshot:
