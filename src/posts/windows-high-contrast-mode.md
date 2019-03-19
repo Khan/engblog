@@ -361,7 +361,7 @@ CSS:
 ```
 
 ## Questions / comments / sweet memes?
-You can reach out to us on [Twitter](https://twitter.com/khanacademy/), [Facebook](https://www.facebook.com/khanacademy), or [send us a support ticket](https://khanacademy.zendesk.com/hc/en-us)!
+You can reach out to us on [Twitter](https://twitter.com/khanacademy/) or [send us a support ticket](https://khanacademy.zendesk.com/hc/en-us)!
 
 Thank you for reading this post (or at least scrolling to the end)! I hope that it's been educational to you in some way and helps in your journey to make the web a better place.
 
