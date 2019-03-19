@@ -50,6 +50,8 @@ In this code example, the background is set to 50% black. In Windows High Contra
 ```css
 background-color: rgba(0, 0, 0, 0.5); /* White as the driven snow if the driven show were 50% opacity. */
 ```
+#### Key takeaway
+Only use `background-color` and `background-image` CSS for decorative styling. Windows High Contrast Mode considers them unnecessary to understand the page.
 
 ### Border and outline colors
 For border colors and outline colors, it actually goes the other way. No matter what color or opacity you set, they'll be set to 100% black in Windows High Contrast Mode.
@@ -57,14 +59,18 @@ For border colors and outline colors, it actually goes the other way. No matter 
 outline: 2px dotted lightsalmon; /* Black as your heart. */
 border: 2px solid lavenderblush; /* And my coffee. */
 ```
+#### Key takeaway
+Borders and outlines should be functional, not ornamental, because Windows High Contrast Mode retains them. Also, they won't be distinguishable if used to separate black sections created by `<img>` and SVG elements.
 
 ### `<img>` and SVG elements
 `<img>` and SVG elements are immune and will remain intact.
 
 ```html
-<img src="cousin_fall.gif" alt="Cousin Fal's at it again"> <!-- Impervious to Windows High Contrast Mode. -->
+<img src="cousin_fal.gif" alt="Cousin Fal's at it again"> <!-- Impervious to Windows High Contrast Mode. -->
 <svg> ... </svg> <!-- An svg of me being too lazy to write an svg example. 1,000,000 defense against Windows High Contrast Mode. -->
 ```
+#### Key takeaway
+Semantic `<img>` and SVG elements are for important, functional elements. Windows High Contrast Mode assumes they're required to interpret the page.
 
 ### Font colors
 Font colors work the same as border and outline colors but with one more detail — the text element's background will be set to white. This is because the `<img>` and SVG elements are unchanged. If you have text on top of an `<img>` or SVG element, the text could become impossible to see if the image were dark when the text becomes black. By forcing the text to be black *and* have a white background, Windows High Contrast Mode ensures that the user will be able to read the text regardless of what `<img>` or SVG you may have behind it.
@@ -73,6 +79,8 @@ In this example, the text will be black with a white background.
 ```css
 color: lemonchiffon;
 ```
+#### Key takeaway
+You don't need to worry about text color; it can handle itself.
 
 ### Comparison
 Here's a section of the screenshots of the Khan Academy logged out homepage. Here we can see examples of almost all the ways Windows High Contrast Mode alters our custom styling:
