@@ -1,4 +1,4 @@
-title: "Windows High Contrast Mode"
+title: "Making Websites Work with Windows High Contrast Mode"
 published_on: March 21, 2019
 author: Diedra Rater
 team: Web Frontend
