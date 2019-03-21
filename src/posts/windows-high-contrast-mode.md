@@ -145,7 +145,7 @@ const timestamp = "3:14"; // Just for an example, to simplify this code.
 const timestampAria = `${timestamp} Click to jump to ${timestamp} in video`;
 
 return (
-    <button class='videoPlayButton' aria-label={timestampAria}>
+    <button className='videoPlayButton' aria-label={timestampAria}>
         {timestamp}
     </button>
 );
@@ -178,10 +178,10 @@ JSX:
 const timestamp = "3:14"; // Just for an example, to simplify this code.
 const timestampAria = `${timestamp} Click to jump to ${timestamp} in video`;
 
-const playIcon = `<img src="/images/play.png" class="youTubePlayIcon" />`;
+const playIcon = `<img src="/images/play.png" className="youTubePlayIcon" />`;
 
 return (
-    <button class='videoPlayButton' aria-label={timestampAria}>
+    <button className='videoPlayButton' aria-label={timestampAria}>
         {playIcon} {timestamp}
     </button>
 );
@@ -222,7 +222,7 @@ const PLAY_BUTTON_DIAMETER = 44;
 
 <button
     aria-label="Play video"
-    class="playButton"
+    className="playButton"
     onClick={this.handlePlayButtonClick}
 >
     <svg
@@ -265,7 +265,7 @@ const PLAY_BUTTON_RADIUS = Math.floor(PLAY_BUTTON_DIAMETER / 2);
 
 <button
     aria-label="Play video"
-    class="playButton"
+    className="playButton"
     onClick={this.handlePlayButtonClick}
 >
     <svg
@@ -320,7 +320,7 @@ JSX:
 ```jsx
 return (
     <a aria-label="Khan Academy" href="/">
-        <svg class="logoSvg" aria-hidden={true}>...</svg>
+        <svg className="logoSvg" aria-hidden={true}>...</svg>
     </a>
 );
 ```
@@ -346,8 +346,8 @@ CSS:
 JSX:
 ```jsx
 return (
-    <a class="logoLink" aria-label="Khan Academy" href="/">
-        <svg class="logoSvg" aria-hidden={true}>...</svg>
+    <a className="logoLink" aria-label="Khan Academy" href="/">
+        <svg className="logoSvg" aria-hidden={true}>...</svg>
     </a>
 );
 ```
