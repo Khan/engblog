@@ -14,14 +14,14 @@ Windows High Contrast Mode is an accessibility settings feature in the Windows o
 Khan Academy's logged out homepage without Windows High Contrast Mode:
 
 <img
-    src="/images/windows-high-contrast-mode/lohp_default.png"
+    src="/images/windows-high-contrast-mode/lohp_default.jpg"
     alt="Screenshot of Khan Academy's logged out homepage without Windows High Contrast Mode. There are light gray borders, light gray backgrounds, a dark blue button, and text of different colors."
 />
 
 Khan Academy's logged out homepage with Windows High Contrast Mode:
 
 <img
-    src="/images/windows-high-contrast-mode/lohp_whc.png"
+    src="/images/windows-high-contrast-mode/lohp_whc.jpg"
     alt="Screenshot of Khan Academy's logged out homepage with Windows High Contrast Mode. All the borders are now black, the background colors are white (including buttons), and all of the text is either blue (if it's a link) or black (if it's not a link)."
 />
 
@@ -30,7 +30,7 @@ The high contrast version of the web may not be as pretty, but it is easier to s
 There are several different versions of Windows High Contrast Mode that can be used. **The examples in this post use High Contrast White.**
 
 <img
-    src="/images/windows-high-contrast-mode/settings.png"
+    src="/images/windows-high-contrast-mode/settings.jpg"
     alt="Screenshot of the Windows High Contrast Mode settings options in Windows. There are four options: 'High Contrast /#1', 'High Contrast /#2', 'High Contrast Black', and 'High Contrast White'. 'High Contrast White' has been selected and the settings is turned on."
 />
 
@@ -91,7 +91,7 @@ Here's a section of the screenshots of the Khan Academy logged out homepage. Her
 4. All the text on the page has returned to its default browser color (black for non-links and blue for links), and the text on top of the SVG image has a white background.
 
 <img
-    src="/images/windows-high-contrast-mode/comparison.png"
+    src="/images/windows-high-contrast-mode/comparison.jpg"
     alt="Section of the Khan Academy logged out homepage shown in two versions side by side. On the left side is the default mode, and on the right side is the Windows High Contrast Mode. The section shown includes a button that reads 'Learners, start here'. In the default version, the button has a dark blue background, white text, and no visible outline. In the Windows High Contrast Mode version, the button has a white background, black text, and a black outline. Behind the button is an image of a sky, which is the same in both versions."
 />
 
@@ -111,7 +111,7 @@ To fix this, we removed the `background-image` from the CSS and added the image 
 Screenshot:
 
 <img
-    src="/images/windows-high-contrast-mode/timestamp_before.png"
+    src="/images/windows-high-contrast-mode/timestamp_before.jpg"
     alt="Screenshot of the discussion feature on a video page. There's a post that reads 'At', a blank space, and then '0:23, does the picture display bacteria?'"
 />
 
@@ -143,7 +143,7 @@ return (
 Screenshot:
 
 <img
-    src="/images/windows-high-contrast-mode/timestamp_after.png"
+    src="/images/windows-high-contrast-mode/timestamp_after.jpg"
     alt="Screenshot of the discussion feature on a video page. There's a post that reads 'At', a little blue play icon, and then '0:23, does the picture display bacteria?'"
 />
 
@@ -184,7 +184,7 @@ There are a couple of different ways to fix this, but, in this case, we chose to
 Screenshot:
 
 <img
-    src="/images/windows-high-contrast-mode/playbutton_before.png"
+    src="/images/windows-high-contrast-mode/playbutton_before.jpg"
     alt="Screenshot of a video page. On top of the video, there's a big white circle with a black outline."
 />
 
@@ -230,7 +230,7 @@ const PLAY_BUTTON_DIAMETER = 44;
 Screenshot:
 
 <img
-    src="/images/windows-high-contrast-mode/playbutton_after.png"
+    src="/images/windows-high-contrast-mode/playbutton_after.jpg"
     alt="Screenshot of a video page. On top of the video, there's a big white circle with a black outline and a blue play icon in the middle of the white circle."
 />
 
@@ -293,7 +293,7 @@ Here's an example of one place where we fixed this — the logo in the global he
 Screenshot:
 
 <img
-    src="/images/windows-high-contrast-mode/logo_before.png"
+    src="/images/windows-high-contrast-mode/logo_before.jpg"
     alt="Screenshot of the global header at the top of the Khan Academy website. The header is white. In the center of the header is the Khan Academy logo icon, which is green. To the right of the logo icon is a blank space."
 />
 
@@ -317,7 +317,7 @@ return (
 Screenshot:
 
 <img
-    src="/images/windows-high-contrast-mode/logo_after.png"
+    src="/images/windows-high-contrast-mode/logo_after.jpg"
     alt="Screenshot of the global header at the top of the Khan Academy website. The header is white. In the center of the header is the Khan Academy logo icon, which is green. To the right of the logo icon is dark blue text that reads 'Khan Academy'."
 />
 
@@ -351,7 +351,7 @@ This is something we encountered with our sign up/login modals, which are visual
 Screenshot:
 
 <img
-    src="/images/windows-high-contrast-mode/modal_before.png"
+    src="/images/windows-high-contrast-mode/modal_before.jpg"
     alt="Screenshot of a Khan Academy video page. The page is has a partially transparent white veil over it. In the center of the page is a big white rectangle. In the rectangle is a login form. The white rectangle has no outline."
 />
 
@@ -359,7 +359,7 @@ Screenshot:
 Screenshot:
 
 <img
-    src="/images/windows-high-contrast-mode/modal_after.png"
+    src="/images/windows-high-contrast-mode/modal_after.jpg"
     alt="Screenshot of a Khan Academy video page. The page is has a partially transparent white veil over it. In the center of the page is a big white rectangle. In the rectangle is a login form. The white rectangle has a black outline."
 />
 

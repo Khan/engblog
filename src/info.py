@@ -214,7 +214,7 @@ authors = {
     "Diedra Rater": {
         "display_as": "Diedra Rater",
         "primary_url": "https://github.com/dierat",
-        "icon_url": "/images/author-icons/diedra.gif",
+        "icon_url": "/images/author-icons/diedra.jpg",
     },
 }
 
