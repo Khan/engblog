@@ -6,7 +6,7 @@ team: Web Frontend
 
 At Khan Academy, we've been working to make our web product more accessible to a variety of users, including those who experience blurry vision and/or severe color-blindness. Part of this work has involved updating our styling to be able to work well with Windows High Contrast Mode.
 
-This project required a little bit of learning via trial-and-error, so I wanted to share some of the things we discovered to make it easier for other developers working with accessibility. In this post, you'll learn about how to optimize web applications for the benefit of other users with visual accessibility needs.
+This project required a little bit of learning via trial-and-error, with a lot of help from our dear friends at [Level Access](https://www.levelaccess.com/), so I wanted to share some of the things we discovered to make it easier for other developers working with accessibility. In this post, you'll learn about how to optimize web applications for the benefit of other users with visual accessibility needs.
 
 ## What is it and who uses it?
 Windows High Contrast Mode is an accessibility settings feature in the Windows operating system. As the name suggests, it changes the visual appearance of everything displayed to have higher contrast. This includes applications that are native to the Windows platform as well as web apps.
