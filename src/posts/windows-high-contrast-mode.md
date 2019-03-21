@@ -44,12 +44,15 @@ background-color: lawngreen; /* No color for you. */
 background-image: url("cousin_fal.gif"); /* No image either. */
 ```
 
+(You can see an example of this in \#1 of the Comparison section below.)
+
 The opacity of background color styles will remain the same, though. The color will just be changed to white.
 
 In this code example, the background is set to 50% black. In Windows High Contrast Mode, it will instead be 50% white.
 ```css
 background-color: rgba(0, 0, 0, 0.5); /* White as the driven snow if the driven show were 50% opacity. */
 ```
+
 #### Key takeaway
 Only use `background-color` and `background-image` CSS for decorative styling. Windows High Contrast Mode considers them unnecessary to understand the page.
 
@@ -59,6 +62,9 @@ For border colors and outline colors, it actually goes the other way. No matter 
 outline: 2px dotted lightsalmon; /* Black as your heart. */
 border: 2px solid lavenderblush; /* And my coffee. */
 ```
+
+(You can see an example of this in \#2 of the Comparison section below.)
+
 #### Key takeaway
 Borders and outlines should be functional, not ornamental, because Windows High Contrast Mode retains them. Also, they won't be distinguishable if used to separate black sections created by `<img>` and SVG elements.
 
@@ -69,6 +75,9 @@ Borders and outlines should be functional, not ornamental, because Windows High 
 <img src="cousin_fal.gif" alt="Cousin Fal's at it again"> <!-- Impervious to Windows High Contrast Mode. -->
 <svg> ... </svg> <!-- An svg of me being too lazy to write an svg example. 1,000,000 defense against Windows High Contrast Mode. -->
 ```
+
+(You can see an example of this in \#3 of the Comparison section below.)
+
 #### Key takeaway
 Semantic `<img>` and SVG elements are for important, functional elements. Windows High Contrast Mode assumes they're required to interpret the page.
 
@@ -79,6 +88,9 @@ In this example, the text will be black with a white background.
 ```css
 color: lemonchiffon;
 ```
+
+(You can see an example of this in \#4 of the Comparison section below.)
+
 #### Key takeaway
 You don't need to worry about text color; it can handle itself.
 
