@@ -13,7 +13,7 @@
         "gulp-minify-css": "^1.2.4",
         "gulp-minify-html": "^1.0.6",
         "gulp-minify-inline": "^1.0.0",
-        "gulp-shell": "^0.6.5",
+        "gulp-shell": "^0.7.1",
         "http-server": "^0.11.1",
         "yargs": "^11.0.0"
     },
