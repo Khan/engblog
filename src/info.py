@@ -216,6 +216,11 @@ authors = {
         "primary_url": "https://github.com/dierat",
         "icon_url": "/images/author-icons/diedra.jpg",
     },
+    "Marta Kosarchyn": {
+        "display_as": "Marta Kosarchyn",
+        "primary_url": "",
+        "icon_url": "/images/author-icons/marta.jpg",
+    },
 }
 
 

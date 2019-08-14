@@ -7,7 +7,7 @@ Khan Academy Engineering Blog
 
 This repo houses the content and code used to build the `Khan Academy Engineering Blog <http://engineering.khanacademy.org>`_.
 
-The instructions in this README are geared towards the general public. **If you're a KA employee** who wants to make a blog post, `this forge page <https://sites.google.com/a/khanacademy.org/forge/for-khan-employees/ka-engineering-blog>`_ is your best starting point.
+The instructions in this README are geared towards the general public. **If you're a KA employee** who wants to make a blog post, `this page <https://www.khanacademy.org/r/engblog>`_ is your best starting point.
 
 
 Who can contribute?
@@ -90,9 +90,5 @@ If you'd like to add support for another markup language, see ``Post.get_html_co
 Publishing
 ----------
 
-**If you're publishing a new blog post, make sure to update the upcoming post section first**, which you can do by editing the file ``src/info.py``.  You can find the information to update to in the `publish queue <https://app.asana.com/0/33397771830491/68184404290301>`_ -- or, at least, everything except the team, which you may need to figure out (from the list of categories above) yourself.  Or better yet, ask the author!  For team_class, just do ``team.lower().replace(' ', '-')``.
 
-After this, just push your changes to master. `Travis <https://travis-ci.org/Khan/engblog>`_ will take care of everything else.
-You can ping `brownhead <https://github.com/brownhead>`_ (``@johnsullivan`` on HipChat) for help if anything explodes.
-
-**If you're a KA employee**, make sure to follow `the remaining instructions on the forge page <https://sites.google.com/a/khanacademy.org/forge/for-khan-employees/ka-engineering-blog#TOC-Publishing->`_. This includes *at least* posting to the KA Engineering twitter account.
+**If you're a KA employee**, make sure to follow `the publishing instructions <https://www.khanacademy.org/r/engblog>`_.
