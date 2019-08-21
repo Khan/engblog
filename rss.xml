@@ -5,6 +5,12 @@
         <link>http://engineering.khanacademy.org</link>
         <description>Khan Academy Engineering's blog</description>
         <item>
+            <title>How Engineering Principles Can Help You Scale</title>
+            <link>http://engineering.khanacademy.org/posts/eng-principles-help-scale.htm</link>
+            <pubDate>Wed, 21 Aug 2019 11:00:00 GMT-8</pubDate>
+            <guid>http://engineering.khanacademy.org/posts/eng-principles-help-scale.htm</guid>
+        </item>
+        <item>
             <title>Making Websites Work with Windows High Contrast Mode</title>
             <link>http://engineering.khanacademy.org/posts/windows-high-contrast-mode.htm</link>
             <pubDate>Thu, 21 Mar 2019 11:00:00 GMT-8</pubDate>
@@ -77,7 +83,7 @@
             <guid>http://engineering.khanacademy.org/posts/tips-for-code-reviews.htm</guid>
         </item>
         <item>
-            <title>Let's Reduce! A Gentle Introduction to Javascript's Reduce Method</title>
+            <title>Let&#x27;s Reduce! A Gentle Introduction to Javascript&#x27;s Reduce Method</title>
             <link>http://engineering.khanacademy.org/posts/lets-reduce.htm</link>
             <pubDate>Mon, 10 Jul 2017 11:00:00 GMT-8</pubDate>
             <guid>http://engineering.khanacademy.org/posts/lets-reduce.htm</guid>
@@ -113,7 +119,7 @@
             <guid>http://engineering.khanacademy.org/posts/flex-language-shootout.htm</guid>
         </item>
         <item>
-            <title>What's New in OSS at Khan Academy</title>
+            <title>What&#x27;s New in OSS at Khan Academy</title>
             <link>http://engineering.khanacademy.org/posts/new-oss-activity.htm</link>
             <pubDate>Mon, 03 Apr 2017 11:00:00 GMT-8</pubDate>
             <guid>http://engineering.khanacademy.org/posts/new-oss-activity.htm</guid>
@@ -125,7 +131,7 @@
             <guid>http://engineering.khanacademy.org/posts/automating-app-store-screenshots.htm</guid>
         </item>
         <item>
-            <title>It's Okay to Break Things: Reflections on Khan Academy's Healthy Hackathon</title>
+            <title>It&#x27;s Okay to Break Things: Reflections on Khan Academy&#x27;s Healthy Hackathon</title>
             <link>http://engineering.khanacademy.org/posts/its-okay-to-break-things.htm</link>
             <pubDate>Mon, 06 Mar 2017 11:00:00 GMT-8</pubDate>
             <guid>http://engineering.khanacademy.org/posts/its-okay-to-break-things.htm</guid>
@@ -185,7 +191,7 @@
             <guid>http://engineering.khanacademy.org/posts/user-write-lock.htm</guid>
         </item>
         <item>
-            <title>Khan Academy's Engineering Principles</title>
+            <title>Khan Academy&#x27;s Engineering Principles</title>
             <link>http://engineering.khanacademy.org/posts/engineering-principles.htm</link>
             <pubDate>Mon, 06 Jun 2016 11:00:00 GMT-8</pubDate>
             <guid>http://engineering.khanacademy.org/posts/engineering-principles.htm</guid>
@@ -269,7 +275,7 @@
             <guid>http://engineering.khanacademy.org/posts/receiving-feedback.htm</guid>
         </item>
         <item>
-            <title>Schrödinger's deploys no more: how we update translations</title>
+            <title>Schrödinger&#x27;s deploys no more: how we update translations</title>
             <link>http://engineering.khanacademy.org/posts/translation-server.htm</link>
             <pubDate>Mon, 12 Oct 2015 11:00:00 GMT-8</pubDate>
             <guid>http://engineering.khanacademy.org/posts/translation-server.htm</guid>
@@ -305,7 +311,7 @@
             <guid>http://engineering.khanacademy.org/posts/fun-with-slopfields.htm</guid>
         </item>
         <item>
-            <title>Khan Academy: a new employee's primer</title>
+            <title>Khan Academy: a new employee&#x27;s primer</title>
             <link>http://engineering.khanacademy.org/posts/new-employees-primer.htm</link>
             <pubDate>Mon, 20 Jul 2015 11:00:00 GMT-8</pubDate>
             <guid>http://engineering.khanacademy.org/posts/new-employees-primer.htm</guid>
@@ -317,7 +323,7 @@
             <guid>http://engineering.khanacademy.org/posts/evil-puzzle.htm</guid>
         </item>
         <item>
-            <title>Babel in Khan Academy's i18n Toolchain</title>
+            <title>Babel in Khan Academy&#x27;s i18n Toolchain</title>
             <link>http://engineering.khanacademy.org/posts/i18n-babel-plugin.htm</link>
             <pubDate>Mon, 22 Jun 2015 11:00:00 GMT-8</pubDate>
             <guid>http://engineering.khanacademy.org/posts/i18n-babel-plugin.htm</guid>
