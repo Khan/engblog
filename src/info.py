@@ -221,6 +221,11 @@ authors = {
         "primary_url": "",
         "icon_url": "/images/author-icons/marta.jpg",
     },
+    "Jangmi Jo": {
+        "display_as": "Jangmi Jo",
+        "primary_url": "https://github.com/jangmi-jo",
+        "icon_url": "/images/author-icons/jangmi-jo.jpg",
+    },
 }
 
 
