@@ -5,6 +5,12 @@
         <link>http://engineering.khanacademy.org</link>
         <description>Khan Academy Engineering's blog</description>
         <item>
+            <title>How to upgrade hundreds of React components without breaking production</title>
+            <link>http://engineering.khanacademy.org/posts/upgrade-buttons-links.htm</link>
+            <pubDate>Mon, 23 Sep 2019 11:00:00 GMT-8</pubDate>
+            <guid>http://engineering.khanacademy.org/posts/upgrade-buttons-links.htm</guid>
+        </item>
+        <item>
             <title>How Engineering Principles Can Help You Scale</title>
             <link>http://engineering.khanacademy.org/posts/eng-principles-help-scale.htm</link>
             <pubDate>Wed, 21 Aug 2019 11:00:00 GMT-8</pubDate>
