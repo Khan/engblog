@@ -84,6 +84,6 @@ We’ve been using Google App Engine since day 1, and it has worked well for us 
 
 **As of December 2019, we have our first few Go services running in production** behind an Apollo GraphQL gateway. These services are pretty small today, because the way we’re doing the migration is very incremental. This incremental switchover is another good topic to talk about on another day (subscribe to our  [RSS feed](http://engineering.khanacademy.org/rss.xml)  or  [our Twitter account](https://twitter.com/KhanAcademyEng)  to read new posts as they go live).
 
-For us, **2020 is going to be filled with technical challenge and opportunity**: Converting a large Python monolith to GraphQL-based services in Go. We’re excited about this project, which we’ve named Goliath (you can probably imagine all of the “Go-” names we considered!). It’s a once in a decade opportunity to take a revolutionary step forward.
+For us, **2020 is going to be filled with technical challenge and opportunity**: Converting a large Python monolith to GraphQL-based services in Go. We’re excited about this project, which we’ve named Goliath (you can probably imagine all of the “Go-” names we considered!). It’s a once in a decade opportunity to take a revolutionary step forward, and a big example of how we live our ["We champion quality" engineering principle](http://engineering.khanacademy.org/posts/eng-principles-help-scale.htm).
 
-*If you’re also excited about this opportunity, check out   . As you can imagine, we’re hiring engineers!* [our careers page](https://www.khanacademy.org/careers)
+*If you’re also excited about this opportunity, check out [our careers page](https://www.khanacademy.org/careers). As you can imagine, we’re hiring engineers!*
