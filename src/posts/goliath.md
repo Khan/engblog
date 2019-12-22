@@ -16,7 +16,7 @@ Ten years is a long time in technology! We chose Python as our backend server la
 
 # The Python 2 end-of-life
 
-Now, in 2019, Python 3 versions are dominant and the Python Software Foundation has said that  [Python 2 reaches its official end-of-life on January 1, 2020](https://www.python.org/doc/sunset-python-2/) , so that they can focus their limited time fully on the future. Undoubtedly, there are still *millions* of lines of Python 2 out there, but the truth is undeniable: Python 2 is on its way out.
+Now, in 2019, Python 3 versions are dominant and the Python Software Foundation has said that  [Python 2 reaches its official end-of-life on January 1, 2020](https://www.python.org/doc/sunset-python-2/), so that they can focus their limited time fully on the future. Undoubtedly, there are still *millions* of lines of Python 2 out there, but the truth is undeniable: Python 2 is on its way out.
 
 **Moving from Python 2 to 3 is not an easy task.** Beyond that hurdle, which has been widely written about elsewhere, we also have a bunch of other APIs in libraries we use which have undergone huge changes.
 
@@ -30,7 +30,7 @@ For all of that work, we’d receive these benefits:
 # Other languages
 
 Given all of the work required and the relatively small benefits, we wanted to consider other options.
-We started  [using Kotlin for specific jobs within Khan Academy a year ago](https://engineering.khanacademy.org/posts/kotlin-adoption.htm) . Its performance benefits have saved us money, which we can apply in other ways to help people around the world learn. **If we moved from Python to a language that is an order of magnitude faster, we can both improve how responsive our site is****and****decrease our server costs dramatically.**
+We started  [using Kotlin for specific jobs within Khan Academy a year ago](https://engineering.khanacademy.org/posts/kotlin-adoption.htm). Its performance benefits have saved us money, which we can apply in other ways to help people around the world learn. **If we moved from Python to a language that is an order of magnitude faster, we can both improve how responsive our site is****and****decrease our server costs dramatically.**
 
 Moving to Kotlin was an appealing alternative.  While we were at it, we decided to dig deeper into other options. Looking at the languages that have first-class support in Google App Engine, another serious contender appeared: Go. Kotlin is a very expressive language with an impressive set of features. Go, on the other hand, offers simplicity and consistency. The Go team is focused on making a language which helps teams reliably ship software over the long-term.
 
@@ -54,7 +54,7 @@ The added complexity of services is balanced by a number of big benefits:
 * We can have more confidence that a problem with a deployment will have a limited impact on other parts of the site.
 * By having separate services, we can also choose the right kinds of instances and hosting configuration needed for each service, which helps to optimize both performance and cost.
 
-We posted a series of blog posts ( [part 1](http://engineering.khanacademy.org/posts/python-refactor-1.htm), [part 2](http://engineering.khanacademy.org/posts/slicker.htm) ,  [part 3](http://engineering.khanacademy.org/posts/python-refactor-3.htm) ) about how we had performed a significant refactoring of our Python code, drawing boundaries and creating constraints around which code could import which other code. Those boundaries provided a starting point for thinking about how we’d break our code into services. Craig Silverstein and Ben Kraft led an effort to figure out an initial set of services and how we would need to accommodate the boundaries between them.
+We posted a series of blog posts ([part 1](http://engineering.khanacademy.org/posts/python-refactor-1.htm), [part 2](http://engineering.khanacademy.org/posts/slicker.htm), [part 3](http://engineering.khanacademy.org/posts/python-refactor-3.htm)) about how we had performed a significant refactoring of our Python code, drawing boundaries and creating constraints around which code could import which other code. Those boundaries provided a starting point for thinking about how we’d break our code into services. Craig Silverstein and Ben Kraft led an effort to figure out an initial set of services and how we would need to accommodate the boundaries between them.
 
 In our current monolith, code is free to read and update any data models it needs to. To keep things sane, we made some rules around data access from services, but that’s a topic for another day.
 
@@ -67,7 +67,7 @@ Ten years is also a long time for a product. **We have introduced an incredible 
 We’re going to do a lot of housecleaning in Python. We’re very aware of the  [second-system effect](https://en.wikipedia.org/wiki/Second-system_effect)  and our goal with this work is not to “create the perfect system” but rather to make it easier to port to Go. We started some of these technical migrations earlier, and some of them will continue on past the point at which our system is running in Go, but the end result will be more modern and coherent.
 
 * We’ll only generate web pages via React server side rendering, eliminating the Jinja server-side templating we’ve been using
-* We’ll use  [GraphQL federation](https://blog.apollographql.com/apollo-federation-f260cf525d21)  to dispatch requests to our services (and to our legacy Python code during the transition)
+* We’ll use  [GraphQL federation](https://blog.apollographql.com/apollo-federation-f260cf525d21) to dispatch requests to our services (and to our legacy Python code during the transition)
 * Where we need to offer REST endpoints, we’ll do so through a gateway that converts the request to GraphQL
 * We will rely more heavily on Fastly, our CDN provider, to enable more requests to be served quickly, closer to our users, and without requiring our server infrastructure to handle the request at all
 * We’re going to deprecate some largely unused, outdated features that are an ongoing maintenance burden and would slow down our path forward
@@ -82,7 +82,7 @@ We’ve been using Google App Engine since day 1, and it has worked well for us 
 
 # The plan
 
-**As of December 2019, we have our first few Go services running in production** behind an Apollo GraphQL gateway. These services are pretty small today, because the way we’re doing the migration is very incremental. This incremental switchover is another good topic to talk about on another day (subscribe to our  [RSS feed](http://engineering.khanacademy.org/rss.xml)  or  [our Twitter account](https://twitter.com/KhanAcademyEng)  to read new posts as they go live).
+**As of December 2019, we have our first few Go services running in production** behind an Apollo GraphQL gateway. These services are pretty small today, because the way we’re doing the migration is very incremental. This incremental switchover is another good topic to talk about on another day (subscribe to our [RSS feed](http://engineering.khanacademy.org/rss.xml) or [our Twitter account](https://twitter.com/KhanAcademyEng)  to read new posts as they go live).
 
 For us, **2020 is going to be filled with technical challenge and opportunity**: Converting a large Python monolith to GraphQL-based services in Go. We’re excited about this project, which we’ve named Goliath (you can probably imagine all of the “Go-” names we considered!). It’s a once in a decade opportunity to take a revolutionary step forward, and a big example of how we live our ["We champion quality" engineering principle](http://engineering.khanacademy.org/posts/eng-principles-help-scale.htm).
 
