@@ -88,6 +88,8 @@ Our iOS and Android apps share a single codebase, with engineers specializing in
 
 **One last caveat before finishing up here:** *Fully native apps are also terrific*, and many of us still really enjoy working on them in our other projects. (Personally, my heart still belongs to Xcode, and I really enjoy thinking in Swift!) That said, our transition to React Native has been a huge boon to our team. It isn’t the One True Choice For Everyone, but it’s worked marvelously for us!
 
+[Discuss on Hacker News](https://news.ycombinator.com/item?id=23784576)
+
 -----
 
 Footnotes:
