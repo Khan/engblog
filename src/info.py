@@ -46,8 +46,8 @@ authors = {
         "primary_url": "https://github.com/SamLau95",
         "icon_url": "/images/author-icons/samlau.jpg",
     },
-    "William Chargin": {
-        "display_as": "William Chargin",
+    "Willow Chargin": {
+        "display_as": "Willow Chargin",
         "primary_url": "https://wchargin.github.io",
         "icon_url": "/images/author-icons/wchargin.png",
     },

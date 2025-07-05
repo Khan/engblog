@@ -4,7 +4,7 @@ author: Ben Kraft
 team: Infrastructure
 ...
 
-Last year, William wrote about how we [optimized our in-memory content data](/posts/evolving-our-content-infrastructure.htm) to take up less space.  But this was always a temporary solution: if we want to have a separate content tree for each language, we knew we would need to break up the monolithic content blob, and pull in content on-demand.
+Last year, Willow wrote about how we [optimized our in-memory content data](/posts/evolving-our-content-infrastructure.htm) to take up less space.  But this was always a temporary solution: if we want to have a separate content tree for each language, we knew we would need to break up the monolithic content blob, and pull in content on-demand.
 
 In principle, doing this is simple -- we already use [App Engine's Memcached](https://cloud.google.com/appengine/docs/python/memcache/), so all we need to do is change our data structures to pull in content from there whenever someone asks for it.  But that might be some unknown amount slower -- many requests access dozens or even hundreds of content items, which right now is plenty fast!  We had several ideas for how to improve access patterns and speed things up, but we didn't want to spend a couple months building one only to find it wasn't fast enough.  We had some vague guesses as to how often we access content, what requests would be the worst, and how fast Memcached is, but we didn't really know.  So last fall we set out to find out.
 

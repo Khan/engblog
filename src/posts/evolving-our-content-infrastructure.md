@@ -1,6 +1,6 @@
 title: "Evolving our content infrastructure"
 published_on: September 19, 2016
-author: William Chargin
+author: Willow Chargin
 team: Infrastructure
 ...
 

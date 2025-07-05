@@ -1,6 +1,6 @@
 title: Making thumbnails fast
 published_on: September 14, 2015
-author: William Chargin
+author: Willow Chargin
 team: Web Frontend
 async_scripts: ["https://cdn.rawgit.com/Khan/KaTeX/v0.6.0/dist/katex.min.js", "https://cdn.rawgit.com/Khan/KaTeX/v0.6.0/dist/contrib/auto-render.min.js"]
 stylesheets: ["https://cdn.rawgit.com/Khan/KaTeX/v0.6.0/dist/katex.min.css"]
